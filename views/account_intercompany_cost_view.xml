@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="account_intercompany_cost_view_form" model="ir.ui.view">
+        <field name="name">account.intercompany.cost.view.form</field>
+        <field name="model">account.intercompany.cost</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <header>
+                    <field name="state" widget="statusbar" />
+                    <button name="post_intercompany_cost" string="Publicar" type="object" />
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="responsible_user"/>
+                        </group>
+                        <group>
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                        </group>
+                    </group>
+                    <field name="analytic_line_ids">
+                        <tree default_order="date">
+                            <field name="date"/>
+                            <field name="employee_id"/>
+                            <field name="unit_amount" widget="timesheet_uom"/>
+                        </tree>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="account_intercompany_cost_view_tree" model="ir.ui.view">
+        <field name="name">account.intercompany.cost.view.tree</field>
+        <field name="model">account.intercompany.cost</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name"/>
+                <field name="responsible_user"/>
+                <field name="date_from"/>
+                <field name="date_to"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_action_view_account_intercompany_cost" model="ir.actions.act_window">
+        <field name="name">Costos Intercompañía</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">account.intercompany.cost</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="account_intercompany_cost_menu"
+        action="action_action_view_account_intercompany_cost"
+        parent="account.menu_finance_entries_accounting_miscellaneous"
+        sequence="10"/>
+
+</odoo>
