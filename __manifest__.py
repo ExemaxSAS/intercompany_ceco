@@ -16,5 +16,6 @@
         'security/ir.model.access.csv',
         'views/account_intercompany_cost_view.xml',
         'views/hr_employee_inherit_view.xml',
+        'views/account_account.xml',
     ],
 }

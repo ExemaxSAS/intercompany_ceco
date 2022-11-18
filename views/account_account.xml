@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_account_form_intercompany" model="ir.ui.view">
+        <field name="name">view.account.form.intercompany</field>
+        <field name="model">account.account</field>
+        <field name="inherit_id" ref="account.view_account_form"/>
+        <field name="arch" type="xml">
+            <!--<xpath expr="//page[@name='accounting']//group//group" position="inside">-->
+            <xpath expr="//page[@name='accounting']" position="after">
+                <page name="costos" string="Costos">
+                    <group>
+                    <group>
+                        <field name="area"/>
+                        <field name="unidad_operativa"/>
+                        <field name="tipo_cuenta"/>
+                    </group>
+                    <group>
+                        <field name="grupo"  options="{'no_quick_create':False,'no_create_edit':False,'no_open': False,}"/>
+                        <field name="subgrupo"  options="{'no_quick_create':False,'no_create_edit':False,'no_open': False,}"/>
+                    </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
+

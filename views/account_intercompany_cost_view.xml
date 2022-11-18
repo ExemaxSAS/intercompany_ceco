@@ -8,7 +8,9 @@
             <form string="">
                 <header>
                     <field name="state" widget="statusbar" />
+                    <button name="prepost_intercompany_cost" string="Procesar" type="object" />
                     <button name="post_intercompany_cost" string="Publicar" type="object" />
+                    <!-- que deshabilite publicar si ya está publicado-->
                 </header>
                 <sheet>
                     <group>
@@ -21,13 +23,29 @@
                             <field name="date_to"/>
                         </group>
                     </group>
-                    <field name="analytic_line_ids">
-                        <tree default_order="date">
-                            <field name="date"/>
-                            <field name="employee_id"/>
-                            <field name="unit_amount" widget="timesheet_uom"/>
-                        </tree>
-                    </field>
+                    <notebook>
+                        <page string="Registro de Horas">
+                            <field name="analytic_line_ids">
+                                <tree default_order="date">
+                                    <field name="date"/>
+                                    <field name="employee_id"/>
+                                    <field name="unit_amount" widget="timesheet_uom"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Control">
+                            <field name="intercompany_cost_line" readonly="1">
+                                <tree default_order="hr_employee_id">
+                                    <field name="hr_employee_id" />
+                                    <field name="costo_sueldo"/>
+                                    <field name="costo_contribuciones"/>
+                                    <field name="account_id" />
+                                    <field name="area_uniope"/>
+                                    <field name="tipo"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
@@ -54,6 +72,18 @@
         <field name="view_mode">tree,form</field>
     </record>
 
+     <record id="action_action_view_intercompany_cost_groups" model="ir.actions.act_window">
+        <field name="name">Grupos</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">intercompany.cost.groups</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="action_action_view_intercompany_cost_subgroups" model="ir.actions.act_window">
+        <field name="name">Subgrupos</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">intercompany.cost.subgroups</field>
+        <field name="view_mode">tree,form</field>
+    </record>
     <menuitem id="account_intercompany_cost_menu"
         action="action_action_view_account_intercompany_cost"
         parent="account.menu_finance_entries_accounting_miscellaneous"

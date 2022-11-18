@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api, _
+from odoo import models, fields, api,
 
 class HrEmployeeInherit(models.Model):
     _inherit = 'hr.employee'
@@ -14,3 +14,4 @@ class IntercompanyEmployeeCost(models.Model):
     hr_sueldo_facturado = fields.Float('Sueldo/Facturado')
     hr_contribuciones = fields.Float('Contribuciones')
     hr_employee_id = fields.Many2one('hr.employee','Employee')
+    hr_employee_es_rd = fields.Boolean('Es Relación de Dependencia')
