@@ -8,23 +8,33 @@ from collections import defaultdict
 _logger = logging.getLogger(__name__)
 
 HORAS_SUELDO=160
-COSTOS_INDIRECTOS=3
-COSTOS_DIRECTOS=5
+COSTOS_INDIRECTOS=2
+COSTOS_DIRECTOS=1
 DIARIO= 67 #sueldos y jornales
-CUENTA_SUELDOS_APAGAR = 116
+CUENTA_SUELDOS_APAGAR = 2065
 
 class IntercompanyCostGroups(models.Model):
     _name = 'intercompany.cost.groups'
     _description = 'Grupos costos'
 
     name=fields.Char('Nombre', required=True)
-
+    subgrupos=fields.One2many('intercompany.cost.subgroups','grupo_id', string='Subgrupo',copy=True, auto_join=True)
+    #pais = fields.Selection([('MEX','MEX'),('USA','USA'),('ARG','ARG'),('','')],'Pais para COM-LEADS')
+    # tomo pais directo de la cuenta
 class IntercompanyCostSubGroups(models.Model):
     _name = 'intercompany.cost.subgroups'
     _description = 'Sugrupos costos'
 
     name=fields.Char('Nombre', required=True)
     grupo_id= fields.Many2one('intercompany.cost.groups',string='Grupo padre', required=True)
+    distribucion_costo = fields.Selection([
+        ('B1', 'B1'),
+        ('NT', 'NT'),
+        ('MKT', 'MKT'),
+        ('S4', 'S4'),
+        ('TUSA', 'TALENT USA'),
+        ('TLATAM', 'TALENT LATAM'),
+    ], 'Distribución de costo',)
 
 class IntercompanyCostLine(models.Model):
     _name = 'intercompany.cost.line'
@@ -43,12 +53,15 @@ class IntercompanyCostLine(models.Model):
     tipo= fields.Char(string="Tipo de Costo")
     es_freelance= fields.Boolean('Es freelance',store=True)
 
+    _sql_constraints = [('unique_icperiodo', 'unique(date_from, date_to)',
+                         'Ya existe un periodo cargado con iguales fechas desde-hasta')]
 class AccountIntercompanyCost(models.Model):
     _name = 'account.intercompany.cost'
     _description = 'Costo entre empresas'
 
     state = fields.Selection([
         ('draft', 'Borrador'),
+        ('checkpoint', 'Checkpoint'),
         ('post', 'Publicado')
     ], 'Estado', default = 'draft')
     name = fields.Char('Nombre', required=True)
@@ -141,7 +154,9 @@ class AccountIntercompanyCost(models.Model):
                     fields=['unit_amount','group_id'],
                     groupby=['group_id'])
                 _logger.info('DIRECTAS:' + str(total_employee_directas))
-
+                #inicializo indirectas por si no trabaja directas
+                horas_indirectas = HORAS_SUELDO
+                #
                 for tot_directas in total_employee_directas:
                     if len(tot_directas)>0:
                         total_hrs_directas=tot_directas.get('unit_amount')
@@ -155,8 +170,6 @@ class AccountIntercompanyCost(models.Model):
 
                             id_cuenta = cuenta.get('account_id')[0]
                             horas_trabajadas = cuenta.get('unit_amount')
-                            horas_indirectas=0
-                            #if (horas_trabajadas<=HORAS_SUELDO):
                             if (total_hrs_directas<=HORAS_SUELDO):
                                 horas_cuenta= horas_trabajadas
                                 horas_indirectas = HORAS_SUELDO - horas_trabajadas
@@ -183,48 +196,57 @@ class AccountIntercompanyCost(models.Model):
                                     'es_freelance' :es_freelance,
                                 }
                             self.env['intercompany.cost.line'].create(vals)
-                            #***********  si corresponde indirectas , busco costos indirectos********
-                            if horas_indirectas>0:
-                                # busco total de cuentas indirectas del empleado
-                                request = "SELECT  SUM(unit_amount) as total_employee_indirectas FROM account_analytic_line " \
-                                          " WHERE group_id="+ str(COSTOS_INDIRECTOS) +" and employee_id ="+ str(id_empleado)+\
-                                          " and date >='" +  str(self.date_from) + "' and date<='"+  str(self.date_to) + "'  GROUP BY group_id"
-                                self.env.cr.execute(request)
-                                for record in self.env.cr.dictfetchall():
-                                    if record['total_employee_indirectas']>0:
-                                        total_hrs_indirectas = record['total_employee_indirectas']
-                                        #f total_hrs_indirectas> horas_indirectas:
-                                        #   total_hrs_indirectas=horas_indirectas
+                #***********  si corresponde indirectas , busco costos indirectos********
+                _logger.info(
+                    'HORAS INDIRECTAS :' + str(horas_indirectas))
+                if horas_indirectas>0:
+                    # busco total de cuentas indirectas del empleado
+                    request = "SELECT  SUM(unit_amount) as total_employee_indirectas FROM account_analytic_line " \
+                              " WHERE group_id="+ str(COSTOS_INDIRECTOS) +" and employee_id ="+ str(id_empleado)+\
+                              " and date >='" +  str(self.date_from) + "' and date<='"+  str(self.date_to) + "'  GROUP BY group_id"
+                    self.env.cr.execute(request)
 
-                                        result_employee = self.env['account.analytic.line'].read_group(
-                                            [('employee_id', '=', id_empleado), ('date', '>=', self.date_from),
-                                             ('date', '<=', self.date_to), ('group_id', '=', COSTOS_INDIRECTOS)],
-                                            fields=['account_id', 'unit_amount'],
-                                            groupby=['account_id'])
-                                        for cuenta in result_employee:
-                                            id_cuenta = cuenta.get('account_id')[0]
-                                            horas_trabajadas = cuenta.get('unit_amount')
-                                            tipo_costo = 'indirectos'
-                                            porcentaje_cuenta = horas_trabajadas * 100 / total_hrs_indirectas
-                                            sueldo_cuenta = valor_hora_sueldo * horas_indirectas * porcentaje_cuenta / 100
+                    for record in self.env.cr.dictfetchall():
+                        _logger.info(
+                            'HORAS INDIRECTAS empleado:' + str(record['total_employee_indirectas']))
+                        if record['total_employee_indirectas']>0:
+                            total_hrs_indirectas = record['total_employee_indirectas']
+                            #f total_hrs_indirectas> horas_indirectas:
+                            #   total_hrs_indirectas=horas_indirectas
 
-                                            if not (es_freelance):
-                                                contribuciones_cuenta = valor_hora_contribucion * horas_indirectas * porcentaje_cuenta / 100
-                                            vals = {
-                                                'account_itc_id': self.id,
-                                                'date_from': self.date_from,
-                                                'date_to': self.date_to,
-                                                'hr_employee_id': id_empleado,
-                                                'account_id': id_cuenta,
-                                                'area_uniope': area_uniope,
-                                                'area': area,
-                                                'unidad_operativa': unidad_operativa,
-                                                'costo_sueldo': sueldo_cuenta,
-                                                'costo_contribuciones': contribuciones_cuenta,
-                                                'tipo': tipo_costo,
-                                                'es_freelance': es_freelance,
-                                            }
-                                            self.env['intercompany.cost.line'].create(vals)
+                            result_employee = self.env['account.analytic.line'].read_group(
+                                [('employee_id', '=', id_empleado), ('date', '>=', self.date_from),
+                                 ('date', '<=', self.date_to), ('group_id', '=', COSTOS_INDIRECTOS)],
+                                fields=['account_id', 'unit_amount'],
+                                groupby=['account_id'])
+                            _logger.info(
+                                'ceuntas INDIRECTAS:' + str(result_employee))
+                            for cuenta in result_employee:
+                                id_cuenta = cuenta.get('account_id')[0]
+                                horas_trabajadas = cuenta.get('unit_amount')
+                                tipo_costo = 'indirectos'
+                                porcentaje_cuenta = horas_trabajadas * 100 / total_hrs_indirectas
+                                sueldo_cuenta = valor_hora_sueldo * horas_indirectas * porcentaje_cuenta / 100
+
+                                if not (es_freelance):
+                                    contribuciones_cuenta = valor_hora_contribucion * horas_indirectas * porcentaje_cuenta / 100
+                                vals = {
+                                    'account_itc_id': self.id,
+                                    'date_from': self.date_from,
+                                    'date_to': self.date_to,
+                                    'hr_employee_id': id_empleado,
+                                    'account_id': id_cuenta,
+                                    'area_uniope': area_uniope,
+                                    'area': area,
+                                    'unidad_operativa': unidad_operativa,
+                                    'costo_sueldo': sueldo_cuenta,
+                                    'costo_contribuciones': contribuciones_cuenta,
+                                    'tipo': tipo_costo,
+                                    'es_freelance': es_freelance,
+                                }
+                                self.env['intercompany.cost.line'].create(vals)
+
+        self.state='checkpoint'
 
     def post_intercompany_cost(self):
         #agrupo por area y cuenta para crear el asiento
@@ -242,10 +264,14 @@ class AccountIntercompanyCost(models.Model):
             cuenta_sueldo = self.env['account.account'].search(
                 [('area', '=', area), ('unidad_operativa', '=', unidad_operativa),('tipo_cuenta','=','sueldo')], limit=1)
             cuenta_honorarios = self.env['account.account'].search(
-                [('area', '=', area), ('unidad_operativa', '=', unidad_operativa), ('tipo_cuenta', '=', 'honorarios')],
+                [('area', '=', area), ('unidad_operativa', '=', unidad_operativa), ('tipo_cuenta', '=', 'honorario')],
                 limit=1)
             _logger.info(
-                'MOV : analytica' + str(analytic_account_id) + '- Cuenta' + str(cuenta_sueldo))
+                'AREA UNIOPE: ' + str(area) + '-' + str(unidad_operativa) + '- Cuenta sueldo' +  str(cuenta_sueldo))
+            _logger.info(
+                'AREA UNIOPE: ' + str(area) + '-' + str(unidad_operativa) + '- Cuenta honorario' + str(cuenta_honorarios))
+            _logger.info(
+                'AREA UNIOPE: ' + str(area) + '-' + str(unidad_operativa)  +  ' - Cuenta honorario' + str(cuenta_honorarios))
             # lo limito a uno para evitar errores, de todos modos el constraint deberia evitarlo
             monto= round(record['sum_costosueldo'],2)
             freelance= record['es_freelance']
@@ -299,5 +325,5 @@ class AccountIntercompanyCost(models.Model):
             move = self.env['account.move'].create({'journal_id': DIARIO, 'currency_id': 19,'line_ids':lines })
             move.action_post()
 
-            #publico
-            #self.state='post'
+        #publico
+        self.state='post'

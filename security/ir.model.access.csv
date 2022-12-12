@@ -4,3 +4,6 @@ access_employee_cost_hour_line_user,employee_cost_hour_line_user,model_employee_
 access_intercompany_cost_line,intercompany_cost_line,model_intercompany_cost_line,base.group_user,1,1,1,1
 access_intercompany_cost_groups,intercompany_cost_groups,model_intercompany_cost_groups,base.group_user,1,1,1,1
 access_intercompany_cost_subgroups,intercompany_cost_subgroups,model_intercompany_cost_subgroups,base.group_user,1,1,1,1
+access_resultados_interco,resultados_interco,model_resultados_interco,base.group_user,1,1,1,1
+access_type_results,type_results,model_type_results,base.group_user,1,1,1,1
+access_revenue_interco,revenue_interco,model_revenue_interco,base.group_user,1,1,1,1

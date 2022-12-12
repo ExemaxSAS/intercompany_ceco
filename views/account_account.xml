@@ -15,12 +15,28 @@
                         <field name="tipo_cuenta"/>
                     </group>
                     <group>
-                        <field name="grupo"  options="{'no_quick_create':False,'no_create_edit':False,'no_open': False,}"/>
-                        <field name="subgrupo"  options="{'no_quick_create':False,'no_create_edit':False,'no_open': False,}"/>
+                        <field name="grupo"  options="{'no_quick_create':True,'no_create_edit':True,'no_open': True,}"/>
+                        <field name="subgrupo"  options="{'no_quick_create':True,'no_create_edit':True,'no_open': True,}"/>
+                        <field name="pais"/>
                     </group>
                     </group>
                 </page>
             </xpath>
+        </field>
+    </record>
+
+    <record id="view_account_tree_intercompany" model="ir.ui.view">
+        <field name="name">view.account.tree.intercompany</field>
+        <field name="model">account.account</field>
+        <field name="inherit_id" ref="account.view_account_list"/>
+        <field name="arch" type="xml">
+                <tree>
+                    <field name="area" optional="hide"/>
+                    <field name="unidad_operativa" optional="hide"/>
+                    <field name="grupo" optional="hide"/>
+                    <field name="subgrupo" optional="hide"/>
+                    <field name="pais" optional="hide"/>
+                </tree>
         </field>
     </record>
 

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--   menu conf -->
+    <menuitem id="costos_interco_settings_menu"
+        name="Configuración Costos Intercompany"
+        parent="account.menu_finance_configuration"
+        sequence="2"/>
+
+    <menuitem id="type_results_menu"
+        action="action_view_type_results"
+        name="Configuracion de Distribucion"
+        parent="costos_interco_settings_menu"
+        sequence="1"/>
+    <menuitem id="action_intercompany_cost_groups_menu"
+        action="action_action_view_intercompany_cost_groups"
+        parent="costos_interco_settings_menu"
+        sequence="9"/>
+    <menuitem id="revenue_interco_menu"
+        action="action_view_revenue_interco"
+        name="Revenue Intercompany"
+        parent="costos_interco_settings_menu"
+        sequence="2"/>
+    <!--   fin menu conf -->
+    <menuitem id="resultados_mensuales_menu"
+        action="action_view_resultados_mensuales"
+        name ="Distribución Interco"
+        parent="account.menu_finance_entries_accounting_miscellaneous"
+        sequence="11"/>
+
+    <menuitem id="account_intercompany_cost_menu"
+        action="action_action_view_account_intercompany_cost"
+        parent="account.menu_finance_entries_accounting_miscellaneous"
+        sequence="10"/>
+</odoo>

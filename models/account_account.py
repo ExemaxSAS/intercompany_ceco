@@ -13,9 +13,10 @@ class AccountAccount(models.Model):
     area = fields.Many2one('hr.department', 'Area')
     unidad_operativa = fields.Many2one('hr.employee.add.category', 'Unidad Operativa')
     tipo_cuenta= fields.Selection([ ('sueldo', 'Cuenta sueldo'),('honorario', 'Cuenta honorario'),('contribucion', 'Cuenta contribucion')],'Tipo cuenta')
+    pais = fields.Selection([('MEX','MEX'),('USA','USA'),('','')],'Pais')
 
     _sql_constraints = [('unique_account_areauoptipo', 'unique(area, unidad_operativa, tipo_cuenta)',
-                         'Ya se degignó una cuenta contable al Area-Unidad Operativa para el tipo de cuenta seleccionado')]
+                         'Ya se designó una cuenta contable al Area-Unidad Operativa para el tipo de cuenta seleccionado')]
 
     @api.onchange('grupo')
     def onchange_grupod(self):

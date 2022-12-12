@@ -8,8 +8,8 @@
             <form string="">
                 <header>
                     <field name="state" widget="statusbar" />
-                    <button name="prepost_intercompany_cost" string="Procesar" type="object" />
-                    <button name="post_intercompany_cost" string="Publicar" type="object" />
+                    <button name="prepost_intercompany_cost" string="Procesar" type="object" attrs="{'visible': [('state','!=', 'post')]}" />
+                    <button name="post_intercompany_cost" string="Publicar" type="object" attrs="{'visible': [('state','==', 'checkpoint')]}"/>
                     <!-- que deshabilite publicar si ya está publicado-->
                 </header>
                 <sheet>
@@ -66,7 +66,7 @@
     </record>
 
     <record id="action_action_view_account_intercompany_cost" model="ir.actions.act_window">
-        <field name="name">Costos Intercompañía</field>
+        <field name="name">Ditribucion de Costos Internos</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">account.intercompany.cost</field>
         <field name="view_mode">tree,form</field>
@@ -84,9 +84,84 @@
         <field name="res_model">intercompany.cost.subgroups</field>
         <field name="view_mode">tree,form</field>
     </record>
-    <menuitem id="account_intercompany_cost_menu"
-        action="action_action_view_account_intercompany_cost"
-        parent="account.menu_finance_entries_accounting_miscellaneous"
-        sequence="10"/>
+    <record id="grupos_view_form" model="ir.ui.view">
+        <field name="name">grupos.view.form</field>
+        <field name="model">intercompany.cost.groups</field>
+        <field name="arch" type="xml">
+            <form string="Grupos de costos">
+                <groop>
+                      <field name="name"/>
+                </groop>
+                 <notebook>
+                 <page string="Subgrupos" name="subgrupos">
+                            <field
+                                name="subgrupos"
+                                widget="section_and_note_one2many"
+                                mode="tree"
+
+                            >
+                                <form>
+                                    <group>
+                                            <field name="grupo_id"
+                                                force_save="1"
+                                                widget="many2one_barcode"
+                                               />
+                                            <field name="name" />
+                                            <field name="distribucion_costo" />
+                                    </group>
+                                </form>
+                                <tree
+                                    string="Subgrupos"
+                                    editable="bottom"
+                                >
+                                    <control>
+                                        <create name="add_product_control" string="Agrega subgrupo"/>
+                                    </control>
+
+                                    <field
+                                        name="grupo_id"
+                                        options="{'no_open': True}"
+                                        force_save="1"
+                                        widget="product_configurator"
+                                    />
+                                    <field name="name"/>
+                                    <field name="distribucion_costo" />
+                                </tree>
+
+                            </field>
+
+                  </page>
+                </notebook>
+                <!--<sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    <field name="subgrupos"/>
+                </sheet>-->
+            </form>
+        </field>
+    </record>
+
+        <record id="grupos_view_tree" model="ir.ui.view">
+        <field name="name">grupos.view.tree</field>
+        <field name="model">intercompany.cost.groups</field>
+        <field name="arch" type="xml">
+            <tree string="Grupos de costos">
+                        <field name="name"/>
+                        <field name="subgrupos" string="subgrupos" widget="many2many_tags"  options="{'no_quick_create':False,'no_create_edit':False,'no_open': False,}"/>
+            </tree>
+        </field>
+    </record>
+     <record id="view_account_anlaytic_tree_intercompany" model="ir.ui.view">
+        <field name="name">view.account.analytic.tree.intercompany</field>
+        <field name="model">account.analytic.account</field>
+        <field name="inherit_id" ref="analytic.view_account_analytic_account_list"/>
+        <field name="arch" type="xml">
+                <tree>
+                    <field name="group_id" optional="hide"/>
+                </tree>
+        </field>
+    </record>
+
 
 </odoo>

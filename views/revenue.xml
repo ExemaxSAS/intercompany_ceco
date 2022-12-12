@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="revenue_interco_view_form" model="ir.ui.view">
+        <field name="name">revenue.interco.view.form</field>
+        <field name="model">revenue.interco</field>
+        <field name="arch" type="xml">
+            <form string="Revenue">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="mes"/>
+                        </group>
+                        <group>
+                            <field name="anio"  widget="integer" options="{'format': 0}" />
+                        </group>
+                        <group>
+                            <field name="pais"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                                <span style="text-decoration: underline;">Totales por costos</span>
+                                <field name="totb1" style="text-align: right;"/>
+                                <field name="totmkt" style="text-align: right;"/>
+                                <field name="totnt" style="text-align: right;"/>
+                                <field name="tots4" style="text-align: right;"/>
+                                <field name="tottalentlatam" style="text-align: right;"/>
+                                <field name="tottalentusa" style="text-align: right;"/>
+                                <field name="total" widget="float" type="char"/>
+                        </group>
+                        <group>
+                            <span style="text-decoration: underline;">Costos para imputar Interco</span>
+                            <field name="porc_B1"/>
+                            <field name="porc_MKT"/>
+                            <field name="porc_NT"/>
+                            <field name="porc_S4"/>
+                            <field name="porc_talentlatam"/>
+                            <field name="porc_talentusa"/>
+                        </group>
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="revenue_interco_view_tree" model="ir.ui.view">
+        <field name="name">revenue_interco.view.tree</field>
+        <field name="model">revenue.interco</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <!--<field name="periodo"/>-->
+                <field name="mes"/>
+                <field name="anio"   widget="integer" options="{'format': 0}"/>
+                <field name="pais"/>
+                <field name="totb1"/>
+                <field name="porc_B1"/>
+                <field name="totmkt"/>
+                <field name="porc_MKT"/>
+                <field name="totnt"/>
+                <field name="porc_NT"/>
+                <field name="tots4"/>
+                <field name="porc_S4"/>
+                <field name="tottalentlatam"/>
+                <field name="porc_talentlatam"/>
+                <field name="tottalentusa"/>
+                <field name="porc_talentusa"/>
+                <field name="total"/>
+            </tree>
+        </field>
+    </record>
+    <record id="revenue_interco_search_tree" model="ir.ui.view">
+        <field name="name">revenue.interco.search.tree</field>
+        <field name="model">revenue.interco</field>
+        <field name="arch" type="xml">
+        <search>
+            <group  string="Group By">
+                    <field name="periodo"/>
+                   <filter name="periodo" string="Mes y año"  context="{'group_by':'periodo'}"/>
+            </group>
+        </search>
+        </field>
+    </record>
+
+    <record id="revenue_interco_view_pivot" model="ir.ui.view">
+        <field name="name">revenue.interco.view.pivot</field>
+        <field name="model">revenue.interco</field>
+        <field name="arch" type="xml">
+            <pivot string="Revenue">
+                    <!--<field name="total" type="measure" /-->
+                    <field name="totb1" type="measure" />
+                    <field name="totmkt" type="measure" />
+                    <field name="totnt" type="measure" />
+                    <field name="tots4" type="measure" />
+                    <field name="tottalentlatam" type="measure" />
+                    <field name="tottalentusa" type="measure" />
+                    <field name="total" type="measure" />
+                    <field name="anio" type="row" />
+                    <field name="mes" type="row" />
+                    <field name="pais" type="row" />
+            </pivot>
+        </field>
+    </record>
+
+    <record id="action_view_revenue_interco" model="ir.actions.act_window">
+        <field name="name">Revenue Intercompany</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">revenue.interco</field>
+        <field name="view_mode">tree,form,pivot</field>
+    </record>
+
+
+</odoo>
+

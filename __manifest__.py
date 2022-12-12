@@ -17,5 +17,8 @@
         'views/account_intercompany_cost_view.xml',
         'views/hr_employee_inherit_view.xml',
         'views/account_account.xml',
+        'views/resultados.xml',
+        'views/revenue.xml',
+        'views/template.xml',
     ],
 }
