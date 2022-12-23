@@ -32,10 +32,11 @@ class RevenueInterco(models.Model):
     _sql_constraints = [('unique_revenue_mesaniopais', 'unique(mes, anio, pais)',
                          'Ya existe un registro para el período y pais seleccionado')]
 
-    @api.onchange('anio','mes')
+    @api.depends('anio','mes')
     def _compute_periodo(self):
         for rec in self:
-            rec.periodo= rec.mes + ' '+ str(rec.anio)
+            if rec.anio:
+                rec.periodo= rec.mes + ' '+ str(rec.anio)
 
 
     @api.onchange('totb1','totmkt','totnt','tots4','tottalentlatam','tottalentusa')

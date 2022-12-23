@@ -8,8 +8,10 @@ from collections import defaultdict
 _logger = logging.getLogger(__name__)
 
 HORAS_SUELDO=160
-COSTOS_INDIRECTOS=2
-COSTOS_DIRECTOS=1
+#COSTOS_INDIRECTOS=2  prod
+COSTOS_INDIRECTOS=4
+# COSTOS_DIRECTOS=1 prod
+COSTOS_DIRECTOS=2
 DIARIO= 67 #sueldos y jornales
 CUENTA_SUELDOS_APAGAR = 2065
 
@@ -19,6 +21,7 @@ class IntercompanyCostGroups(models.Model):
 
     name=fields.Char('Nombre', required=True)
     subgrupos=fields.One2many('intercompany.cost.subgroups','grupo_id', string='Subgrupo',copy=True, auto_join=True)
+    ctas_comunes = fields.One2many('intercompany.cost.ctascomunes', 'grupo_id', string='Ctas comunes', copy=True, auto_join=True)
     #pais = fields.Selection([('MEX','MEX'),('USA','USA'),('ARG','ARG'),('','')],'Pais para COM-LEADS')
     # tomo pais directo de la cuenta
 class IntercompanyCostSubGroups(models.Model):
@@ -27,6 +30,24 @@ class IntercompanyCostSubGroups(models.Model):
 
     name=fields.Char('Nombre', required=True)
     grupo_id= fields.Many2one('intercompany.cost.groups',string='Grupo padre', required=True)
+    distribucion_costo = fields.Selection([
+        ('B1', 'B1'),
+        ('NT', 'NT'),
+        ('MKT', 'MKT'),
+        ('S4', 'S4'),
+        ('TUSA', 'TALENT USA'),
+        ('TLATAM', 'TALENT LATAM'),
+    ], 'Distribución de costo',)
+
+
+
+class IntercompanyCostCtasComunes(models.Model):
+    _name = 'intercompany.cost.ctascomunes'
+    _description = 'Cuentas comunes'
+
+    grupo_id= fields.Many2one('intercompany.cost.groups',string='Grupo padre', required=True)
+    centro_costos = fields.Many2one('account.analytic.account', string='Centro de Costos',required=True)
+    account_id = fields.Many2one('account.account',string='Cuenta Contable')
     distribucion_costo = fields.Selection([
         ('B1', 'B1'),
         ('NT', 'NT'),
@@ -52,6 +73,9 @@ class IntercompanyCostLine(models.Model):
     costo_contribuciones = fields.Float('Costo Contribuciones',digits=(12,2))
     tipo= fields.Char(string="Tipo de Costo")
     es_freelance= fields.Boolean('Es freelance',store=True)
+    cuenta_sueldo = fields.Char('Cta.Sueldo')
+    cuenta_contribucion = fields.Char('Cta.Contribucion')
+    cuenta_honorario = fields.Char('Cta.Honorario')
 
     _sql_constraints = [('unique_icperiodo', 'unique(date_from, date_to)',
                          'Ya existe un periodo cargado con iguales fechas desde-hasta')]
@@ -71,6 +95,7 @@ class AccountIntercompanyCost(models.Model):
     analytic_line_ids = fields.Many2many('account.analytic.line', 'Cuentas analíticas', compute='_compute_analytic_line')
     intercompany_cost_line = fields.One2many('intercompany.cost.line', 'account_itc_id', string='Intercompany Cost Lines',
                                  copy=True,auto_join=True)
+    comentarios = fields.Text('Datos a verificar')
     @api.depends('date_from', 'date_to')
     def _compute_analytic_line(self):
         aline_ids = self.env['account.analytic.line'].search([('employee_id','!=',False),('date','>=', self.date_from),('date','<=', self.date_to)])
@@ -83,11 +108,21 @@ class AccountIntercompanyCost(models.Model):
         lines_unlink = self.env['intercompany.cost.line'].search([('account_itc_id','=', self.id)])
 #        _logger.info('Borro' +  str(lines_unlink))
         lines_unlink.unlink()
+        #busco proyectos que no estén diferenciados en directos/indirectos
+        self.comentarios=''
+        request_ctrl = "SELECT distinct(account.id), account.name as name  FROM account_analytic_line as acc_line INNER JOIN account_analytic_account as account on account.id=acc_line.account_id " \
+                  " WHERE account.group_id is null and acc_line.date >='" + str(self.date_from) + "' and acc_line.date<='" + str(self.date_to) +"' and account.company_id=1"
+        self.env.cr.execute(request_ctrl)
+
+        _logger.info('ctas sin costo:' + request_ctrl)
+        for record in self.env.cr.dictfetchall():
+                self.comentarios += "Cuenta analitica sin definir como directo/indirecto: " + str(record['name']) +".\n"
         # busco empleados
         result = self.env['account.analytic.line'].read_group(
             [('employee_id', '!=', False), ('date', '>=', self.date_from), ('date', '<=', self.date_to)],
             fields=['employee_id', 'unit_amount'],
             groupby=['employee_id'])
+
 
         for employee in result:
 
@@ -135,10 +170,12 @@ class AccountIntercompanyCost(models.Model):
                                                                                            self.date_to)],
                                                                                          order='hr_cost_date desc')
                     if valores_sueldo_empleado:
+                        es_freelance = not (valores_sueldo_empleado[0].hr_employee_es_rd)
                         valor_sueldo = valores_sueldo_empleado[0].hr_sueldo_facturado
                         valor_contribucion = valores_sueldo_empleado[0].hr_contribuciones
                     else:
-                        _logger.info('empleado '  + str(id_empleado)+ ' no registra valor sueldo')
+                        self.comentarios+= 'El empleado '  + empleado.name + ' no registra valor sueldo. \n'
+                _logger.info('empleado '  + str(id_empleado)+ ' freelance' + str(es_freelance) )
                         # raise UserError(_("No se encontró valor suelde para  empleado" ))
 
                 valor_hora_sueldo = valor_sueldo / HORAS_SUELDO
@@ -171,16 +208,48 @@ class AccountIntercompanyCost(models.Model):
                             id_cuenta = cuenta.get('account_id')[0]
                             horas_trabajadas = cuenta.get('unit_amount')
                             if (total_hrs_directas<=HORAS_SUELDO):
-                                horas_cuenta= horas_trabajadas
-                                horas_indirectas = HORAS_SUELDO - horas_trabajadas
+                                if (horas_total_empleado<=total_hrs_directas):
+                                    #solo trabajó directas
+                                    horas_cuenta = HORAS_SUELDO
+                                    horas_indirectas = 0
+                                else:
+                                    horas_cuenta= horas_trabajadas
+                                    horas_indirectas = HORAS_SUELDO - horas_trabajadas
                             else:
                                 horas_cuenta = HORAS_SUELDO
-                            porcentaje_cuenta=  horas_trabajadas * 100 / total_hrs_directas
+                            if total_hrs_directas>0:
+                                porcentaje_cuenta=  horas_trabajadas * 100 / total_hrs_directas
+                            else:
+                                porcentaje_cuenta=0
                             sueldo_cuenta= valor_hora_sueldo * horas_cuenta * porcentaje_cuenta/100
                             _logger.info('directa :' + str(horas_cuenta) + '-' + str(horas_indirectas) + '-' + str(porcentaje_cuenta)  )
 
+                            cuenta_sueldo=None
+                            cuenta_honorarios=None
+                            cuenta_contribucion=None
+
+
                             if not(es_freelance):
                                 contribuciones_cuenta = valor_hora_contribucion * horas_cuenta * porcentaje_cuenta/100
+
+                                cta_sueldo = self.env['account.account'].search(
+                                    [('area', '=', area), ('unidad_operativa', '=', unidad_operativa),
+                                     ('tipo_cuenta', '=', 'sueldo')],
+                                    limit=1)
+                                if cta_sueldo:
+                                    cuenta_sueldo = cta_sueldo.name
+                                cta_contribucion = self.env['account.account'].search(
+                                    [('area', '=', area), ('unidad_operativa', '=', unidad_operativa),
+                                     ('tipo_cuenta', '=', 'contribucion')], limit=1)
+                                if cta_contribucion:
+                                    cuenta_contribucion = cta_contribucion.name
+                            else:
+                                cta_honorarios = self.env['account.account'].search(
+                                    [('area', '=', area), ('unidad_operativa', '=', unidad_operativa),
+                                     ('tipo_cuenta', '=', 'honorario')],
+                                    limit=1)
+                                if cta_honorarios:
+                                    cuenta_honorarios = cta_honorarios.name
                             vals ={
                                     'account_itc_id': self.id,
                                     'date_from': self.date_from,
@@ -194,6 +263,9 @@ class AccountIntercompanyCost(models.Model):
                                     'costo_contribuciones':contribuciones_cuenta,
                                     'tipo':tipo_costo,
                                     'es_freelance' :es_freelance,
+                                    'cuenta_honorario' : cuenta_honorarios,
+                                    'cuenta_sueldo': cuenta_sueldo,
+                                    'cuenta_contribucion': cuenta_contribucion
                                 }
                             self.env['intercompany.cost.line'].create(vals)
                 #***********  si corresponde indirectas , busco costos indirectos********
@@ -220,16 +292,40 @@ class AccountIntercompanyCost(models.Model):
                                 fields=['account_id', 'unit_amount'],
                                 groupby=['account_id'])
                             _logger.info(
-                                'ceuntas INDIRECTAS:' + str(result_employee))
+                                'cuentas INDIRECTAS:' + str(result_employee))
                             for cuenta in result_employee:
                                 id_cuenta = cuenta.get('account_id')[0]
                                 horas_trabajadas = cuenta.get('unit_amount')
                                 tipo_costo = 'indirectos'
-                                porcentaje_cuenta = horas_trabajadas * 100 / total_hrs_indirectas
+                                if total_hrs_indirectas>0:
+                                    porcentaje_cuenta = horas_trabajadas * 100 / total_hrs_indirectas
+                                else:
+                                    porcentaje_cuenta=0
                                 sueldo_cuenta = valor_hora_sueldo * horas_indirectas * porcentaje_cuenta / 100
+                                cuenta_sueldo = ''
+                                cuenta_honorarios = ''
+                                cuenta_contribucion = ''
 
                                 if not (es_freelance):
                                     contribuciones_cuenta = valor_hora_contribucion * horas_indirectas * porcentaje_cuenta / 100
+                                    cta_sueldo = self.env['account.account'].search(
+                                        [('area', '=', area), ('unidad_operativa', '=', unidad_operativa),
+                                         ('tipo_cuenta', '=', 'sueldo')],
+                                        limit=1)
+                                    if cta_sueldo:
+                                        cuenta_sueldo=cta_sueldo.name
+                                    cta_contribucion = self.env['account.account'].search(
+                                        [('area', '=', area), ('unidad_operativa', '=', unidad_operativa),
+                                         ('tipo_cuenta', '=', 'contribucion')], limit=1)
+                                    if cta_contribucion:
+                                        cuenta_contribucion=cta_contribucion.name
+                                else:
+                                    cta_honorarios = self.env['account.account'].search(
+                                        [('area', '=', area), ('unidad_operativa', '=', unidad_operativa),
+                                         ('tipo_cuenta', '=', 'honorario')],
+                                        limit=1)
+                                    if cta_honorarios:
+                                        cuenta_honorarios=cta_honorarios.name
                                 vals = {
                                     'account_itc_id': self.id,
                                     'date_from': self.date_from,
@@ -243,8 +339,12 @@ class AccountIntercompanyCost(models.Model):
                                     'costo_contribuciones': contribuciones_cuenta,
                                     'tipo': tipo_costo,
                                     'es_freelance': es_freelance,
+                                    'cuenta_honorario': cuenta_honorarios,
+                                    'cuenta_sueldo': cuenta_sueldo,
+                                    'cuenta_contribucion': cuenta_contribucion
                                 }
                                 self.env['intercompany.cost.line'].create(vals)
+
 
         self.state='checkpoint'
 

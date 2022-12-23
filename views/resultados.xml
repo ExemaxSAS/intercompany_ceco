@@ -13,6 +13,10 @@
                     <group>
                         <field name="grupo"  widget="many2many_tags"/>
                     </group>
+                    <group>
+                        <field name="ctacontable_mex"/>
+                        <field name="ctacontable_usa"/>
+                    </group>
                 </sheet>
             </form>
         </field>
@@ -25,6 +29,8 @@
             <tree string="">
                 <field name="resultado" string="Distribucion"/>
                 <field name="grupo"  widget="many2many_tags"/>
+                <field name="ctacontable_mex"/>
+                <field name="ctacontable_usa"/>
             </tree>
         </field>
     </record>
@@ -45,7 +51,7 @@
                     <header>
                         <field name="state" widget="statusbar" />
                         <button name="process_results" string="Procesar" type="object" attrs="{'visible': [('state','!=', 'post')]}" />
-<!--                        <button name="post_intercompany_cost" string="Publicar" type="object" attrs="{'visible': [('state','==', 'checkpoint')]}"/>-->
+                        <button name="post" string="Publicar" type="object" attrs="{'visible': [('state','==', 'checkpoint')]}"/>
                     </header>
                     <group>
                         <field name="mes" />
@@ -81,7 +87,7 @@
                             <!--<field name="op_total" readonly="1"/>-->
                             <field name="op_usa" readonly="1"/>
                             <field name="op_mex" readonly="1"/>
-                            <!--<field name="op_arg" readonly="1"/>-->
+                            <field name="op_arg" readonly="1"/>
                         </group>
                         </page>
                         <page string="SALES">
@@ -160,6 +166,18 @@
                 <field name="mes"/>
                 <field name="anio" widget="integer" options="{'format': 0}" />
                 <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_move_line_tree_interco" model="ir.ui.view">
+        <field name="name">view.move.line.tree</field>
+        <field name="model">account.move.line</field>
+        <field name="inherit_id" ref="account.view_move_line_tree"/>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="grupo_id" optional="show"/>
+                <field name="subgrupo_id" optional="show"/>
             </tree>
         </field>
     </record>

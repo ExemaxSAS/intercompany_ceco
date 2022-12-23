@@ -6,4 +6,5 @@ access_intercompany_cost_groups,intercompany_cost_groups,model_intercompany_cost
 access_intercompany_cost_subgroups,intercompany_cost_subgroups,model_intercompany_cost_subgroups,base.group_user,1,1,1,1
 access_resultados_interco,resultados_interco,model_resultados_interco,base.group_user,1,1,1,1
 access_type_results,type_results,model_type_results,base.group_user,1,1,1,1
+access_intercompany_cost_ctascomunes,intercompany_cost_ctascomunes,model_intercompany_cost_ctascomunes,base.group_user,1,1,1,1
 access_revenue_interco,revenue_interco,model_revenue_interco,base.group_user,1,1,1,1

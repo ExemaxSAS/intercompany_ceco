@@ -20,5 +20,7 @@
         'views/resultados.xml',
         'views/revenue.xml',
         'views/template.xml',
+        'views/resultados.xml',
+
     ],
 }

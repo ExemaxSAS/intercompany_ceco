@@ -42,10 +42,16 @@
                                     <field name="account_id" />
                                     <field name="area_uniope"/>
                                     <field name="tipo"/>
+                                    <field name="cuenta_sueldo"/>
+                                    <field name="cuenta_contribucion"/>
+                                    <field name="cuenta_honorario"/>
                                 </tree>
                             </field>
                         </page>
                     </notebook>
+                    <group>
+                        <field name="comentarios" enabled="0"/>
+                    </group>
                 </sheet>
             </form>
         </field>
@@ -89,9 +95,9 @@
         <field name="model">intercompany.cost.groups</field>
         <field name="arch" type="xml">
             <form string="Grupos de costos">
-                <groop>
+                <group>
                       <field name="name"/>
-                </groop>
+                </group>
                  <notebook>
                  <page string="Subgrupos" name="subgrupos">
                             <field
@@ -126,6 +132,45 @@
                                     />
                                     <field name="name"/>
                                     <field name="distribucion_costo" />
+                                </tree>
+
+                            </field>
+
+                  </page>
+                        <page string="Ctas contables comunes" name="ctas_comunes">
+                            <field
+                                name="ctas_comunes"
+                                widget="section_and_note_one2many"
+                                mode="tree"
+                            >
+                                <form>
+                                    <group>
+                                            <field name="grupo_id"
+                                                force_save="1"
+                                                widget="many2one_barcode"
+                                               />
+                                            <field name="centro_costos"/>
+                                            <field name="distribucion_costo" />
+                                            <field name="account_id"/>
+                                    </group>
+                                </form>
+                                <tree
+                                    string="Ctas Contables comunes"
+                                    editable="bottom"
+                                >
+                                    <control>
+                                        <create name="add_product_control" string="Agrega Cta Contable común"/>
+                                    </control>
+
+                                    <field
+                                        name="grupo_id"
+                                        options="{'no_open': True}"
+                                        force_save="1"
+                                        widget="product_configurator"
+                                    />
+                                    <field name="centro_costos"/>
+                                    <field name="distribucion_costo" />
+                                    <field name="account_id"/>
                                 </tree>
 
                             </field>
