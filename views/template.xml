@@ -32,4 +32,5 @@
         action="action_action_view_account_intercompany_cost"
         parent="account.menu_finance_entries_accounting_miscellaneous"
         sequence="10"/>
+
 </odoo>

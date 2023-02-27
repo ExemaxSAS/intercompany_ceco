@@ -15,7 +15,7 @@ class AccountAccount(models.Model):
     tipo_cuenta= fields.Selection([ ('sueldo', 'Cuenta sueldo'),('honorario', 'Cuenta honorario'),('contribucion', 'Cuenta contribucion')],'Tipo cuenta')
     pais = fields.Selection([('MEX','MEX'),('USA','USA'),('ARG','ARG')],'Pais')
 
-    _sql_constraints = [('unique_account_areauoptipo', 'unique(area, unidad_operativa, tipo_cuenta)',
+    _sql_constraints = [('unique_account_areauoptipo', 'unique(area, unidad_operativa, tipo_cuenta,pais)',
                          'Ya se designó una cuenta contable al Area-Unidad Operativa para el tipo de cuenta seleccionado')]
 
     @api.onchange('grupo')

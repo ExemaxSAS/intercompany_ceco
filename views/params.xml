@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="idcostos_directos" model="ir.config_parameter">
+            <field name="key">idcostos_directos</field>
+            <field name="value">2</field>
+        </record>
+        <record id="idcostos_indirectos" model="ir.config_parameter">
+            <field name="key">idcostos_indirectos</field>
+            <field name="value">4</field>
+        </record>
+        <record id="iddiario_sueldos" model="ir.config_parameter">
+            <field name="key">iddiario_sueldos</field>
+            <field name="value">67</field>
+        </record>
+        <record id="cta_sueldosapagar" model="ir.config_parameter">
+            <field name="key">cta_sueldosapagar</field>
+            <field name="value">2065</field>
+        </record>
+        <record id="codcta_ic_usa" model="ir.config_parameter">
+            <field name="key">codcta_ic_usa</field>
+            <field name="value">112003</field>
+        </record>
+        <record id="codcta_ic_mex" model="ir.config_parameter">
+            <field name="key">codcta_ic_mex</field>
+            <field name="value">112004</field>
+        </record>
+        <record id="diario" model="ir.config_parameter">
+            <field name="key">diario</field>
+            <field name="value">19</field>
+        </record>
+        <record id="company" model="ir.config_parameter">
+            <field name="key">company</field>
+            <field name="value">1</field>
+        </record>
+    </data>
+</odoo>

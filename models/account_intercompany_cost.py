@@ -8,12 +8,6 @@ from collections import defaultdict
 _logger = logging.getLogger(__name__)
 
 HORAS_SUELDO=160
-#COSTOS_INDIRECTOS=2  prod
-COSTOS_INDIRECTOS=4
-# COSTOS_DIRECTOS=1 prod
-COSTOS_DIRECTOS=2
-DIARIO= 67 #sueldos y jornales
-CUENTA_SUELDOS_APAGAR = 2065
 
 class IntercompanyCostGroups(models.Model):
     _name = 'intercompany.cost.groups'
@@ -77,8 +71,7 @@ class IntercompanyCostLine(models.Model):
     cuenta_contribucion = fields.Char('Cta.Contribucion')
     cuenta_honorario = fields.Char('Cta.Honorario')
 
-    _sql_constraints = [('unique_icperiodo', 'unique(date_from, date_to)',
-                         'Ya existe un periodo cargado con iguales fechas desde-hasta')]
+
 class AccountIntercompanyCost(models.Model):
     _name = 'account.intercompany.cost'
     _description = 'Costo entre empresas'
@@ -96,6 +89,9 @@ class AccountIntercompanyCost(models.Model):
     intercompany_cost_line = fields.One2many('intercompany.cost.line', 'account_itc_id', string='Intercompany Cost Lines',
                                  copy=True,auto_join=True)
     comentarios = fields.Text('Datos a verificar')
+
+    _sql_constraints = [('unique_icperiodo', 'unique(date_from, date_to)',
+                         'Ya existe un periodo cargado con iguales fechas desde-hasta')]
     @api.depends('date_from', 'date_to')
     def _compute_analytic_line(self):
         aline_ids = self.env['account.analytic.line'].search([('employee_id','!=',False),('date','>=', self.date_from),('date','<=', self.date_to)])
@@ -103,8 +99,11 @@ class AccountIntercompanyCost(models.Model):
 
     def prepost_intercompany_cost(self):
 
+        COSTOS_INDIRECTOS = int(self.env['ir.config_parameter'].get_param('idcostos_indirectos', ''))
+        COSTOS_DIRECTOS = int(self.env['ir.config_parameter'].get_param('idcostos_directos', ''))
+        _logger.info('costos directos:' + str(COSTOS_DIRECTOS) )
+        _logger.info('costos indirectos:' + str(COSTOS_INDIRECTOS))
         #borro datos existentes si no est está publicado
-
         lines_unlink = self.env['intercompany.cost.line'].search([('account_itc_id','=', self.id)])
 #        _logger.info('Borro' +  str(lines_unlink))
         lines_unlink.unlink()
@@ -349,10 +348,13 @@ class AccountIntercompanyCost(models.Model):
         self.state='checkpoint'
 
     def post_intercompany_cost(self):
+        #PARAMETROS
+        DIARIO = int(self.env['ir.config_parameter'].get_param('diario', ''))
+        CUENTA_SUELDOS_APAGAR =int(self.env['ir.config_parameter'].get_param('cta_sueldosapagar', ''))
         #agrupo por area y cuenta para crear el asiento
         lines = [(5, 0, 0)]
         request= "SELECT  SUM(costo_sueldo) as sum_costosueldo,SUM(costo_contribuciones) as sum_costo_contribuciones,  area, unidad_operativa, account_id, es_freelance " \
-                 " FROM intercompany_cost_line  WHERE account_itc_id =" + str(self.id) + "GROUP BY area, unidad_operativa, account_id, es_freelance" \
+                 " FROM intercompany_cost_line  WHERE account_itc_id =" + str(self.id) + " GROUP BY area, unidad_operativa, account_id, es_freelance"
 
         self.env.cr.execute(request)
         monto_total = 0
