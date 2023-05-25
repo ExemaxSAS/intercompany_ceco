@@ -9,34 +9,25 @@
                 <sheet>
                     <group>
                         <field name="resultado" string="Distribucion"/>
-                        <field name="current_company_id" invisible="1" />
                     </group>
                     <group>
                         <field name="grupo"  widget="many2many_tags"/>
                     </group>
                     <group>
-                        <group name="ctasmex" attrs="{'invisible': [('current_company_id', 'in', [2])]}">
+                        <group name="ctasmex">
                             <field name="ctacontable_B1_mex" style="width:70%%" />
                             <field name="ctacontable_MKT_mex" style="width:70%%"/>
                             <field name="ctacontable_NT_mex" style="width:70%%"/>
                             <field name="ctacontable_S4_mex" style="width:70%%"/>
                             <field name="ctacontable_talent_mex" style="width:70%%"/>
                         </group>
-                        <group name="ctasusa" style="width:50%%" attrs="{'invisible': [('current_company_id', 'in', [3])]}">
+                         <group name="ctasusa" style="width:50%%">
                             <field name="ctacontable_B1_usa"/>
                             <field name="ctacontable_MKT_usa"/>
                             <field name="ctacontable_NT_usa"/>
                             <field name="ctacontable_S4_usa"/>
                             <field name="ctacontable_talent_usa"/>
                         </group>
-                        <group name="ctasarg" style="width:50%%" attrs="{'invisible': [('current_company_id', 'in', [1])]}">
-                            <field name="ctacontable_B1_arg"/>
-                            <field name="ctacontable_MKT_arg"/>
-                            <field name="ctacontable_NT_arg"/>
-                            <field name="ctacontable_S4_arg"/>
-                            <field name="ctacontable_talent_arg"/>
-                        </group>
-                        <group><field name="company_id"/></group>
                     </group>
                 </sheet>
             </form>
@@ -50,26 +41,16 @@
             <tree string="">
                 <field name="resultado" string="Distribucion"/>
                 <field name="grupo"  widget="many2many_tags"/>
-                <field name="current_company_id" invisible="1" />
-              
-                <field name="ctacontable_B1_mex" attrs="{'invisible': [('current_company_id', 'in', [2])], 'column_invisible': [('current_company_id', 'in', [2])]}"/>
-                <field name="ctacontable_MKT_mex" attrs="{'invisible': [('current_company_id', 'in', [2])], 'column_invisible': [('current_company_id', 'in', [2])]}"/>
-                <field name="ctacontable_NT_mex" attrs="{'invisible': [('current_company_id', 'in', [2])], 'column_invisible': [('current_company_id', 'in', [2])]}"/>
-                <field name="ctacontable_S4_mex" attrs="{'invisible': [('current_company_id', 'in', [2])], 'column_invisible': [('current_company_id', 'in', [2])]}"/>
-                <field name="ctacontable_talent_mex" attrs="{'invisible': [('current_company_id', 'in', [2])], 'column_invisible': [('current_company_id', 'in', [2])]}"/>
-            
-                <field name="ctacontable_B1_usa" attrs="{'invisible': [('current_company_id', 'in', [3])], 'column_invisible': [('current_company_id', 'in', [3])]}"/>
-                <field name="ctacontable_MKT_usa" attrs="{'invisible': [('current_company_id', 'in', [3])], 'column_invisible': [('current_company_id', 'in', [3])]}"/>
-                <field name="ctacontable_NT_usa" attrs="{'invisible': [('current_company_id', 'in', [3])], 'column_invisible': [('current_company_id', 'in', [3])]}"/>
-                <field name="ctacontable_S4_usa" attrs="{'invisible': [('current_company_id', 'in', [3])], 'column_invisible': [('current_company_id', 'in', [3])]}"/>
-                <field name="ctacontable_talent_usa" attrs="{'invisible': [('current_company_id', 'in', [3])], 'column_invisible': [('current_company_id', 'in', [3])]}"/>
-            
-                <field name="ctacontable_B1_arg" attrs="{'invisible': [('current_company_id', 'in', [1])], 'column_invisible': [('current_company_id', 'in', [1])]}"/>
-                <field name="ctacontable_MKT_arg" attrs="{'invisible': [('current_company_id', 'in', [1])], 'column_invisible': [('current_company_id', 'in', [1])]}"/>
-                <field name="ctacontable_NT_arg" attrs="{'invisible': [('current_company_id', 'in', [1])], 'column_invisible': [('current_company_id', 'in', [1])]}"/>
-                <field name="ctacontable_S4_arg" attrs="{'invisible': [('current_company_id', 'in', [1])], 'column_invisible': [('current_company_id', 'in', [1])]}"/>
-                <field name="ctacontable_talent_arg" attrs="{'invisible': [('current_company_id', 'in', [1])], 'column_invisible': [('current_company_id', 'in', [1])]}"/>
-                
+                <field name="ctacontable_B1_mex"/>
+                <field name="ctacontable_MKT_mex"/>
+                <field name="ctacontable_NT_mex"/>
+                <field name="ctacontable_S4_mex"/>
+                <field name="ctacontable_talent_mex"/>
+                <field name="ctacontable_B1_usa"/>
+                <field name="ctacontable_MKT_usa"/>
+                <field name="ctacontable_NT_usa"/>
+                <field name="ctacontable_S4_usa"/>
+                <field name="ctacontable_talent_usa"/>
             </tree>
         </field>
     </record>
@@ -96,7 +77,6 @@
                     <group>
                         <field name="mes" />
                         <field name="anio" widget="integer" options="{'format': 0}" />
-                        <field name="current_company_id" invisible="1" />
                     </group>
 
                     <notebook>
@@ -105,182 +85,132 @@
                             <!--<field name="icdirecto_total" readonly="1"/>-->
                             <field name="icdirecto_usa" readonly="1"/>
                             <field name="icdirecto_mex" readonly="1"/>
-                            <field name="icdirecto_arg" readonly="1"/>
                         </group>
                         </page>
                         <page string="Recruiting">
                         <group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [3])]}">
+                            <group>
                                 <field name="recruiting_b1_usa" readonly="1"/>
                                 <field name="recruiting_nt_usa" readonly="1"/>
                                 <field name="recruiting_mkt_usa" readonly="1"/>
                                 <field name="recruiting_s4_usa" readonly="1"/>
                                 <field name="recruiting_talent_usa" readonly="1"/>
                             </group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [2])]}">
+                            <group>
                                 <field name="recruiting_b1_mex" readonly="1"/>
                                 <field name="recruiting_nt_mex" readonly="1"/>
                                 <field name="recruiting_mkt_mex" readonly="1"/>
                                 <field name="recruiting_s4_mex" readonly="1"/>
                                 <field name="recruiting_talent_mex" readonly="1"/>
-                            </group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [1])]}">
-                                <field name="recruiting_b1_arg" readonly="1"/>
-                                <field name="recruiting_nt_arg" readonly="1"/>
-                                <field name="recruiting_mkt_arg" readonly="1"/>
-                                <field name="recruiting_s4_arg" readonly="1"/>
-                                <field name="recruiting_talent_arg" readonly="1"/>
-                            </group>
+                            </group>                            
                         </group>
                         </page>
                         <page string="MKT">
                             <group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [3])]}">
+                            <group>
                                 <field name="mkt_b1_usa" readonly="1"/>
                                 <field name="mkt_nt_usa" readonly="1"/>
                                 <field name="mkt_mkt_usa" readonly="1"/>
                                 <field name="mkt_s4_usa" readonly="1"/>
                                 <field name="mkt_talent_usa" readonly="1"/>
                             </group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [2])]}">
+                            <group>
                                 <field name="mkt_b1_mex" readonly="1"/>
                                 <field name="mkt_nt_mex" readonly="1"/>
                                 <field name="mkt_mkt_mex" readonly="1"/>
                                 <field name="mkt_s4_mex" readonly="1"/>
                                 <field name="mkt_talent_mex" readonly="1"/>
                             </group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [1])]}">
-                                <field name="mkt_b1_arg" readonly="1"/>
-                                <field name="mkt_nt_arg" readonly="1"/>
-                                <field name="mkt_mkt_arg" readonly="1"/>
-                                <field name="mkt_s4_arg" readonly="1"/>
-                                <field name="mkt_talent_arg" readonly="1"/>
-                            </group>
                         </group>
                         </page>
                         <page string="OP">
                             <group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [3])]}">
+                            <group>
                                 <field name="op_b1_usa" readonly="1"/>
                                 <field name="op_nt_usa" readonly="1"/>
                                 <field name="op_mkt_usa" readonly="1"/>
                                 <field name="op_s4_usa" readonly="1"/>
                                 <field name="op_talent_usa" readonly="1"/>
                             </group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [2])]}">
+                            <group>
                                 <field name="op_b1_mex" readonly="1"/>
                                 <field name="op_nt_mex" readonly="1"/>
                                 <field name="op_mkt_mex" readonly="1"/>
                                 <field name="op_s4_mex" readonly="1"/>
                                 <field name="op_talent_mex" readonly="1"/>
                             </group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [1])]}">
-                                <field name="op_b1_arg" readonly="1"/>
-                                <field name="op_nt_arg" readonly="1"/>
-                                <field name="op_mkt_arg" readonly="1"/>
-                                <field name="op_s4_arg" readonly="1"/>
-                                <field name="op_talent_arg" readonly="1"/>
-                            </group>
                         </group>
                         </page>
                         <page string="SALES">
                         <group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [3])]}">
+                            <group>
                                 <field name="sales_b1_usa" readonly="1"/>
                                 <field name="sales_nt_usa" readonly="1"/>
                                 <field name="sales_mkt_usa" readonly="1"/>
                                 <field name="sales_s4_usa" readonly="1"/>
                                 <field name="sales_talent_usa" readonly="1"/>
                             </group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [2])]}">
+                            <group>
                                 <field name="sales_b1_mex" readonly="1"/>
                                 <field name="sales_nt_mex" readonly="1"/>
                                 <field name="sales_mkt_mex" readonly="1"/>
                                 <field name="sales_s4_mex" readonly="1"/>
                                 <field name="sales_talent_mex" readonly="1"/>
                             </group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [1])]}">
-                                <field name="sales_b1_arg" readonly="1"/>
-                                <field name="sales_nt_arg" readonly="1"/>
-                                <field name="sales_mkt_arg" readonly="1"/>
-                                <field name="sales_s4_arg" readonly="1"/>
-                                <field name="sales_talent_arg" readonly="1"/>
-                            </group>
                         </group>
                         </page>
                         <page string="PRESALES">
                         <group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [3])]}">
+                            <group>
                                 <field name="presales_b1_usa" readonly="1"/>
                                 <field name="presales_nt_usa" readonly="1"/>
                                 <field name="presales_mkt_usa" readonly="1"/>
                                 <field name="presales_s4_usa" readonly="1"/>
                                 <field name="presales_talent_usa" readonly="1"/>
                             </group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [2])]}">
+                            <group>
                                 <field name="presales_b1_mex" readonly="1"/>
                                 <field name="presales_nt_mex" readonly="1"/>
                                 <field name="presales_mkt_mex" readonly="1"/>
                                 <field name="presales_s4_mex" readonly="1"/>
                                 <field name="presales_talent_mex" readonly="1"/>
                             </group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [1])]}">
-                                <field name="presales_b1_arg" readonly="1"/>
-                                <field name="presales_nt_arg" readonly="1"/>
-                                <field name="presales_mkt_arg" readonly="1"/>
-                                <field name="presales_s4_arg" readonly="1"/>
-                                <field name="presales_talent_arg" readonly="1"/>
-                            </group>
                         </group>
                         </page>
 
                         <page string="CI">
                         <group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [3])]}">
+                            <group>
                                 <field name="ci_b1_usa" readonly="1"/>
                                 <field name="ci_nt_usa" readonly="1"/>
                                 <field name="ci_mkt_usa" readonly="1"/>
                                 <field name="ci_s4_usa" readonly="1"/>
                                 <field name="ci_talent_usa" readonly="1"/>
                             </group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [2])]}">
+                            <group>
                                 <field name="ci_b1_mex" readonly="1"/>
                                 <field name="ci_nt_mex" readonly="1"/>
                                 <field name="ci_mkt_mex" readonly="1"/>
                                 <field name="ci_s4_mex" readonly="1"/>
                                 <field name="ci_talent_mex" readonly="1"/>
                             </group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [1])]}">
-                                <field name="ci_b1_arg" readonly="1"/>
-                                <field name="ci_nt_arg" readonly="1"/>
-                                <field name="ci_mkt_arg" readonly="1"/>
-                                <field name="ci_s4_arg" readonly="1"/>
-                                <field name="ci_talent_arg" readonly="1"/>
-                            </group>
                         </group>
                         </page>
                          <page string="CI-UN">
                        <group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [3])]}">
+                            <group>
                                 <field name="ciun_b1_usa" readonly="1"/>
                                 <field name="ciun_nt_usa" readonly="1"/>
                                 <field name="ciun_mkt_usa" readonly="1"/>
                                 <field name="ciun_s4_usa" readonly="1"/>
                                 <field name="ciun_talent_usa" readonly="1"/>
                             </group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [2])]}">
+                            <group>
                                 <field name="ciun_b1_mex" readonly="1"/>
                                 <field name="ciun_nt_mex" readonly="1"/>
                                 <field name="ciun_mkt_mex" readonly="1"/>
                                 <field name="ciun_s4_mex" readonly="1"/>
                                 <field name="ciun_talent_mex" readonly="1"/>
-                            </group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [1])]}">
-                                <field name="ciun_b1_arg" readonly="1"/>
-                                <field name="ciun_nt_arg" readonly="1"/>
-                                <field name="ciun_mkt_arg" readonly="1"/>
-                                <field name="ciun_s4_arg" readonly="1"/>
-                                <field name="ciun_talent_arg" readonly="1"/>
                             </group>
                         </group>                        </page>
                         <page string="COM - LEADS">
@@ -294,48 +224,34 @@
                                 <field name="comimkt_mex" readonly="1"/>
                             </group>-->
                           
-                            <group attrs="{'invisible': [('current_company_id', 'in', [3])]}">
+                            <group>
                                 <field name="leadsmkt_b1_usa" readonly="1"/>
                                 <field name="leadsmkt_nt_usa" readonly="1"/>
                                 <field name="leadsmkt_mkt_usa" readonly="1"/>
                                 <field name="leadsmkt_s4_usa" readonly="1"/>
                                 <field name="leadsmkt_talent_usa" readonly="1"/>
                             </group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [2])]}">
+                            <group>
                                 <field name="leadsmkt_b1_mex" readonly="1"/>
                                 <field name="leadsmkt_nt_mex" readonly="1"/>
                                 <field name="leadsmkt_mkt_mex" readonly="1"/>
                                 <field name="leadsmkt_s4_mex" readonly="1"/>
                                 <field name="leadsmkt_talent_mex" readonly="1"/>
                             </group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [1])]}">
-                                <field name="leadsmkt_b1_arg" readonly="1"/>
-                                <field name="leadsmkt_nt_arg" readonly="1"/>
-                                <field name="leadsmkt_mkt_arg" readonly="1"/>
-                                <field name="leadsmkt_s4_arg" readonly="1"/>
-                                <field name="leadsmkt_talent_arg" readonly="1"/>
-                            </group>
 
-                            <group attrs="{'invisible': [('current_company_id', 'in', [3])]}">
+                            <group>
                                 <field name="leadsmkt_b1_usa" string="COM B1 USA" readonly="1"/>
                                 <field name="leadsmkt_nt_usa" string="COM NT USA" readonly="1"/>
                                 <field name="leadsmkt_mkt_usa" string="COM MKT USA" readonly="1"/>
                                 <field name="leadsmkt_s4_usa" string="COM S4 USA" readonly="1"/>
                                 <field name="leadsmkt_talent_usa" string="COM Talent Usa" readonly="1"/>
                             </group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [2])]}">
+                            <group>
                                 <field name="leadsmkt_b1_mex" string="COM B1 MEX" readonly="1"/>
                                 <field name="leadsmkt_nt_mex" string="COM NT MEX" readonly="1"/>
                                 <field name="leadsmkt_mkt_mex" string="COM MKT MEX" readonly="1"/>
                                 <field name="leadsmkt_s4_mex" string="COM S4 MEX" readonly="1"/>
                                 <field name="leadsmkt_talent_mex" string="COM talent Latam" readonly="1"/>
-                            </group>
-                            <group attrs="{'invisible': [('current_company_id', 'in', [1])]}">
-                                <field name="leadsmkt_b1_arg" string="COM B1 ARG" readonly="1"/>
-                                <field name="leadsmkt_nt_arg" string="COM NT ARG" readonly="1"/>
-                                <field name="leadsmkt_mkt_arg" string="COM MKT ARG" readonly="1"/>
-                                <field name="leadsmkt_s4_arg" string="COM S4 ARG" readonly="1"/>
-                                <field name="leadsmkt_talent_arg" string="COM talent Latam ARG" readonly="1"/>
                             </group>
                         
                         </group>
@@ -354,7 +270,6 @@
                 <field name="mes"/>
                 <field name="anio" widget="integer" options="{'format': 0}" />
                 <field name="state"/>
-                <field name="company_id"/>
             </tree>
         </field>
     </record>

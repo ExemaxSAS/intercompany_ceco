@@ -21,6 +21,7 @@
         'views/revenue.xml',
         'views/template.xml',
         'views/resultados.xml',
-
+	    'data/params.xml',
+	    'data/rules.xml',        
     ],
 }

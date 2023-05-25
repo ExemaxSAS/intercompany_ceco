@@ -1,0 +1,473 @@
+2023-04-27 16:13:01,252 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ACA GRUPO OPERACIONES : 
+2023-04-27 16:13:01,252 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma b1:631807.66 
+2023-04-27 16:13:01,252 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma nt:1732378.27 
+2023-04-27 16:13:01,255 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma mkt:701570.14 total_mkt:27458.56 
+2023-04-27 16:13:01,255 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma s4:2982115.65 
+2023-04-27 16:13:01,255 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma tlatam:0 
+2023-04-27 16:13:01,255 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma talentusa:1058196.8 
+2023-04-27 16:13:01,255 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_b1:631807.66 revenue_b1_usa:0.0 
+2023-04-27 16:13:01,256 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_mkt:701570.14 revenue_mkt_usa:0.8387184178631363 
+2023-04-27 16:13:01,256 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_nt:1732378.27 revenue_nt_usa:0.0 
+2023-04-27 16:13:01,256 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_s4:2982115.65 revenue_s4_usa:0.0 
+2023-04-27 16:13:01,257 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_tusa:1058196.8 revenue_tusa_usa:1.0 
+2023-04-27 16:13:01,258 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ACA GRUPO OPERACIONES : 
+2023-04-27 16:13:01,258 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ---------USA--------- : 
+2023-04-27 16:13:01,258 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    b1 usa:0.0 
+2023-04-27 16:13:01,258 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    nt usa:0.0 
+2023-04-27 16:13:01,258 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    mkt usa:588419.797840819 
+2023-04-27 16:13:01,258 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    s4 usa:0.0 
+2023-04-27 16:13:01,259 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    tusa:1058196.8 
+2023-04-27 16:13:01,259 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_b1:631807.66 revenue_b1_mex:0.032850116164397335 
+2023-04-27 16:13:01,259 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_mkt:701570.14 revenue_mkt_mex:0.050257551743427185 
+2023-04-27 16:13:01,260 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_nt:1732378.27 revenue_nt_mex:0.6101341385941634 
+2023-04-27 16:13:01,261 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_s4:2982115.65 revenue_s4_mex:0.9502129634662038 
+2023-04-27 16:13:01,261 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_tlatam:0 revenue_tmex_mex:0.2974206752020993 
+2023-04-27 16:13:01,262 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ---------MEX--------- : 
+2023-04-27 16:13:01,262 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    b1 mex:20754.955024556057 
+2023-04-27 16:13:01,262 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    nt mex:1056983.1234856972 
+2023-04-27 16:13:01,262 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    mkt mex:35259.19761269345 
+2023-04-27 16:13:01,262 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    s4 mex:2833644.9491854445 
+2023-04-27 16:13:01,263 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    tlatam:0.0 
+2023-04-27 16:13:01,263 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_b1:631807.66 revenue_b1_arg:0.9671498838356026 
+2023-04-27 16:13:01,263 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_mkt:701570.14 revenue_mkt_arg:0.1110240303934365 
+2023-04-27 16:13:01,263 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_nt:1732378.27 revenue_nt_arg:0.3898658614058365 
+2023-04-27 16:13:01,263 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_s4:2982115.65 revenue_s4_arg:0.04978703653379624 
+2023-04-27 16:13:01,263 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_tlatam:0 revenue_targ_arg:0.7025793247979008 
+2023-04-27 16:13:01,263 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ---------ARG--------- : 
+2023-04-27 16:13:01,263 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    b1 arg:611052.704975444 
+2023-04-27 16:13:01,263 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    nt arg:675395.1465143028 
+2023-04-27 16:13:01,263 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    mkt arg:77891.1445464875 
+2023-04-27 16:13:01,264 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    s4 arg:148470.70081455552 
+2023-04-27 16:13:01,264 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    tlatam:0.0 
+2023-04-27 16:13:01,267 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10353 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,268 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10354 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,269 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10355 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,271 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13774 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,271 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13775 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,272 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13776 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,273 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:7 subgrupo:B1:$0 
+2023-04-27 16:13:01,273 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:7 subgrupo:B1:$0 
+2023-04-27 16:13:01,274 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10369 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,275 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10370 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,275 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10371 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,277 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13790 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,278 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13791 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,279 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13792 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,280 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:7 subgrupo:NT:$0 
+2023-04-27 16:13:01,280 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:7 subgrupo:NT:$0 
+2023-04-27 16:13:01,282 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10389 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,282 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10390 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,283 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10391 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,284 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13810 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,285 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   parcial cta:13810- subgrupo:MKT $325652.77 
+2023-04-27 16:13:01,285 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13811 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,286 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13812 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,286 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:7 subgrupo:MKT:$325652.77 
+2023-04-27 16:13:01,286 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:7 subgrupo:MKT:$325652.77 
+2023-04-27 16:13:01,287 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10361 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,288 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10362 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,288 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10363 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,289 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13782 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,290 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13783 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,291 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13784 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,291 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:7 subgrupo:S4:$0 
+2023-04-27 16:13:01,291 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:7 subgrupo:S4:$0 
+2023-04-27 16:13:01,292 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10383 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,292 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10384 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,293 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10385 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,293 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13804 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,293 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13805 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,293 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13806 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,294 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:7 subgrupo:TUSA:$0 
+2023-04-27 16:13:01,294 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:7 subgrupo:TUSA:$0 
+2023-04-27 16:13:01,295 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13798 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,295 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   parcial cta:13798- subgrupo:TLATAM $789529.0 
+2023-04-27 16:13:01,295 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10377 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,295 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10378 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,296 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10379 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,296 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13799 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,296 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13800 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,297 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:7 subgrupo:TLATAM:$789529.0 
+2023-04-27 16:13:01,297 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:7 subgrupo:TLATAM:$789529.0 
+2023-04-27 16:13:01,297 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ACA GRUPO SALES : 
+2023-04-27 16:13:01,297 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma b1:0 
+2023-04-27 16:13:01,297 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma nt:0 
+2023-04-27 16:13:01,297 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma mkt:325652.77 
+2023-04-27 16:13:01,297 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma s4:0 
+2023-04-27 16:13:01,297 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma tlatam:789529.0 
+2023-04-27 16:13:01,297 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma talentusa:0 
+2023-04-27 16:13:01,298 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_b1:0 revenue_b1_usa:0.0 
+2023-04-27 16:13:01,298 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_mkt:325652.77 revenue_mkt_usa:0.8387184178631363 
+2023-04-27 16:13:01,298 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_nt:0 revenue_nt_usa:0.0 
+2023-04-27 16:13:01,298 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_s4:0 revenue_s4_usa:0.0 
+2023-04-27 16:13:01,298 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_tusa:0 revenue_tusa_usa:1.0 
+2023-04-27 16:13:01,299 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    b1 usa:0.0 
+2023-04-27 16:13:01,299 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    nt usa:0.0 
+2023-04-27 16:13:01,299 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    mkt usa:273130.97602714784 
+2023-04-27 16:13:01,299 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    s4 usa:0.0 
+2023-04-27 16:13:01,299 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    tusa:0.0 
+2023-04-27 16:13:01,299 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_b1:0 revenue_b1_mex:0.032850116164397335 
+2023-04-27 16:13:01,299 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_mkt:325652.77 revenue_sales_mex:0.050257551743427185 
+2023-04-27 16:13:01,299 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_nt:0 revenue_nt_mex:0.6101341385941634 
+2023-04-27 16:13:01,300 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_s4:0 revenue_s4_mex:0.9502129634662038 
+2023-04-27 16:13:01,300 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_tlatam:789529.0 revenue_tmex_mex:0.2974206752020993 
+2023-04-27 16:13:01,301 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ---------MEX--------- : 
+2023-04-27 16:13:01,301 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    b1 mex:0.0 
+2023-04-27 16:13:01,301 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    nt mex:0.0 
+2023-04-27 16:13:01,301 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    mkt mex:16366.510938665393 
+2023-04-27 16:13:01,301 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    s4 mex:0.0 
+2023-04-27 16:13:01,301 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    tlatam:234822.24827163827 
+2023-04-27 16:13:01,303 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10309 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,304 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10310 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,305 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10311 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,305 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13730 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,306 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   parcial cta:13730- subgrupo:B1 $441722.0 
+2023-04-27 16:13:01,306 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13731 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,307 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13732 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,307 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:6 subgrupo:B1:$441722.0 
+2023-04-27 16:13:01,308 3446266 INFO odoo odoo.addons.account_payment_group.models.account_payment_group: Getting name for payment group 170 
+2023-04-27 16:13:01,309 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:6 subgrupo:B1:$441722.0 
+2023-04-27 16:13:01,311 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10325 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,312 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10326 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,314 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10327 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,314 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13746 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,314 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   parcial cta:13746- subgrupo:NT $100985.1 
+2023-04-27 16:13:01,316 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13747 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,316 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   parcial cta:13747- subgrupo:NT $38220.37 
+2023-04-27 16:13:01,316 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13748 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,317 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   parcial cta:13748- subgrupo:NT $9308.18 
+2023-04-27 16:13:01,317 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:6 subgrupo:NT:$148513.65 
+2023-04-27 16:13:01,318 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:6 subgrupo:NT:$148513.65 
+2023-04-27 16:13:01,318 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10333 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,319 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10334 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,320 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10335 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,320 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13754 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,322 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   parcial cta:13754- subgrupo:MKT $384115.29 
+2023-04-27 16:13:01,322 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13755 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,323 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   parcial cta:13755- subgrupo:MKT $171425.25 
+2023-04-27 16:13:01,323 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13756 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,323 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   parcial cta:13756- subgrupo:MKT $41042.37 
+2023-04-27 16:13:01,325 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:6 subgrupo:MKT:$596582.91 
+2023-04-27 16:13:01,325 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:6 subgrupo:MKT:$596582.91 
+2023-04-27 16:13:01,326 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10317 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,326 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10318 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,326 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10319 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,328 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13738 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,329 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   parcial cta:13738- subgrupo:S4 $284156.95 
+2023-04-27 16:13:01,329 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13739 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,330 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13740 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,331 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:6 subgrupo:S4:$284156.95 
+2023-04-27 16:13:01,332 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:6 subgrupo:S4:$284156.95 
+2023-04-27 16:13:01,333 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10347 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,336 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10348 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,337 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10349 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,339 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13768 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,339 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13769 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,340 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13770 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,341 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:6 subgrupo:TUSA:$0 
+2023-04-27 16:13:01,341 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:6 subgrupo:TUSA:$0 
+2023-04-27 16:13:01,342 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10341 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,342 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10342 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,343 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10343 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,343 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13762 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,343 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13763 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,343 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13764 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,344 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:6 subgrupo:TLATAM:$0 
+2023-04-27 16:13:01,344 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:6 subgrupo:TLATAM:$0 
+2023-04-27 16:13:01,344 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ACA GRUPO PRESALES : 
+2023-04-27 16:13:01,344 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma b1:441722.0 
+2023-04-27 16:13:01,344 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma nt:148513.65 
+2023-04-27 16:13:01,344 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma mkt:596582.91 
+2023-04-27 16:13:01,344 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma s4:284156.95 
+2023-04-27 16:13:01,344 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma tlatam:0 
+2023-04-27 16:13:01,344 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma talentusa:0 
+2023-04-27 16:13:01,344 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_b1:441722.0 revenue_b1_usa:0.0 
+2023-04-27 16:13:01,345 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_mkt:596582.91 revenue_mkt_usa:0.8387184178631363 
+2023-04-27 16:13:01,345 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_nt:148513.65 revenue_nt_usa:0.0 
+2023-04-27 16:13:01,345 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_s4:284156.95 revenue_s4_usa:0.0 
+2023-04-27 16:13:01,345 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_tusa:0 revenue_tusa_usa:1.0 
+2023-04-27 16:13:01,345 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ---------USA--------- : 
+2023-04-27 16:13:01,345 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    b1 usa:0.0 
+2023-04-27 16:13:01,345 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    nt usa:0.0 
+2023-04-27 16:13:01,346 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    mkt usa:500365.07439938583 
+2023-04-27 16:13:01,346 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    s4 usa:0.0 
+2023-04-27 16:13:01,346 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    tusa:0.0 
+2023-04-27 16:13:01,346 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_b1:441722.0 revenue_b1_mex:0.032850116164397335 
+2023-04-27 16:13:01,346 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_mkt:596582.91 revenue_presales_mex:0.050257551743427185 
+2023-04-27 16:13:01,346 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_nt:148513.65 revenue_nt_mex:0.6101341385941634 
+2023-04-27 16:13:01,346 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_s4:284156.95 revenue_s4_mex:0.9502129634662038 
+2023-04-27 16:13:01,347 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_tlatam:0 revenue_tmex_mex:0.2974206752020993 
+2023-04-27 16:13:01,347 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ---------MEX--------- : 
+2023-04-27 16:13:01,347 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    b1 mex:14510.61901236992 
+2023-04-27 16:13:01,347 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    nt mex:90613.24791222508 
+2023-04-27 16:13:01,347 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    mkt mex:29982.796468569366 
+2023-04-27 16:13:01,347 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    s4 mex:270009.6175490179 
+2023-04-27 16:13:01,347 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    tlatam:0.0 
+2023-04-27 16:13:01,349 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14750 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,349 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   parcial cta:14750- subgrupo:B1 $1853113.0 
+2023-04-27 16:13:01,349 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10570 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,350 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10571 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,350 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10572 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,351 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10573 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,351 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13994 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,351 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13993 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,351 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13992 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,352 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13991 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,352 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:8 subgrupo:B1:$1853113.0 
+2023-04-27 16:13:01,352 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:8 subgrupo:B1:$1853113.0 
+2023-04-27 16:13:01,353 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10588 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,353 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10589 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,353 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10590 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,353 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10591 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,354 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:8 subgrupo:NT:$0 
+2023-04-27 16:13:01,354 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:8 subgrupo:NT:$0 
+2023-04-27 16:13:01,354 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10561 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,354 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10562 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,355 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10563 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,355 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10564 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,355 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13982 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,355 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   parcial cta:13982- subgrupo:MKT $2713849.27 
+2023-04-27 16:13:01,355 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13983 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,355 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   parcial cta:13983- subgrupo:MKT $293098.01 
+2023-04-27 16:13:01,355 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13984 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,356 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   parcial cta:13984- subgrupo:MKT $70421.67 
+2023-04-27 16:13:01,356 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13985 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,356 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   parcial cta:13985- subgrupo:MKT $26910.0 
+2023-04-27 16:13:01,356 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:8 subgrupo:MKT:$3104278.95 
+2023-04-27 16:13:01,356 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:8 subgrupo:MKT:$3104278.95 
+2023-04-27 16:13:01,357 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10579 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,357 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10580 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,357 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10581 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,357 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10582 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,357 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14000 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,358 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14001 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,358 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14002 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,358 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14003 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,358 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:8 subgrupo:S4:$0 
+2023-04-27 16:13:01,358 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:8 subgrupo:S4:$0 
+2023-04-27 16:13:01,359 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10604 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,359 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10605 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,359 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10606 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,359 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10607 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,359 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14025 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,360 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14026 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,360 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14027 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,360 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14028 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,360 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:8 subgrupo:TUSA:$0 
+2023-04-27 16:13:01,360 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:8 subgrupo:TUSA:$0 
+2023-04-27 16:13:01,361 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10597 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,361 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10598 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,361 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10599 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,362 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10603 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,362 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10600 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,362 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14018 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,362 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14019 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,362 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14020 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,363 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14021 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,363 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   parcial cta:14021- subgrupo:TLATAM $15939.0 
+2023-04-27 16:13:01,363 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:8 subgrupo:TLATAM:$15939.0 
+2023-04-27 16:13:01,363 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:8 subgrupo:TLATAM:$15939.0 
+2023-04-27 16:13:01,363 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ACA GRUPO CI-UN : 
+2023-04-27 16:13:01,363 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma b1:1853113.0 
+2023-04-27 16:13:01,363 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma nt:0 
+2023-04-27 16:13:01,363 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma mkt:3104278.95 
+2023-04-27 16:13:01,363 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma s4:0 
+2023-04-27 16:13:01,363 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma tlatam:15939.0 
+2023-04-27 16:13:01,363 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma talentusa:0 
+2023-04-27 16:13:01,363 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_b1:1853113.0 revenue_b1_usa:0.0 
+2023-04-27 16:13:01,364 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_mkt:3104278.95 revenue_mkt_usa:0.8387184178631363 
+2023-04-27 16:13:01,364 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_nt:0 revenue_nt_usa:0.0 
+2023-04-27 16:13:01,364 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_s4:0 revenue_s4_usa:0.0 
+2023-04-27 16:13:01,364 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_tusa:0 revenue_tusa_usa:1.0 
+2023-04-27 16:13:01,364 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ---------USA--------- : 
+2023-04-27 16:13:01,364 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    b1 usa:0.0 
+2023-04-27 16:13:01,365 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    nt usa:0.0 
+2023-04-27 16:13:01,365 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    mkt usa:2603615.929549838 
+2023-04-27 16:13:01,365 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    s4 usa:0.0 
+2023-04-27 16:13:01,365 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    tusa:0.0 
+2023-04-27 16:13:01,365 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_b1:1853113.0 revenue_b1_mex:0.032850116164397335 
+2023-04-27 16:13:01,365 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_mkt:3104278.95 revenue_ciun_mex:0.050257551743427185 
+2023-04-27 16:13:01,365 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_nt:0 revenue_nt_mex:0.6101341385941634 
+2023-04-27 16:13:01,365 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_s4:0 revenue_s4_mex:0.9502129634662038 
+2023-04-27 16:13:01,365 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_tlatam:15939.0 revenue_tmex_mex:0.2974206752020993 
+2023-04-27 16:13:01,365 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ---------MEX--------- : 
+2023-04-27 16:13:01,365 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    b1 mex:60874.97731575484 
+2023-04-27 16:13:01,366 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    nt mex:0.0 
+2023-04-27 16:13:01,366 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    mkt mex:156013.4599556568 
+2023-04-27 16:13:01,366 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    s4 mex:0.0 
+2023-04-27 16:13:01,366 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    tlatam:4740.588142046261 
+2023-04-27 16:13:01,368 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: GRUPO:Sales Comisiones ARGCUENTAS USA:account.account() 
+2023-04-27 16:13:01,370 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13850 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,370 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:17 subgrupo:B1:$0 
+2023-04-27 16:13:01,370 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:17 subgrupo:B1:$0 
+2023-04-27 16:13:01,371 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13862 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,371 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:17 subgrupo:NT:$0 
+2023-04-27 16:13:01,371 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:17 subgrupo:NT:$0 
+2023-04-27 16:13:01,372 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13876 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,372 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   parcial cta:13876- subgrupo:MKT $151218.27 
+2023-04-27 16:13:01,372 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:17 subgrupo:MKT:$151218.27 
+2023-04-27 16:13:01,372 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:17 subgrupo:MKT:$151218.27 
+2023-04-27 16:13:01,372 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13856 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,373 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:17 subgrupo:S4:$0 
+2023-04-27 16:13:01,373 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:17 subgrupo:S4:$0 
+2023-04-27 16:13:01,373 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:17 subgrupo:TUSA:$0 
+2023-04-27 16:13:01,373 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:17 subgrupo:TUSA:$0 
+2023-04-27 16:13:01,373 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14508 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,373 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13868 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,374 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:17 subgrupo:TLATAM:$0 
+2023-04-27 16:13:01,374 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:17 subgrupo:TLATAM:$0 
+2023-04-27 16:13:01,374 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10429 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,374 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13855 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,374 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:21 subgrupo:B1:$0 
+2023-04-27 16:13:01,375 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:21 subgrupo:B1:$0 
+2023-04-27 16:13:01,375 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10441 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,375 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13867 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,375 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:21 subgrupo:NT:$0 
+2023-04-27 16:13:01,376 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:21 subgrupo:NT:$0 
+2023-04-27 16:13:01,376 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10455 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,377 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13881 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,377 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   parcial cta:13881- subgrupo:MKT $79413.08 
+2023-04-27 16:13:01,377 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:21 subgrupo:MKT:$79413.08 
+2023-04-27 16:13:01,377 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:21 subgrupo:MKT:$79413.08 
+2023-04-27 16:13:01,378 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10435 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,378 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13861 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,379 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:21 subgrupo:S4:$0 
+2023-04-27 16:13:01,379 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:21 subgrupo:S4:$0 
+2023-04-27 16:13:01,379 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:21 subgrupo:TUSA:$0 
+2023-04-27 16:13:01,379 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:21 subgrupo:TUSA:$0 
+2023-04-27 16:13:01,380 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10447 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,380 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10451 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,380 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13871 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,380 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   parcial cta:13871- subgrupo:TLATAM $66751.98 
+2023-04-27 16:13:01,380 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:21 subgrupo:TLATAM:$66751.98 
+2023-04-27 16:13:01,381 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:21 subgrupo:TLATAM:$66751.98 
+2023-04-27 16:13:01,382 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:24 subgrupo:B1:$0 
+2023-04-27 16:13:01,382 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:24 subgrupo:B1:$0 
+2023-04-27 16:13:01,383 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:24 subgrupo:NT:$0 
+2023-04-27 16:13:01,383 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:24 subgrupo:NT:$0 
+2023-04-27 16:13:01,384 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14525 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,384 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   parcial cta:14525- subgrupo:MKT $39706.54 
+2023-04-27 16:13:01,385 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:24 subgrupo:MKT:$39706.54 
+2023-04-27 16:13:01,385 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:24 subgrupo:MKT:$39706.54 
+2023-04-27 16:13:01,386 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:24 subgrupo:S4:$0 
+2023-04-27 16:13:01,386 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:24 subgrupo:S4:$0 
+2023-04-27 16:13:01,387 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13872 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,387 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:24 subgrupo:TUSA:$0 
+2023-04-27 16:13:01,387 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:24 subgrupo:TUSA:$0 
+2023-04-27 16:13:01,388 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:24 subgrupo:TLATAM:$0 
+2023-04-27 16:13:01,388 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: -------TOTAL grupo:24 subgrupo:TLATAM:$0 
+2023-04-27 16:13:01,388 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ACA GRUPO LEADS MKT: 
+2023-04-27 16:13:01,388 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma b1:0 
+2023-04-27 16:13:01,388 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma nt:0 
+2023-04-27 16:13:01,388 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma mkt:270337.88999999996 
+2023-04-27 16:13:01,388 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma s4:0 
+2023-04-27 16:13:01,389 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma tlatam:66751.98 
+2023-04-27 16:13:01,389 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    suma talentusa:0 
+2023-04-27 16:13:01,389 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_b1:0 revenue_b1_usa:0.0 
+2023-04-27 16:13:01,389 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_mkt:270337.88999999996 revenue_mkt_usa:0.8387184178631363 
+2023-04-27 16:13:01,389 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_nt:0 revenue_nt_usa:0.0 
+2023-04-27 16:13:01,390 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_s4:0 revenue_s4_usa:0.0 
+2023-04-27 16:13:01,390 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_tusa:0 revenue_tusa_usa:1.0 
+2023-04-27 16:13:01,390 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ---------USA--------- : 
+2023-04-27 16:13:01,390 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    b1 usa:0.0 
+2023-04-27 16:13:01,390 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    nt usa:0.0 
+2023-04-27 16:13:01,390 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    mkt usa:226737.36738925852 
+2023-04-27 16:13:01,390 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    s4 usa:0.0 
+2023-04-27 16:13:01,390 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    tusa:0.0 
+2023-04-27 16:13:01,391 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_b1:0 revenue_b1_mex:0.032850116164397335 
+2023-04-27 16:13:01,391 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_mkt:270337.88999999996 revenue_leadsmkt_mex:0.050257551743427185 
+2023-04-27 16:13:01,391 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_nt:0 revenue_nt_mex:0.6101341385941634 
+2023-04-27 16:13:01,391 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_s4:0 revenue_s4_mex:0.9502129634662038 
+2023-04-27 16:13:01,391 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:   suma_tlatam:66751.98 revenue_tmex_mex:0.2974206752020993 
+2023-04-27 16:13:01,391 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ---------MEX--------- : 
+2023-04-27 16:13:01,391 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    b1 mex:0.0 
+2023-04-27 16:13:01,391 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    nt mex:0.0 
+2023-04-27 16:13:01,391 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    mkt mex:13586.520494883924 
+2023-04-27 16:13:01,391 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    s4 mex:0.0 
+2023-04-27 16:13:01,391 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:    tlatam:19853.418962677028 
+2023-04-27 16:13:01,393 3446266 INFO odoo werkzeug: 181.239.88.80 - - [27/Apr/2023 16:13:01] "POST /web/dataset/call_button HTTP/1.1" 200 - 356 0.180 0.248
+2023-04-27 16:13:01,398 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ACA GRUPO CI PAIS: 
+2023-04-27 16:13:01,399 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: grupo ci:9 
+2023-04-27 16:13:01,399 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: cuentas_comunes:intercompany.cost.ctascomunes() 
+2023-04-27 16:13:01,400 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: GRUPO CI :ADMCUENTAS:account.account(14059, 14060, 14061) 
+2023-04-27 16:13:01,400 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14059 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,400 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14060 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,401 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14061 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,401 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: TOTAL grupo:6407971.17 
+2023-04-27 16:13:01,401 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ACA GRUPO CI PAIS: 
+2023-04-27 16:13:01,401 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: grupo ci:10 
+2023-04-27 16:13:01,402 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: cuentas_comunes:intercompany.cost.ctascomunes() 
+2023-04-27 16:13:01,403 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: GRUPO CI :EXPENSESCUENTAS:account.account(14076, 14077, 14078, 14079, 14080, 14081, 14082, 14083, 14084, 14085, 14086, 14087, 14088, 14089, 14090, 14091, 14092, 14093, 14094, 14095, 14096, 14097, 14098, 14099, 14100, 14101, 14102, 14103, 14104, 14105, 14106, 14107, 14108, 14109, 14110, 14111, 14113, 14114, 14115) 
+2023-04-27 16:13:01,403 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14076 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,403 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14077 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,404 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14078 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,404 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14079 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,404 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14080 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,404 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14081 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,404 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14082 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,405 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14083 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,405 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14084 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,405 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14085 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,405 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14086 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,405 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14087 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,406 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14088 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,406 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14089 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,406 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14090 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,406 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14091 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,406 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14092 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,406 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14093 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,407 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14094 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,407 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14095 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,407 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14096 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,407 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14097 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,407 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14098 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,408 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14099 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,408 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14100 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,408 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14101 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,408 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14102 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,408 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14103 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,408 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14104 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,409 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14105 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,409 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14106 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,409 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14107 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,409 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14108 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,409 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14109 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,409 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14110 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,409 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14111 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,410 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14113 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,410 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14114 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,410 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14115 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,410 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: TOTAL grupo:11036991.599999998 
+2023-04-27 16:13:01,410 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ACA GRUPO CI PAIS: 
+2023-04-27 16:13:01,411 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: grupo ci:11 
+2023-04-27 16:13:01,411 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: cuentas_comunes:intercompany.cost.ctascomunes() 
+2023-04-27 16:13:01,412 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: GRUPO CI :GGCUENTAS:account.account(14063, 14064, 14065) 
+2023-04-27 16:13:01,412 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14063 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,412 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14064 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,412 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14065 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,413 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: TOTAL grupo:2851425.05 
+2023-04-27 16:13:01,413 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ACA GRUPO CI PAIS: 
+2023-04-27 16:13:01,413 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: grupo ci:12 
+2023-04-27 16:13:01,413 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: cuentas_comunes:intercompany.cost.ctascomunes() 
+2023-04-27 16:13:01,414 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: GRUPO CI :RRHHCUENTAS:account.account(14067, 14068, 14069) 
+2023-04-27 16:13:01,415 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14067 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,415 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14068 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,415 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14069 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,415 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: TOTAL grupo:3451755.2800000003 
+2023-04-27 16:13:01,416 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ACA GRUPO CI PAIS: 
+2023-04-27 16:13:01,416 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: grupo ci:13 
+2023-04-27 16:13:01,416 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: cuentas_comunes:intercompany.cost.ctascomunes() 
+2023-04-27 16:13:01,417 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: GRUPO CI :MKT INDIRECTO ITPS ONECUENTAS:account.account(14071, 14072, 14073, 14074) 
+2023-04-27 16:13:01,417 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14071 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,417 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14072 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,418 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14073 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,418 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14074 and parent_state='posted' and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-27 16:13:01,418 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: TOTAL grupo:692470.16 
+2023-04-27 16:13:01,418 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: suma total CI:24440613.259999998 
+2023-04-27 16:13:01,418 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:  PAIS :MEX COSTO total-107603.53 
+2023-04-27 16:13:01,419 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: revenue mex:0.29 
+2023-04-27 16:13:01,419 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados:  PAIS :USA COSTO total-124730.0 
+2023-04-27 16:13:01,419 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: revenue usa:0.34 
+2023-04-27 16:13:01,419 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ci_total:15397586.353799999 
+2023-04-27 16:13:01,419 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ci_mex:7087777.845399999 
+2023-04-27 16:13:01,419 3446266 INFO demo6 odoo.addons.intercompany_ceco.models.resultados: ci_usa:8309808.5084 
