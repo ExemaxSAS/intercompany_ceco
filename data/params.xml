@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Costos Directos -->
+        <!-- ARG -->
+        <record id="idcostos_directos-1" model="ir.config_parameter">
+            <field name="key">idcostos_directos-1</field>
+            <field name="value">1</field>
+        </record>
+        <!-- MEX -->
+        <record id="idcostos_directos-2" model="ir.config_parameter">
+            <field name="key">idcostos_directos-2</field>
+            <field name="value">6</field>
+        </record>
+        <!-- USA -->
+        <record id="idcostos_directos-3" model="ir.config_parameter">
+            <field name="key">idcostos_directos-3</field>
+            <field name="value">8</field>
+        </record>
+        <!-- Costos Indirectos -->
+        <record id="idcostos_indirectos-1" model="ir.config_parameter">
+            <field name="key">idcostos_indirectos-1</field>
+            <field name="value">2</field>
+        </record>
+        <record id="idcostos_indirectos-2" model="ir.config_parameter">
+            <field name="key">idcostos_indirectos-2</field>
+            <field name="value">7</field>
+        </record>
+        <record id="idcostos_indirectos-3" model="ir.config_parameter">
+            <field name="key">idcostos_indirectos-3</field>
+            <field name="value">9</field>
+        </record>
+        <!-- CUENTAS SUELDOS -->
+        <record id="cta_sueldosapagar-1" model="ir.config_parameter">
+            <field name="key">cta_sueldosapagar-1</field>
+            <field name="value">15251</field>
+        </record>
+        <record id="cta_sueldosapagar-2" model="ir.config_parameter">
+            <field name="key">cta_sueldosapagar-2</field>
+            <field name="value">15258</field>
+        </record>
+        <record id="cta_sueldosapagar-3" model="ir.config_parameter">
+            <field name="key">cta_sueldosapagar-3</field>
+            <field name="value">15263</field>
+        </record>
+        <!-- DIARIOS -->
+        <record id="diario-1" model="ir.config_parameter">
+            <field name="key">diario-1</field>
+            <field name="value">3</field>
+        </record>
+        <record id="diario-2" model="ir.config_parameter">
+            <field name="key">diario-2</field>
+            <field name="value">15</field>
+        </record>
+        <record id="diario-3" model="ir.config_parameter">
+            <field name="key">diario-3</field>
+            <field name="value">23</field>
+        </record>
+        <!-- COD. CUENTAS -->
+        <record id="codcta_ic_arg" model="ir.config_parameter">
+            <field name="key">codcta_ic_arg</field>
+            <field name="value">1120055</field>
+        </record>
+        <record id="codcta_ic_mex" model="ir.config_parameter">
+            <field name="key">codcta_ic_mex</field>
+            <field name="value">112004</field>
+        </record>
+        <record id="codcta_ic_usa" model="ir.config_parameter">
+            <field name="key">codcta_ic_usa</field>
+            <field name="value">112003</field>
+        </record>
+        
+
+
+        <record id="iddiario_sueldos" model="ir.config_parameter">
+            <field name="key">iddiario_sueldos</field>
+            <field name="value">67</field>
+        </record>
+        
+        
+        
+      
+        <!-- <record id="company" model="ir.config_parameter">
+            <field name="key">company</field>
+            <field name="value">1</field>
+        </record> -->
+    </data>
+</odoo>

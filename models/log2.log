@@ -1,0 +1,806 @@
+2023-04-18 15:24:05,904 2597300 INFO demo6 o.interco.r: GRUPO:COSTO DIRECTO A CLIENTE MEX - USACUENTAS MEX:account.account() 
+2023-04-18 15:24:05,910 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10520 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,912 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10521 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,912 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10522 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,912 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10523 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,913 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13941 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,913 2597300 INFO demo6 o.interco.r:   parcial cta:13941- subgrupo:B1 $95825.97 
+2023-04-18 15:24:05,913 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13942 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,913 2597300 INFO demo6 o.interco.r:   parcial cta:13942- subgrupo:B1 $52925.86 
+2023-04-18 15:24:05,913 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13943 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,913 2597300 INFO demo6 o.interco.r:   parcial cta:13943- subgrupo:B1 $12985.92 
+2023-04-18 15:24:05,913 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13944 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,913 2597300 INFO demo6 o.interco.r:   parcial cta:13944- subgrupo:B1 $3093.15 
+2023-04-18 15:24:05,913 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:2 subgrupo:B1:$164830.90000000002 
+2023-04-18 15:24:05,914 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:2 subgrupo:B1:$164830.90000000002 
+2023-04-18 15:24:05,914 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10529 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,914 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10530 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,914 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10531 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,915 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10532 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,915 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13950 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,915 2597300 INFO demo6 o.interco.r:   parcial cta:13950- subgrupo:NT $25091.01 
+2023-04-18 15:24:05,915 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13951 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,915 2597300 INFO demo6 o.interco.r:   parcial cta:13951- subgrupo:NT $18405.16 
+2023-04-18 15:24:05,915 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13952 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,915 2597300 INFO demo6 o.interco.r:   parcial cta:13952- subgrupo:NT $4515.88 
+2023-04-18 15:24:05,915 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13953 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,915 2597300 INFO demo6 o.interco.r:   parcial cta:13953- subgrupo:NT $2062.1 
+2023-04-18 15:24:05,915 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:2 subgrupo:NT:$50074.149999999994 
+2023-04-18 15:24:05,916 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:2 subgrupo:NT:$50074.149999999994 
+2023-04-18 15:24:05,916 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10511 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,916 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10512 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,916 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10513 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,917 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10514 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,917 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13932 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,917 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13933 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,917 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13934 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,917 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13935 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,917 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:2 subgrupo:MKT:$0 
+2023-04-18 15:24:05,917 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:2 subgrupo:MKT:$0 
+2023-04-18 15:24:05,918 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10538 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,918 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10539 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,918 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10540 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,918 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10541 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,919 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13959 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,919 2597300 INFO demo6 o.interco.r:   parcial cta:13959- subgrupo:S4 $105370.84 
+2023-04-18 15:24:05,919 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13960 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,919 2597300 INFO demo6 o.interco.r:   parcial cta:13960- subgrupo:S4 $65440.85 
+2023-04-18 15:24:05,919 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13961 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,920 2597300 INFO demo6 o.interco.r:   parcial cta:13961- subgrupo:S4 $16077.69 
+2023-04-18 15:24:05,920 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13962 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,920 2597300 INFO demo6 o.interco.r:   parcial cta:13962- subgrupo:S4 $6186.3 
+2023-04-18 15:24:05,920 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:2 subgrupo:S4:$193075.68 
+2023-04-18 15:24:05,920 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:2 subgrupo:S4:$193075.68 
+2023-04-18 15:24:05,921 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10554 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,921 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10555 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,921 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10556 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,921 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10557 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,921 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13975 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,921 2597300 INFO demo6 o.interco.r:   parcial cta:13975- subgrupo:TUSA $843072.75 
+2023-04-18 15:24:05,921 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13976 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,922 2597300 INFO demo6 o.interco.r:   parcial cta:13976- subgrupo:TUSA $303535.42 
+2023-04-18 15:24:05,922 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13977 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,922 2597300 INFO demo6 o.interco.r:   parcial cta:13977- subgrupo:TUSA $74261.78 
+2023-04-18 15:24:05,922 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13978 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,922 2597300 INFO demo6 o.interco.r:   parcial cta:13978- subgrupo:TUSA $55676.7 
+2023-04-18 15:24:05,922 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:2 subgrupo:TUSA:$1276546.65 
+2023-04-18 15:24:05,922 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:2 subgrupo:TUSA:$1276546.65 
+2023-04-18 15:24:05,923 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10547 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,923 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10548 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,923 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10549 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,923 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10550 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,923 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13968 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,923 2597300 INFO demo6 o.interco.r:   parcial cta:13968- subgrupo:TLATAM $1910122.63 
+2023-04-18 15:24:05,923 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13969 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,924 2597300 INFO demo6 o.interco.r:   parcial cta:13969- subgrupo:TLATAM $695502.46 
+2023-04-18 15:24:05,924 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13970 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,924 2597300 INFO demo6 o.interco.r:   parcial cta:13970- subgrupo:TLATAM $167939.36 
+2023-04-18 15:24:05,924 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13971 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,924 2597300 INFO demo6 o.interco.r:   parcial cta:13971- subgrupo:TLATAM $139191.75 
+2023-04-18 15:24:05,924 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:2 subgrupo:TLATAM:$2912756.1999999997 
+2023-04-18 15:24:05,924 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:2 subgrupo:TLATAM:$2912756.1999999997 
+2023-04-18 15:24:05,924 2597300 INFO demo6 o.interco.r: ACA RECRUITING : 
+2023-04-18 15:24:05,924 2597300 INFO demo6 o.interco.r:    suma b1:164830.90000000002 
+2023-04-18 15:24:05,924 2597300 INFO demo6 o.interco.r:    suma nt:50074.149999999994 
+2023-04-18 15:24:05,925 2597300 INFO demo6 o.interco.r:  PAIS :ARG COSTO totmkt-3048.56 
+2023-04-18 15:24:05,925 2597300 INFO demo6 o.interco.r:  PAIS :MEX COSTO totmkt-1380.0 
+2023-04-18 15:24:05,925 2597300 INFO demo6 o.interco.r:  PAIS :USA COSTO totmkt-23030.0 
+2023-04-18 15:24:05,925 2597300 INFO demo6 o.interco.r:    suma mkt:0 total_mkt:27458.56 
+2023-04-18 15:24:05,925 2597300 INFO demo6 o.interco.r:    suma s4:193075.68 
+2023-04-18 15:24:05,925 2597300 INFO demo6 o.interco.r:    suma tlatam:2912756.1999999997 
+2023-04-18 15:24:05,925 2597300 INFO demo6 o.interco.r:    suma talentusa:1276546.65 
+2023-04-18 15:24:05,925 2597300 INFO demo6 o.interco.r:  PAIS :ARG COSTO totb1-28469.73 
+2023-04-18 15:24:05,926 2597300 INFO demo6 o.interco.r:  PAIS :MEX COSTO totb1-967.0 
+2023-04-18 15:24:05,926 2597300 INFO demo6 o.interco.r:  PAIS :USA COSTO totb1-0.0 
+2023-04-18 15:24:05,926 2597300 INFO demo6 o.interco.r:   suma_b1:164830.90000000002 revenue_b1_usa:0.0 
+2023-04-18 15:24:05,926 2597300 INFO demo6 o.interco.r:   suma_mkt:0 revenue_mkt_usa:0.8387184178631363 
+2023-04-18 15:24:05,926 2597300 INFO demo6 o.interco.r:  PAIS :ARG COSTO totnt-7689.57 
+2023-04-18 15:24:05,927 2597300 INFO demo6 o.interco.r:  PAIS :MEX COSTO totnt-12034.06 
+2023-04-18 15:24:05,927 2597300 INFO demo6 o.interco.r:  PAIS :USA COSTO totnt-0.0 
+2023-04-18 15:24:05,927 2597300 INFO demo6 o.interco.r:   suma_nt:50074.149999999994 revenue_nt_usa:0.0 
+2023-04-18 15:24:05,927 2597300 INFO demo6 o.interco.r:  PAIS :ARG COSTO tots4-2867.22 
+2023-04-18 15:24:05,927 2597300 INFO demo6 o.interco.r:  PAIS :MEX COSTO tots4-54722.47 
+2023-04-18 15:24:05,928 2597300 INFO demo6 o.interco.r:  PAIS :USA COSTO tots4-0.0 
+2023-04-18 15:24:05,928 2597300 INFO demo6 o.interco.r:   suma_s4:193075.68 revenue_s4_usa:0.0 
+2023-04-18 15:24:05,928 2597300 INFO demo6 o.interco.r:  PAIS :ARG COSTO tottalentusa-0.0 
+2023-04-18 15:24:05,928 2597300 INFO demo6 o.interco.r:  PAIS :MEX COSTO tottalentusa-0.0 
+2023-04-18 15:24:05,928 2597300 INFO demo6 o.interco.r:  PAIS :USA COSTO tottalentusa-101700.0 
+2023-04-18 15:24:05,928 2597300 INFO demo6 o.interco.r:   suma_tusa:1276546.65 revenue_tusa_usa:1.0 
+2023-04-18 15:24:05,928 2597300 INFO demo6 o.interco.r:    b1 usa:0.0 
+2023-04-18 15:24:05,928 2597300 INFO demo6 o.interco.r:    nt usa:0.0 
+2023-04-18 15:24:05,928 2597300 INFO demo6 o.interco.r:    mkt usa:0.0 
+2023-04-18 15:24:05,928 2597300 INFO demo6 o.interco.r:    s4 usa:0.0 
+2023-04-18 15:24:05,929 2597300 INFO demo6 o.interco.r:    tusa:1276546.65 
+2023-04-18 15:24:05,929 2597300 INFO demo6 o.interco.r: ---------MEX--------- : 
+2023-04-18 15:24:05,929 2597300 INFO demo6 o.interco.r:   suma_b1:164830.90000000002 revenue_b1_mex:0.032850116164397335 
+2023-04-18 15:24:05,929 2597300 INFO demo6 o.interco.r:   suma_mkt:0 revenue_mkt_mex:0.050257551743427185 
+2023-04-18 15:24:05,929 2597300 INFO demo6 o.interco.r:   suma_nt:50074.149999999994 revenue_nt_mex:0.6101341385941634 
+2023-04-18 15:24:05,929 2597300 INFO demo6 o.interco.r:   suma_s4:193075.68 revenue_s4_mex:0.9502129634662038 
+2023-04-18 15:24:05,930 2597300 INFO demo6 o.interco.r:  PAIS :ARG COSTO tottalentlatam-90946.28 
+2023-04-18 15:24:05,930 2597300 INFO demo6 o.interco.r:  PAIS :MEX COSTO tottalentlatam-38500.0 
+2023-04-18 15:24:05,930 2597300 INFO demo6 o.interco.r:  PAIS :USA COSTO tottalentlatam-0.0 
+2023-04-18 15:24:05,930 2597300 INFO demo6 o.interco.r: revenue_tlatam_arg:90946.28 
+2023-04-18 15:24:05,930 2597300 INFO demo6 o.interco.r: revenue_tlatam_mex:38500.0 
+2023-04-18 15:24:05,930 2597300 INFO demo6 o.interco.r: revenue_tlatam_usa:0.0 
+2023-04-18 15:24:05,930 2597300 INFO demo6 o.interco.r: revenue_interco_total_latam:129446.28 
+2023-04-18 15:24:05,930 2597300 INFO demo6 o.interco.r:   suma_tlatam:2912756.1999999997 revenue_tmex_mex:0.2974206752020993 
+2023-04-18 15:24:05,931 2597300 INFO demo6 o.interco.r: ---------MEX--------- : 
+2023-04-18 15:24:05,931 2597300 INFO demo6 o.interco.r:    b1 mex:5414.714212482161 
+2023-04-18 15:24:05,931 2597300 INFO demo6 o.interco.r:    nt mex:30551.948376084925 
+2023-04-18 15:24:05,931 2597300 INFO demo6 o.interco.r:    mkt mex:0.0 
+2023-04-18 15:24:05,931 2597300 INFO demo6 o.interco.r:    s4 mex:183463.01406605245 
+2023-04-18 15:24:05,931 2597300 INFO demo6 o.interco.r:    tlatam:866313.915703101 
+2023-04-18 15:24:05,932 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10470 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,932 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10471 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,932 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10472 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,933 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10473 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,933 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13891 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,933 2597300 INFO demo6 o.interco.r:   parcial cta:13891- subgrupo:B1 $232497.8 
+2023-04-18 15:24:05,933 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13892 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,933 2597300 INFO demo6 o.interco.r:   parcial cta:13892- subgrupo:B1 $14562.88 
+2023-04-18 15:24:05,933 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13893 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,933 2597300 INFO demo6 o.interco.r:   parcial cta:13893- subgrupo:B1 $3498.19 
+2023-04-18 15:24:05,933 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13894 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,933 2597300 INFO demo6 o.interco.r:   parcial cta:13894- subgrupo:B1 $63581.06 
+2023-04-18 15:24:05,934 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:4 subgrupo:B1:$314139.93 
+2023-04-18 15:24:05,934 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:4 subgrupo:B1:$314139.93 
+2023-04-18 15:24:05,934 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10488 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,935 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10489 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,935 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10490 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,935 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10491 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,935 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13909 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,935 2597300 INFO demo6 o.interco.r:   parcial cta:13909- subgrupo:NT $28629.81 
+2023-04-18 15:24:05,935 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13910 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,935 2597300 INFO demo6 o.interco.r:   parcial cta:13910- subgrupo:NT $14749.46 
+2023-04-18 15:24:05,935 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13911 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,936 2597300 INFO demo6 o.interco.r:   parcial cta:13911- subgrupo:NT $3549.02 
+2023-04-18 15:24:05,936 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13912 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,936 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:4 subgrupo:NT:$46928.29 
+2023-04-18 15:24:05,936 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:4 subgrupo:NT:$46928.29 
+2023-04-18 15:24:05,936 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10461 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,937 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10462 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,937 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10463 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,937 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10464 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,937 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13882 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,937 2597300 INFO demo6 o.interco.r:   parcial cta:13882- subgrupo:MKT $239119.12 
+2023-04-18 15:24:05,937 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13883 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,938 2597300 INFO demo6 o.interco.r:   parcial cta:13883- subgrupo:MKT $91594.32 
+2023-04-18 15:24:05,938 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13884 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,938 2597300 INFO demo6 o.interco.r:   parcial cta:13884- subgrupo:MKT $21410.24 
+2023-04-18 15:24:05,938 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13885 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,938 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:4 subgrupo:MKT:$352123.68 
+2023-04-18 15:24:05,938 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:4 subgrupo:MKT:$352123.68 
+2023-04-18 15:24:05,939 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10479 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,939 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10480 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,939 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10481 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,939 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10482 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,940 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13900 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,940 2597300 INFO demo6 o.interco.r:   parcial cta:13900- subgrupo:S4 $75069.92 
+2023-04-18 15:24:05,940 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13901 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,940 2597300 INFO demo6 o.interco.r:   parcial cta:13901- subgrupo:S4 $9386.02 
+2023-04-18 15:24:05,940 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13902 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,940 2597300 INFO demo6 o.interco.r:   parcial cta:13902- subgrupo:S4 $2258.47 
+2023-04-18 15:24:05,940 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13903 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,940 2597300 INFO demo6 o.interco.r:   parcial cta:13903- subgrupo:S4 $203133.89 
+2023-04-18 15:24:05,940 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:4 subgrupo:S4:$289848.30000000005 
+2023-04-18 15:24:05,940 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:4 subgrupo:S4:$289848.30000000005 
+2023-04-18 15:24:05,941 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10504 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,941 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10505 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,941 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10506 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,941 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10507 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,942 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13925 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,942 2597300 INFO demo6 o.interco.r:   parcial cta:13925- subgrupo:TUSA $101849.16 
+2023-04-18 15:24:05,942 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13926 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,942 2597300 INFO demo6 o.interco.r:   parcial cta:13926- subgrupo:TUSA $47180.94 
+2023-04-18 15:24:05,942 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13927 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,942 2597300 INFO demo6 o.interco.r:   parcial cta:13927- subgrupo:TUSA $11122.71 
+2023-04-18 15:24:05,942 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13928 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,942 2597300 INFO demo6 o.interco.r:   parcial cta:13928- subgrupo:TUSA $76733.83 
+2023-04-18 15:24:05,942 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:4 subgrupo:TUSA:$236886.64 
+2023-04-18 15:24:05,942 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:4 subgrupo:TUSA:$236886.64 
+2023-04-18 15:24:05,943 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10497 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,943 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10498 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,943 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10499 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,944 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10500 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,944 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13918 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,944 2597300 INFO demo6 o.interco.r:   parcial cta:13918- subgrupo:TLATAM $112735.91 
+2023-04-18 15:24:05,944 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13919 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,944 2597300 INFO demo6 o.interco.r:   parcial cta:13919- subgrupo:TLATAM $8045.16 
+2023-04-18 15:24:05,944 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13920 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,944 2597300 INFO demo6 o.interco.r:   parcial cta:13920- subgrupo:TLATAM $1935.83 
+2023-04-18 15:24:05,944 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13921 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,944 2597300 INFO demo6 o.interco.r:   parcial cta:13921- subgrupo:TLATAM $252266.5 
+2023-04-18 15:24:05,944 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:4 subgrupo:TLATAM:$374983.4 
+2023-04-18 15:24:05,945 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:4 subgrupo:TLATAM:$374983.4 
+2023-04-18 15:24:05,945 2597300 INFO demo6 o.interco.r: ACA GRUPO MKT : 
+2023-04-18 15:24:05,945 2597300 INFO demo6 o.interco.r:    suma b1:314139.93 
+2023-04-18 15:24:05,945 2597300 INFO demo6 o.interco.r:    suma nt:46928.29 
+2023-04-18 15:24:05,945 2597300 INFO demo6 o.interco.r:    suma mkt:352123.68 total_mkt:27458.56 
+2023-04-18 15:24:05,945 2597300 INFO demo6 o.interco.r:    suma s4:289848.30000000005 
+2023-04-18 15:24:05,945 2597300 INFO demo6 o.interco.r:    suma tlatam:374983.4 
+2023-04-18 15:24:05,945 2597300 INFO demo6 o.interco.r:    suma talentusa:236886.64 
+2023-04-18 15:24:05,945 2597300 INFO demo6 o.interco.r:   suma_b1:314139.93 revenue_b1_usa:0.0 
+2023-04-18 15:24:05,945 2597300 INFO demo6 o.interco.r:   suma_mkt:352123.68 revenue_mkt_usa:0.8387184178631363 
+2023-04-18 15:24:05,945 2597300 INFO demo6 o.interco.r:   suma_nt:46928.29 revenue_nt_usa:0.0 
+2023-04-18 15:24:05,945 2597300 INFO demo6 o.interco.r:   suma_s4:289848.30000000005 revenue_s4_usa:0.0 
+2023-04-18 15:24:05,946 2597300 INFO demo6 o.interco.r:   suma_tusa:236886.64 revenue_tusa_usa:1.0 
+2023-04-18 15:24:05,946 2597300 INFO demo6 o.interco.r:    b1 usa:0.0 
+2023-04-18 15:24:05,946 2597300 INFO demo6 o.interco.r:    nt usa:0.0 
+2023-04-18 15:24:05,946 2597300 INFO demo6 o.interco.r:    mkt usa:295332.6157817453 
+2023-04-18 15:24:05,946 2597300 INFO demo6 o.interco.r:    s4 usa:0.0 
+2023-04-18 15:24:05,946 2597300 INFO demo6 o.interco.r:    tusa:236886.64 
+2023-04-18 15:24:05,946 2597300 INFO demo6 o.interco.r:   suma_b1:314139.93 revenue_b1_mex:0.032850116164397335 
+2023-04-18 15:24:05,946 2597300 INFO demo6 o.interco.r:   suma_mkt:352123.68 revenue_mkt_mex:0.050257551743427185 
+2023-04-18 15:24:05,946 2597300 INFO demo6 o.interco.r:   suma_nt:46928.29 revenue_nt_mex:0.6101341385941634 
+2023-04-18 15:24:05,946 2597300 INFO demo6 o.interco.r:   suma_s4:289848.30000000005 revenue_s4_mex:0.9502129634662038 
+2023-04-18 15:24:05,946 2597300 INFO demo6 o.interco.r:   suma_tlatam:374983.4 revenue_tmex_mex:0.2974206752020993 
+2023-04-18 15:24:05,947 2597300 INFO demo6 o.interco.r: ---------MEX--------- : 
+2023-04-18 15:24:05,947 2597300 INFO demo6 o.interco.r:    b1 mex:10319.533192375648 
+2023-04-18 15:24:05,947 2597300 INFO demo6 o.interco.r:    nt mex:28632.551794847095 
+2023-04-18 15:24:05,947 2597300 INFO demo6 o.interco.r:    mkt mex:17696.874067685996 
+2023-04-18 15:24:05,947 2597300 INFO demo6 o.interco.r:    s4 mex:275417.6120986413 
+2023-04-18 15:24:05,947 2597300 INFO demo6 o.interco.r:    tlatam:111527.8160175789 
+2023-04-18 15:24:05,948 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10277 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,948 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10278 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,949 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10279 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,949 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10280 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,949 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13698 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,949 2597300 INFO demo6 o.interco.r:   parcial cta:13698- subgrupo:B1 $193369.05 
+2023-04-18 15:24:05,949 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13699 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,950 2597300 INFO demo6 o.interco.r:   parcial cta:13699- subgrupo:B1 $352748.53 
+2023-04-18 15:24:05,950 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13700 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,950 2597300 INFO demo6 o.interco.r:   parcial cta:13700- subgrupo:B1 $85690.08 
+2023-04-18 15:24:05,950 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13701 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,950 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:5 subgrupo:B1:$631807.66 
+2023-04-18 15:24:05,950 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:5 subgrupo:B1:$631807.66 
+2023-04-18 15:24:05,951 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10259 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,951 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10260 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,951 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10261 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,952 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10262 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,952 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13681 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,952 2597300 INFO demo6 o.interco.r:   parcial cta:13681- subgrupo:NT $429454.8 
+2023-04-18 15:24:05,952 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13680 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,952 2597300 INFO demo6 o.interco.r:   parcial cta:13680- subgrupo:NT $1198936.04 
+2023-04-18 15:24:05,952 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13682 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,952 2597300 INFO demo6 o.interco.r:   parcial cta:13682- subgrupo:NT $103987.43 
+2023-04-18 15:24:05,952 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13683 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,953 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:5 subgrupo:NT:$1732378.27 
+2023-04-18 15:24:05,953 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:5 subgrupo:NT:$1732378.27 
+2023-04-18 15:24:05,953 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10286 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,953 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10287 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,954 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10288 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,954 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10289 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,954 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13707 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,954 2597300 INFO demo6 o.interco.r:   parcial cta:13707- subgrupo:MKT $701570.14 
+2023-04-18 15:24:05,954 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13708 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,954 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13709 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,954 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13710 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,955 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:5 subgrupo:MKT:$701570.14 
+2023-04-18 15:24:05,955 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:5 subgrupo:MKT:$701570.14 
+2023-04-18 15:24:05,955 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10268 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,956 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10269 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,956 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10270 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,956 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10271 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,956 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13689 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,956 2597300 INFO demo6 o.interco.r:   parcial cta:13689- subgrupo:S4 $2566717.36 
+2023-04-18 15:24:05,956 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13690 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,957 2597300 INFO demo6 o.interco.r:   parcial cta:13690- subgrupo:S4 $334135.48 
+2023-04-18 15:24:05,957 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13691 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,957 2597300 INFO demo6 o.interco.r:   parcial cta:13691- subgrupo:S4 $81262.81 
+2023-04-18 15:24:05,957 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13692 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,957 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:5 subgrupo:S4:$2982115.65 
+2023-04-18 15:24:05,957 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:5 subgrupo:S4:$2982115.65 
+2023-04-18 15:24:05,958 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10302 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,958 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10303 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,958 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10304 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,959 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10305 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,959 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13723 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,959 2597300 INFO demo6 o.interco.r:   parcial cta:13723- subgrupo:TUSA $1058196.8 
+2023-04-18 15:24:05,959 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13724 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,959 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13725 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,959 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13726 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,959 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:5 subgrupo:TUSA:$1058196.8 
+2023-04-18 15:24:05,960 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:5 subgrupo:TUSA:$1058196.8 
+2023-04-18 15:24:05,960 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10296 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,960 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10295 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,961 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10297 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,961 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10298 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,961 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13716 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,961 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13717 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,961 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13718 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,962 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13719 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,962 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:5 subgrupo:TLATAM:$0 
+2023-04-18 15:24:05,962 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:5 subgrupo:TLATAM:$0 
+2023-04-18 15:24:05,962 2597300 INFO demo6 o.interco.r: ACA GRUPO OPERACIONES : 
+2023-04-18 15:24:05,962 2597300 INFO demo6 o.interco.r:    suma b1:631807.66 
+2023-04-18 15:24:05,962 2597300 INFO demo6 o.interco.r:    suma nt:1732378.27 
+2023-04-18 15:24:05,962 2597300 INFO demo6 o.interco.r:    suma mkt:701570.14 total_mkt:27458.56 
+2023-04-18 15:24:05,962 2597300 INFO demo6 o.interco.r:    suma s4:2982115.65 
+2023-04-18 15:24:05,962 2597300 INFO demo6 o.interco.r:    suma tlatam:0 
+2023-04-18 15:24:05,962 2597300 INFO demo6 o.interco.r:    suma talentusa:1058196.8 
+2023-04-18 15:24:05,962 2597300 INFO demo6 o.interco.r:   suma_b1:631807.66 revenue_b1_usa:0.0 
+2023-04-18 15:24:05,962 2597300 INFO demo6 o.interco.r:   suma_mkt:701570.14 revenue_mkt_usa:0.8387184178631363 
+2023-04-18 15:24:05,963 2597300 INFO demo6 o.interco.r:   suma_nt:1732378.27 revenue_nt_usa:0.0 
+2023-04-18 15:24:05,963 2597300 INFO demo6 o.interco.r:   suma_s4:2982115.65 revenue_s4_usa:0.0 
+2023-04-18 15:24:05,963 2597300 INFO demo6 o.interco.r:   suma_tusa:1058196.8 revenue_tusa_usa:1.0 
+2023-04-18 15:24:05,963 2597300 INFO demo6 o.interco.r: ACA GRUPO OPERACIONES : 
+2023-04-18 15:24:05,963 2597300 INFO demo6 o.interco.r: ---------USA--------- : 
+2023-04-18 15:24:05,963 2597300 INFO demo6 o.interco.r:    b1 usa:0.0 
+2023-04-18 15:24:05,963 2597300 INFO demo6 o.interco.r:    nt usa:0.0 
+2023-04-18 15:24:05,963 2597300 INFO demo6 o.interco.r:    mkt usa:588419.797840819 
+2023-04-18 15:24:05,963 2597300 INFO demo6 o.interco.r:    s4 usa:0.0 
+2023-04-18 15:24:05,963 2597300 INFO demo6 o.interco.r:    tusa:1058196.8 
+2023-04-18 15:24:05,963 2597300 INFO demo6 o.interco.r:   suma_b1:631807.66 revenue_b1_mex:0.032850116164397335 
+2023-04-18 15:24:05,963 2597300 INFO demo6 o.interco.r:   suma_mkt:701570.14 revenue_mkt_mex:0.050257551743427185 
+2023-04-18 15:24:05,964 2597300 INFO demo6 o.interco.r:   suma_nt:1732378.27 revenue_nt_mex:0.6101341385941634 
+2023-04-18 15:24:05,964 2597300 INFO demo6 o.interco.r:   suma_s4:2982115.65 revenue_s4_mex:0.9502129634662038 
+2023-04-18 15:24:05,964 2597300 INFO demo6 o.interco.r:   suma_tlatam:0 revenue_tmex_mex:0.2974206752020993 
+2023-04-18 15:24:05,964 2597300 INFO demo6 o.interco.r: ---------MEX--------- : 
+2023-04-18 15:24:05,964 2597300 INFO demo6 o.interco.r:    b1 mex:20754.955024556057 
+2023-04-18 15:24:05,964 2597300 INFO demo6 o.interco.r:    nt mex:1056983.1234856972 
+2023-04-18 15:24:05,964 2597300 INFO demo6 o.interco.r:    mkt mex:35259.19761269345 
+2023-04-18 15:24:05,964 2597300 INFO demo6 o.interco.r:    s4 mex:2833644.9491854445 
+2023-04-18 15:24:05,964 2597300 INFO demo6 o.interco.r:    tlatam:0.0 
+2023-04-18 15:24:05,964 2597300 INFO demo6 o.interco.r:   suma_b1:631807.66 revenue_b1_arg:0.9671498838356026 
+2023-04-18 15:24:05,964 2597300 INFO demo6 o.interco.r:   suma_mkt:701570.14 revenue_mkt_arg:0.1110240303934365 
+2023-04-18 15:24:05,964 2597300 INFO demo6 o.interco.r:   suma_nt:1732378.27 revenue_nt_arg:0.3898658614058365 
+2023-04-18 15:24:05,964 2597300 INFO demo6 o.interco.r:   suma_s4:2982115.65 revenue_s4_arg:0.04978703653379624 
+2023-04-18 15:24:05,964 2597300 INFO demo6 o.interco.r:   suma_tlatam:0 revenue_targ_arg:0.7025793247979008 
+2023-04-18 15:24:05,964 2597300 INFO demo6 o.interco.r: ---------ARG--------- : 
+2023-04-18 15:24:05,964 2597300 INFO demo6 o.interco.r:    b1 arg:611052.704975444 
+2023-04-18 15:24:05,964 2597300 INFO demo6 o.interco.r:    nt arg:675395.1465143028 
+2023-04-18 15:24:05,964 2597300 INFO demo6 o.interco.r:    mkt arg:77891.1445464875 
+2023-04-18 15:24:05,964 2597300 INFO demo6 o.interco.r:    s4 arg:148470.70081455552 
+2023-04-18 15:24:05,964 2597300 INFO demo6 o.interco.r:    tlatam:0.0 
+2023-04-18 15:24:05,966 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10353 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,967 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10354 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,967 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10355 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,967 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13774 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,967 2597300 INFO demo6 o.interco.r:   parcial cta:13774- subgrupo:B1 $417358.0 
+2023-04-18 15:24:05,967 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13775 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,967 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13776 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,967 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:7 subgrupo:B1:$417358.0 
+2023-04-18 15:24:05,968 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:7 subgrupo:B1:$417358.0 
+2023-04-18 15:24:05,968 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10369 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,969 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10370 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,969 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10371 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,969 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13790 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,969 2597300 INFO demo6 o.interco.r:   parcial cta:13790- subgrupo:NT $459900.0 
+2023-04-18 15:24:05,969 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13791 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,969 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13792 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,970 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:7 subgrupo:NT:$459900.0 
+2023-04-18 15:24:05,970 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:7 subgrupo:NT:$459900.0 
+2023-04-18 15:24:05,970 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10389 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,971 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10390 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,971 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10391 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,972 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13810 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,972 2597300 INFO demo6 o.interco.r:   parcial cta:13810- subgrupo:MKT $325652.77 
+2023-04-18 15:24:05,972 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13811 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,972 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13812 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,973 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:7 subgrupo:MKT:$325652.77 
+2023-04-18 15:24:05,973 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:7 subgrupo:MKT:$325652.77 
+2023-04-18 15:24:05,974 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10361 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,974 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10362 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,974 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10363 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,975 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13782 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,975 2597300 INFO demo6 o.interco.r:   parcial cta:13782- subgrupo:S4 $320750.0 
+2023-04-18 15:24:05,975 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13783 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,975 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13784 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,975 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:7 subgrupo:S4:$320750.0 
+2023-04-18 15:24:05,975 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:7 subgrupo:S4:$320750.0 
+2023-04-18 15:24:05,976 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10383 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,976 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10384 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,977 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10385 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,977 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13804 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,977 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13805 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,977 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13806 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,977 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:7 subgrupo:TUSA:$0 
+2023-04-18 15:24:05,978 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:7 subgrupo:TUSA:$0 
+2023-04-18 15:24:05,978 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10377 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,978 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10378 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,979 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10379 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,979 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13798 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,979 2597300 INFO demo6 o.interco.r:   parcial cta:13798- subgrupo:TLATAM $1198388.0 
+2023-04-18 15:24:05,979 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13799 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,979 2597300 INFO demo6 o.interco.r:   parcial cta:13799- subgrupo:TLATAM $345531.1 
+2023-04-18 15:24:05,979 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13800 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,980 2597300 INFO demo6 o.interco.r:   parcial cta:13800- subgrupo:TLATAM $82759.36 
+2023-04-18 15:24:05,980 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:7 subgrupo:TLATAM:$1626678.4600000002 
+2023-04-18 15:24:05,980 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:7 subgrupo:TLATAM:$1626678.4600000002 
+2023-04-18 15:24:05,980 2597300 INFO demo6 o.interco.r: ACA GRUPO SALES : 
+2023-04-18 15:24:05,980 2597300 INFO demo6 o.interco.r:    suma b1:417358.0 
+2023-04-18 15:24:05,980 2597300 INFO demo6 o.interco.r:    suma nt:459900.0 
+2023-04-18 15:24:05,980 2597300 INFO demo6 o.interco.r:    suma mkt:325652.77 
+2023-04-18 15:24:05,980 2597300 INFO demo6 o.interco.r:    suma s4:320750.0 
+2023-04-18 15:24:05,980 2597300 INFO demo6 o.interco.r:    suma tlatam:1626678.4600000002 
+2023-04-18 15:24:05,980 2597300 INFO demo6 o.interco.r:    suma talentusa:0 
+2023-04-18 15:24:05,980 2597300 INFO demo6 o.interco.r:   suma_b1:417358.0 revenue_b1_usa:0.0 
+2023-04-18 15:24:05,981 2597300 INFO demo6 o.interco.r:   suma_mkt:325652.77 revenue_mkt_usa:0.8387184178631363 
+2023-04-18 15:24:05,981 2597300 INFO demo6 o.interco.r:   suma_nt:459900.0 revenue_nt_usa:0.0 
+2023-04-18 15:24:05,981 2597300 INFO demo6 o.interco.r:   suma_s4:320750.0 revenue_s4_usa:0.0 
+2023-04-18 15:24:05,981 2597300 INFO demo6 o.interco.r:   suma_tusa:0 revenue_tusa_usa:1.0 
+2023-04-18 15:24:05,981 2597300 INFO demo6 o.interco.r:    b1 usa:0.0 
+2023-04-18 15:24:05,981 2597300 INFO demo6 o.interco.r:    nt usa:0.0 
+2023-04-18 15:24:05,981 2597300 INFO demo6 o.interco.r:    mkt usa:273130.97602714784 
+2023-04-18 15:24:05,981 2597300 INFO demo6 o.interco.r:    s4 usa:0.0 
+2023-04-18 15:24:05,981 2597300 INFO demo6 o.interco.r:    tusa:0.0 
+2023-04-18 15:24:05,981 2597300 INFO demo6 o.interco.r:   suma_b1:417358.0 revenue_b1_mex:0.032850116164397335 
+2023-04-18 15:24:05,982 2597300 INFO demo6 o.interco.r:   suma_mkt:325652.77 revenue_sales_mex:0.050257551743427185 
+2023-04-18 15:24:05,982 2597300 INFO demo6 o.interco.r:   suma_nt:459900.0 revenue_nt_mex:0.6101341385941634 
+2023-04-18 15:24:05,982 2597300 INFO demo6 o.interco.r:   suma_s4:320750.0 revenue_s4_mex:0.9502129634662038 
+2023-04-18 15:24:05,982 2597300 INFO demo6 o.interco.r:   suma_tlatam:1626678.4600000002 revenue_tmex_mex:0.2974206752020993 
+2023-04-18 15:24:05,982 2597300 INFO demo6 o.interco.r: ---------MEX--------- : 
+2023-04-18 15:24:05,982 2597300 INFO demo6 o.interco.r:    b1 mex:13710.258782140543 
+2023-04-18 15:24:05,982 2597300 INFO demo6 o.interco.r:    nt mex:280600.6903394558 
+2023-04-18 15:24:05,982 2597300 INFO demo6 o.interco.r:    mkt mex:16366.510938665393 
+2023-04-18 15:24:05,982 2597300 INFO demo6 o.interco.r:    s4 mex:304780.80803178484 
+2023-04-18 15:24:05,982 2597300 INFO demo6 o.interco.r:    tlatam:0.0 
+2023-04-18 15:24:05,984 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10309 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,984 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10310 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,985 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10311 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,985 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13730 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,985 2597300 INFO demo6 o.interco.r:   parcial cta:13730- subgrupo:B1 $441722.0 
+2023-04-18 15:24:05,985 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13731 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,985 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13732 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,986 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:6 subgrupo:B1:$441722.0 
+2023-04-18 15:24:05,986 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:6 subgrupo:B1:$441722.0 
+2023-04-18 15:24:05,987 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10325 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,987 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10326 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,987 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10327 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,987 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13746 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,988 2597300 INFO demo6 o.interco.r:   parcial cta:13746- subgrupo:NT $100985.1 
+2023-04-18 15:24:05,988 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13747 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,988 2597300 INFO demo6 o.interco.r:   parcial cta:13747- subgrupo:NT $38220.37 
+2023-04-18 15:24:05,988 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13748 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,988 2597300 INFO demo6 o.interco.r:   parcial cta:13748- subgrupo:NT $9308.18 
+2023-04-18 15:24:05,988 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:6 subgrupo:NT:$148513.65 
+2023-04-18 15:24:05,988 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:6 subgrupo:NT:$148513.65 
+2023-04-18 15:24:05,989 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10333 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,989 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10334 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,989 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10335 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,990 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13754 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,990 2597300 INFO demo6 o.interco.r:   parcial cta:13754- subgrupo:MKT $384115.29 
+2023-04-18 15:24:05,990 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13755 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,990 2597300 INFO demo6 o.interco.r:   parcial cta:13755- subgrupo:MKT $171425.25 
+2023-04-18 15:24:05,990 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13756 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,991 2597300 INFO demo6 o.interco.r:   parcial cta:13756- subgrupo:MKT $41042.37 
+2023-04-18 15:24:05,991 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:6 subgrupo:MKT:$596582.91 
+2023-04-18 15:24:05,991 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:6 subgrupo:MKT:$596582.91 
+2023-04-18 15:24:05,992 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10317 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,992 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10318 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,992 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10319 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,993 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13738 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,993 2597300 INFO demo6 o.interco.r:   parcial cta:13738- subgrupo:S4 $547675.23 
+2023-04-18 15:24:05,993 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13739 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,993 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13740 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,993 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:6 subgrupo:S4:$547675.23 
+2023-04-18 15:24:05,993 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:6 subgrupo:S4:$547675.23 
+2023-04-18 15:24:05,994 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10347 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,994 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10348 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,995 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10349 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,995 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13768 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,995 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13769 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,995 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13770 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,995 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:6 subgrupo:TUSA:$0 
+2023-04-18 15:24:05,995 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:6 subgrupo:TUSA:$0 
+2023-04-18 15:24:05,996 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10341 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,996 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10342 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,997 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10343 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,997 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13762 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,997 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13763 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,997 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13764 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:05,997 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:6 subgrupo:TLATAM:$0 
+2023-04-18 15:24:05,997 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:6 subgrupo:TLATAM:$0 
+2023-04-18 15:24:05,998 2597300 INFO demo6 o.interco.r: ACA GRUPO PRESALES : 
+2023-04-18 15:24:05,998 2597300 INFO demo6 o.interco.r:    suma b1:441722.0 
+2023-04-18 15:24:05,998 2597300 INFO demo6 o.interco.r:    suma nt:148513.65 
+2023-04-18 15:24:05,998 2597300 INFO demo6 o.interco.r:    suma mkt:596582.91 
+2023-04-18 15:24:05,998 2597300 INFO demo6 o.interco.r:    suma s4:547675.23 
+2023-04-18 15:24:05,998 2597300 INFO demo6 o.interco.r:    suma tlatam:0 
+2023-04-18 15:24:05,998 2597300 INFO demo6 o.interco.r:    suma talentusa:0 
+2023-04-18 15:24:05,998 2597300 INFO demo6 o.interco.r:   suma_b1:441722.0 revenue_b1_usa:0.0 
+2023-04-18 15:24:05,998 2597300 INFO demo6 o.interco.r:   suma_mkt:596582.91 revenue_mkt_usa:0.8387184178631363 
+2023-04-18 15:24:05,998 2597300 INFO demo6 o.interco.r:   suma_nt:148513.65 revenue_nt_usa:0.0 
+2023-04-18 15:24:05,998 2597300 INFO demo6 o.interco.r:   suma_s4:547675.23 revenue_s4_usa:0.0 
+2023-04-18 15:24:05,999 2597300 INFO demo6 o.interco.r:   suma_tusa:0 revenue_tusa_usa:1.0 
+2023-04-18 15:24:05,999 2597300 INFO demo6 o.interco.r: ---------USA--------- : 
+2023-04-18 15:24:05,999 2597300 INFO demo6 o.interco.r:    b1 usa:0.0 
+2023-04-18 15:24:05,999 2597300 INFO demo6 o.interco.r:    nt usa:0.0 
+2023-04-18 15:24:05,999 2597300 INFO demo6 o.interco.r:    mkt usa:500365.07439938583 
+2023-04-18 15:24:05,999 2597300 INFO demo6 o.interco.r:    s4 usa:0.0 
+2023-04-18 15:24:05,999 2597300 INFO demo6 o.interco.r:    tusa:0.0 
+2023-04-18 15:24:05,999 2597300 INFO demo6 o.interco.r:   suma_b1:441722.0 revenue_b1_mex:0.032850116164397335 
+2023-04-18 15:24:05,999 2597300 INFO demo6 o.interco.r:   suma_mkt:596582.91 revenue_presales_mex:0.050257551743427185 
+2023-04-18 15:24:05,999 2597300 INFO demo6 o.interco.r:   suma_nt:148513.65 revenue_nt_mex:0.6101341385941634 
+2023-04-18 15:24:05,999 2597300 INFO demo6 o.interco.r:   suma_s4:547675.23 revenue_s4_mex:0.9502129634662038 
+2023-04-18 15:24:05,999 2597300 INFO demo6 o.interco.r:   suma_tlatam:0 revenue_tmex_mex:0.2974206752020993 
+2023-04-18 15:24:06,000 2597300 INFO demo6 o.interco.r: ---------MEX--------- : 
+2023-04-18 15:24:06,000 2597300 INFO demo6 o.interco.r:    b1 mex:14510.61901236992 
+2023-04-18 15:24:06,000 2597300 INFO demo6 o.interco.r:    nt mex:90613.24791222508 
+2023-04-18 15:24:06,000 2597300 INFO demo6 o.interco.r:    mkt mex:29982.796468569366 
+2023-04-18 15:24:06,000 2597300 INFO demo6 o.interco.r:    s4 mex:520408.1033153347 
+2023-04-18 15:24:06,000 2597300 INFO demo6 o.interco.r:    tlatam:0.0 
+2023-04-18 15:24:06,001 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10570 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,001 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10571 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,002 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10572 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,002 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10573 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,002 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13991 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,002 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13992 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,002 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13993 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,003 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13994 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,003 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:B1:$0 
+2023-04-18 15:24:06,003 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:B1:$0 
+2023-04-18 15:24:06,003 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10588 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,004 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10589 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,004 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10590 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,004 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10591 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,004 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14009 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,004 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14010 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,004 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14011 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,005 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14012 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,005 2597300 INFO demo6 o.interco.r:   parcial cta:14012- subgrupo:NT $911665.78 
+2023-04-18 15:24:06,005 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:NT:$911665.78 
+2023-04-18 15:24:06,005 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:NT:$911665.78 
+2023-04-18 15:24:06,005 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10561 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,006 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10562 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,006 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10563 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,006 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10564 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,006 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13982 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,006 2597300 INFO demo6 o.interco.r:   parcial cta:13982- subgrupo:MKT $4566962.27 
+2023-04-18 15:24:06,006 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13983 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,006 2597300 INFO demo6 o.interco.r:   parcial cta:13983- subgrupo:MKT $293098.01 
+2023-04-18 15:24:06,007 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13984 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,007 2597300 INFO demo6 o.interco.r:   parcial cta:13984- subgrupo:MKT $70421.67 
+2023-04-18 15:24:06,007 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13985 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,007 2597300 INFO demo6 o.interco.r:   parcial cta:13985- subgrupo:MKT $369358.61 
+2023-04-18 15:24:06,007 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:MKT:$5299840.56 
+2023-04-18 15:24:06,007 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:MKT:$5299840.56 
+2023-04-18 15:24:06,008 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10579 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,008 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10580 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,008 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10581 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,009 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10582 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,009 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14000 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,009 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14001 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,009 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14002 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,009 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14003 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,009 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:S4:$0 
+2023-04-18 15:24:06,009 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:S4:$0 
+2023-04-18 15:24:06,010 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10604 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,010 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10605 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,010 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10606 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,011 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10607 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,011 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14025 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,011 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14026 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,011 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14027 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,011 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14028 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,011 2597300 INFO demo6 o.interco.r:   parcial cta:14028- subgrupo:TUSA $15939.0 
+2023-04-18 15:24:06,011 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:TUSA:$15939.0 
+2023-04-18 15:24:06,011 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:TUSA:$15939.0 
+2023-04-18 15:24:06,012 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10597 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,012 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10598 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,012 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10599 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,013 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10603 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,013 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10600 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,013 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14018 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,013 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14019 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,013 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14020 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,013 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14021 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,014 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:TLATAM:$0 
+2023-04-18 15:24:06,014 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:TLATAM:$0 
+2023-04-18 15:24:06,014 2597300 INFO demo6 o.interco.r: ACA GRUPO CI-UN : 
+2023-04-18 15:24:06,014 2597300 INFO demo6 o.interco.r:    suma b1:0 
+2023-04-18 15:24:06,014 2597300 INFO demo6 o.interco.r:    suma nt:911665.78 
+2023-04-18 15:24:06,014 2597300 INFO demo6 o.interco.r:    suma mkt:5299840.56 
+2023-04-18 15:24:06,014 2597300 INFO demo6 o.interco.r:    suma s4:0 
+2023-04-18 15:24:06,014 2597300 INFO demo6 o.interco.r:    suma tlatam:0 
+2023-04-18 15:24:06,014 2597300 INFO demo6 o.interco.r:    suma talentusa:15939.0 
+2023-04-18 15:24:06,014 2597300 INFO demo6 o.interco.r:   suma_b1:0 revenue_b1_usa:0.0 
+2023-04-18 15:24:06,014 2597300 INFO demo6 o.interco.r:   suma_mkt:5299840.56 revenue_mkt_usa:0.8387184178631363 
+2023-04-18 15:24:06,015 2597300 INFO demo6 o.interco.r:   suma_nt:911665.78 revenue_nt_usa:0.0 
+2023-04-18 15:24:06,015 2597300 INFO demo6 o.interco.r:   suma_s4:0 revenue_s4_usa:0.0 
+2023-04-18 15:24:06,015 2597300 INFO demo6 o.interco.r:   suma_tusa:15939.0 revenue_tusa_usa:1.0 
+2023-04-18 15:24:06,015 2597300 INFO demo6 o.interco.r: ---------USA--------- : 
+2023-04-18 15:24:06,015 2597300 INFO demo6 o.interco.r:    b1 usa:0.0 
+2023-04-18 15:24:06,015 2597300 INFO demo6 o.interco.r:    nt usa:0.0 
+2023-04-18 15:24:06,015 2597300 INFO demo6 o.interco.r:    mkt usa:4445073.889410078 
+2023-04-18 15:24:06,015 2597300 INFO demo6 o.interco.r:    s4 usa:0.0 
+2023-04-18 15:24:06,015 2597300 INFO demo6 o.interco.r:    tusa:15939.0 
+2023-04-18 15:24:06,015 2597300 INFO demo6 o.interco.r:   suma_b1:0 revenue_b1_mex:0.032850116164397335 
+2023-04-18 15:24:06,015 2597300 INFO demo6 o.interco.r:   suma_mkt:5299840.56 revenue_ciun_mex:0.050257551743427185 
+2023-04-18 15:24:06,015 2597300 INFO demo6 o.interco.r:   suma_nt:911665.78 revenue_nt_mex:0.6101341385941634 
+2023-04-18 15:24:06,016 2597300 INFO demo6 o.interco.r:   suma_s4:0 revenue_s4_mex:0.9502129634662038 
+2023-04-18 15:24:06,016 2597300 INFO demo6 o.interco.r:   suma_tlatam:0 revenue_tmex_mex:0.2974206752020993 
+2023-04-18 15:24:06,016 2597300 INFO demo6 o.interco.r: ---------MEX--------- : 
+2023-04-18 15:24:06,016 2597300 INFO demo6 o.interco.r:    b1 mex:0.0 
+2023-04-18 15:24:06,016 2597300 INFO demo6 o.interco.r:    nt mex:556238.4153660762 
+2023-04-18 15:24:06,016 2597300 INFO demo6 o.interco.r:    mkt mex:266357.0111761141 
+2023-04-18 15:24:06,016 2597300 INFO demo6 o.interco.r:    s4 mex:0.0 
+2023-04-18 15:24:06,016 2597300 INFO demo6 o.interco.r:    tlatam:0.0 
+2023-04-18 15:24:06,017 2597300 INFO demo6 o.interco.r: GRUPO:Sales Comisiones ARGCUENTAS USA:account.account() 
+2023-04-18 15:24:06,019 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10570 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,019 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10571 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,019 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10572 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,020 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10573 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,020 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13991 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,020 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13992 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,020 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13993 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,020 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13994 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,020 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:B1:$0 
+2023-04-18 15:24:06,021 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:B1:$0 
+2023-04-18 15:24:06,021 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10588 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,021 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10589 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,021 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10590 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,022 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10591 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,022 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14009 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,022 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14010 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,022 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14011 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,022 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14012 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,022 2597300 INFO demo6 o.interco.r:   parcial cta:14012- subgrupo:NT $911665.78 
+2023-04-18 15:24:06,022 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:NT:$911665.78 
+2023-04-18 15:24:06,022 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:NT:$911665.78 
+2023-04-18 15:24:06,023 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10561 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,023 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10562 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,023 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10563 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,024 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10564 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,024 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13982 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,024 2597300 INFO demo6 o.interco.r:   parcial cta:13982- subgrupo:MKT $4566962.27 
+2023-04-18 15:24:06,024 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13983 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,024 2597300 INFO demo6 o.interco.r:   parcial cta:13983- subgrupo:MKT $293098.01 
+2023-04-18 15:24:06,024 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13984 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,024 2597300 INFO demo6 o.interco.r:   parcial cta:13984- subgrupo:MKT $70421.67 
+2023-04-18 15:24:06,024 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13985 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,025 2597300 INFO demo6 o.interco.r:   parcial cta:13985- subgrupo:MKT $369358.61 
+2023-04-18 15:24:06,025 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:MKT:$5299840.56 
+2023-04-18 15:24:06,025 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:MKT:$5299840.56 
+2023-04-18 15:24:06,025 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10579 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,025 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10580 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,025 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10581 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,026 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10582 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,026 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14000 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,026 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14001 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,026 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14002 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,026 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14003 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,026 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:S4:$0 
+2023-04-18 15:24:06,027 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:S4:$0 
+2023-04-18 15:24:06,027 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10604 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,027 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10605 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,027 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10606 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,028 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10607 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,028 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14025 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,028 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14026 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,028 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14027 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,028 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14028 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,029 2597300 INFO demo6 o.interco.r:   parcial cta:14028- subgrupo:TUSA $15939.0 
+2023-04-18 15:24:06,029 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:TUSA:$15939.0 
+2023-04-18 15:24:06,029 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:TUSA:$15939.0 
+2023-04-18 15:24:06,030 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10597 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,030 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10598 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,030 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10599 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,030 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10603 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,030 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10600 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,030 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14018 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,031 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14019 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,031 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14020 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,031 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14021 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,031 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:TLATAM:$0 
+2023-04-18 15:24:06,031 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:TLATAM:$0 
+2023-04-18 15:24:06,031 2597300 INFO demo6 o.interco.r:   suma_b1:0 revenue_b1_usa:0.0 
+2023-04-18 15:24:06,032 2597300 INFO demo6 o.interco.r:   suma_mkt:5299840.56 revenue_mkt_usa:0.8387184178631363 
+2023-04-18 15:24:06,032 2597300 INFO demo6 o.interco.r:   suma_nt:911665.78 revenue_nt_usa:0.0 
+2023-04-18 15:24:06,032 2597300 INFO demo6 o.interco.r:   suma_s4:0 revenue_s4_usa:0.0 
+2023-04-18 15:24:06,032 2597300 INFO demo6 o.interco.r:   suma_tusa:15939.0 revenue_tusa_usa:1.0 
+2023-04-18 15:24:06,032 2597300 INFO demo6 o.interco.r: ---------USA--------- : 
+2023-04-18 15:24:06,032 2597300 INFO demo6 o.interco.r:    b1 usa:0.0 
+2023-04-18 15:24:06,032 2597300 INFO demo6 o.interco.r:    nt usa:0.0 
+2023-04-18 15:24:06,032 2597300 INFO demo6 o.interco.r:    mkt usa:4445073.889410078 
+2023-04-18 15:24:06,032 2597300 INFO demo6 o.interco.r:    s4 usa:0.0 
+2023-04-18 15:24:06,032 2597300 INFO demo6 o.interco.r:    tusa:15939.0 
+2023-04-18 15:24:06,032 2597300 INFO demo6 o.interco.r:   suma_b1:0 revenue_b1_mex:0.032850116164397335 
+2023-04-18 15:24:06,033 2597300 INFO demo6 o.interco.r:   suma_mkt:5299840.56 revenue_leadsmkt_mex:0.050257551743427185 
+2023-04-18 15:24:06,033 2597300 INFO demo6 o.interco.r:   suma_nt:911665.78 revenue_nt_mex:0.6101341385941634 
+2023-04-18 15:24:06,033 2597300 INFO demo6 o.interco.r:   suma_s4:0 revenue_s4_mex:0.9502129634662038 
+2023-04-18 15:24:06,033 2597300 INFO demo6 o.interco.r:   suma_tlatam:0 revenue_tmex_mex:0.2974206752020993 
+2023-04-18 15:24:06,033 2597300 INFO demo6 o.interco.r: ---------MEX--------- : 
+2023-04-18 15:24:06,033 2597300 INFO demo6 o.interco.r:    b1 mex:0.0 
+2023-04-18 15:24:06,033 2597300 INFO demo6 o.interco.r:    nt mex:556238.4153660762 
+2023-04-18 15:24:06,033 2597300 INFO demo6 o.interco.r:    mkt mex:266357.0111761141 
+2023-04-18 15:24:06,033 2597300 INFO demo6 o.interco.r:    s4 mex:0.0 
+2023-04-18 15:24:06,033 2597300 INFO demo6 o.interco.r:    tlatam:0.0 
+2023-04-18 15:24:06,038 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10570 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,038 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10571 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,038 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10572 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,039 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10573 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,039 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13991 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,039 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13992 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,039 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13993 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,040 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13994 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,040 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:B1:$0 
+2023-04-18 15:24:06,040 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:B1:$0 
+2023-04-18 15:24:06,040 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10588 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,041 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10589 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,041 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10590 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,041 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10591 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,041 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14009 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,041 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14010 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,042 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14011 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,042 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14012 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,042 2597300 INFO demo6 o.interco.r:   parcial cta:14012- subgrupo:NT $911665.78 
+2023-04-18 15:24:06,042 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:NT:$911665.78 
+2023-04-18 15:24:06,042 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:NT:$911665.78 
+2023-04-18 15:24:06,043 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10561 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,043 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10562 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,043 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10563 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,043 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10564 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,043 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13982 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,044 2597300 INFO demo6 o.interco.r:   parcial cta:13982- subgrupo:MKT $4566962.27 
+2023-04-18 15:24:06,044 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13983 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,044 2597300 INFO demo6 o.interco.r:   parcial cta:13983- subgrupo:MKT $293098.01 
+2023-04-18 15:24:06,044 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13984 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,044 2597300 INFO demo6 o.interco.r:   parcial cta:13984- subgrupo:MKT $70421.67 
+2023-04-18 15:24:06,044 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 13985 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,044 2597300 INFO demo6 o.interco.r:   parcial cta:13985- subgrupo:MKT $369358.61 
+2023-04-18 15:24:06,044 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:MKT:$5299840.56 
+2023-04-18 15:24:06,045 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:MKT:$5299840.56 
+2023-04-18 15:24:06,045 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10579 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,045 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10580 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,046 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10581 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,046 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10582 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,046 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14000 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,046 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14001 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,046 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14002 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,046 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14003 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,047 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:S4:$0 
+2023-04-18 15:24:06,047 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:S4:$0 
+2023-04-18 15:24:06,047 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10604 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,047 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10605 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,048 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10606 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,048 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10607 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,048 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14025 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,048 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14026 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,048 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14027 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,048 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14028 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,048 2597300 INFO demo6 o.interco.r:   parcial cta:14028- subgrupo:TUSA $15939.0 
+2023-04-18 15:24:06,049 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:TUSA:$15939.0 
+2023-04-18 15:24:06,049 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:TUSA:$15939.0 
+2023-04-18 15:24:06,049 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10597 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,049 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10598 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,049 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10599 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,050 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10603 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,050 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 10600 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,050 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14018 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,050 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14019 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,050 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14020 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,050 2597300 INFO demo6 o.interco.r: QUERY:SELECT  SUM(balance) as balance_account  FROM account_move_line  WHERE account_id = 14021 and parent_state='posted'  and date_part('month',date)=2 and date_part('year',date)=2023 and company_id=1 
+2023-04-18 15:24:06,051 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:TLATAM:$0 
+2023-04-18 15:24:06,051 2597300 INFO demo6 o.interco.r: -------TOTAL grupo:8 subgrupo:TLATAM:$0 
+2023-04-18 15:24:06,051 2597300 INFO demo6 o.interco.r: ACA GRUPO CI : 
+2023-04-18 15:24:06,051 2597300 INFO demo6 o.interco.r:    suma b1:0 
+2023-04-18 15:24:06,051 2597300 INFO demo6 o.interco.r:    suma nt:911665.78 
+2023-04-18 15:24:06,051 2597300 INFO demo6 o.interco.r:    suma mkt:5299840.56 
+2023-04-18 15:24:06,051 2597300 INFO demo6 o.interco.r:    suma s4:0 
+2023-04-18 15:24:06,051 2597300 INFO demo6 o.interco.r:    suma tlatam:0 
+2023-04-18 15:24:06,051 2597300 INFO demo6 o.interco.r:    suma talentusa:15939.0 
+2023-04-18 15:24:06,051 2597300 INFO demo6 o.interco.r:   suma_b1:0 revenue_b1_usa:0.0 
+2023-04-18 15:24:06,051 2597300 INFO demo6 o.interco.r:   suma_mkt:5299840.56 revenue_mkt_usa:0.8387184178631363 
+2023-04-18 15:24:06,051 2597300 INFO demo6 o.interco.r:   suma_nt:911665.78 revenue_nt_usa:0.0 
+2023-04-18 15:24:06,051 2597300 INFO demo6 o.interco.r:   suma_s4:0 revenue_s4_usa:0.0 
+2023-04-18 15:24:06,052 2597300 INFO demo6 o.interco.r:   suma_tusa:15939.0 revenue_tusa_usa:1.0 
+2023-04-18 15:24:06,052 2597300 INFO demo6 o.interco.r: ---------USA--------- : 
+2023-04-18 15:24:06,052 2597300 INFO demo6 o.interco.r:    b1 usa:0.0 
+2023-04-18 15:24:06,052 2597300 INFO demo6 o.interco.r:    nt usa:0.0 
+2023-04-18 15:24:06,052 2597300 INFO demo6 o.interco.r:    mkt usa:4445073.889410078 
+2023-04-18 15:24:06,052 2597300 INFO demo6 o.interco.r:    s4 usa:0.0 
+2023-04-18 15:24:06,052 2597300 INFO demo6 o.interco.r:    tusa:15939.0 
+2023-04-18 15:24:06,052 2597300 INFO demo6 o.interco.r:   suma_b1:0 revenue_b1_mex:0.032850116164397335 
+2023-04-18 15:24:06,052 2597300 INFO demo6 o.interco.r:   suma_mkt:5299840.56 revenue_ci_mex:0.050257551743427185 
+2023-04-18 15:24:06,052 2597300 INFO demo6 o.interco.r:   suma_nt:911665.78 revenue_nt_mex:0.6101341385941634 
+2023-04-18 15:24:06,052 2597300 INFO demo6 o.interco.r:   suma_s4:0 revenue_s4_mex:0.9502129634662038 
+2023-04-18 15:24:06,052 2597300 INFO demo6 o.interco.r:   suma_tlatam:0 revenue_tmex_mex:0.2974206752020993 
+2023-04-18 15:24:06,053 2597300 INFO demo6 o.interco.r: ---------MEX--------- : 
+2023-04-18 15:24:06,053 2597300 INFO demo6 o.interco.r:    b1 mex:0.0 
+2023-04-18 15:24:06,053 2597300 INFO demo6 o.interco.r:    nt mex:556238.4153660762 
+2023-04-18 15:24:06,053 2597300 INFO demo6 o.interco.r:    mkt mex:266357.0111761141 
+2023-04-18 15:24:06,053 2597300 INFO demo6 o.interco.r:    s4 mex:0.0 
+2023-04-18 15:24:06,053 2597300 INFO demo6 o.interco.r:    tlatam:0.0 
+2023-04-18 15:24:06,061 2597300 INFO demo6 werkzeug: 179.60.25.191 - - [18/Apr/2023 15:24:06] "POST /web/dataset/call_button HTTP/1.1" 200 - 526 0.098 0.071
+2023-04-18 15:24:06,160 2597300 INFO demo6 werkzeug: 179.60.25.191 - - [18/Apr/2023 15:24:06] "POST /web/dataset/call_kw/resultados.interco/read HTTP/1.1" 200 - 2 0.001 0.018

@@ -17,6 +17,7 @@
                         <group>
                             <field name="name" />
                             <field name="responsible_user"/>
+                            <field name="company_id"/>
                         </group>
                         <group>
                             <field name="date_from"/>
@@ -39,6 +40,7 @@
                                     <field name="hr_employee_id" />
                                     <field name="costo_sueldo"/>
                                     <field name="costo_contribuciones"/>
+                                    <field name="costo_honorario"/>
                                     <field name="account_id" />
                                     <field name="area_uniope"/>
                                     <field name="tipo"/>
@@ -96,7 +98,8 @@
         <field name="arch" type="xml">
             <form string="Grupos de costos">
                 <group>
-                      <field name="name"/>
+                    <field name="name"/>
+                    <field name="company_id"/>
                 </group>
                  <notebook>
                  <page string="Subgrupos" name="subgrupos">
@@ -192,8 +195,9 @@
         <field name="model">intercompany.cost.groups</field>
         <field name="arch" type="xml">
             <tree string="Grupos de costos">
-                        <field name="name"/>
-                        <field name="subgrupos" string="subgrupos" widget="many2many_tags"  options="{'no_quick_create':False,'no_create_edit':False,'no_open': False,}"/>
+                <field name="name"/>
+                <field name="subgrupos" string="Subgrupos" widget="many2many_tags"  options="{'no_quick_create':False,'no_create_edit':False,'no_open': False,}"/>
+                <field name="company_id"/>
             </tree>
         </field>
     </record>

@@ -1,0 +1,42 @@
+from odoo import models, fields, api
+import datetime
+months = (
+    "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre")
+
+class RevenueInterco(models.Model):
+    _name = 'revenue.interco'
+
+    mes=fields.Selection([('1', 'Enero'),('2', 'Febrero'),('3','Marzo'),('4','Abril'),('5','Mayo'),('6','Junio'),
+                          ('7','julio'),('8','Agosto'),('9','Septiembre'),('10','Octubre'),('11','Noviembre'),('12','Diciembre')])
+    anio=fields.Integer('Año',required=True, store=True)
+    pais=fields.Selection( [('ARG', 'Argentina'),
+         ('MEX', 'Mexico'),('USA','USA')],required=True)
+    tot_B1= fields.Float('Total B1')
+    tot_MKT = fields.Float('Total MKT')
+    tot_NT = fields.Float('Total NT')
+    tot_S4 = fields.Float('Total S4')
+    tot_talentlatam = fields.Float('Total Talent Latam')
+    tot_talentusa = fields.Float('Total Talent USA')
+    total=  fields.Float('TOTAL',store=True)
+    porc_B1 = fields.Float('% B1', store=True)
+    porc_MKT = fields.Float('% MKT', store=True)
+    porc_NT = fields.Float('% NT' , store=True)
+    porc_S4 = fields.Float('% S4',  store=True)
+    porc_talentlatam = fields.Float('% Talent Latam', store=True)
+    porc_talentusa = fields.Float('% Talent USA', store=True)
+
+    _sql_constraints = [('unique_account_areauoptipo', 'unique(area, unidad_operativa, tipo_cuenta)',
+                         'Ya se degignó una cuenta contable al Area-Unidad Operativa para el tipo de cuenta seleccionado')]
+
+    @api.onchange('tot_B1','tot_MKT','tot_NT','tot_S4','tot_talentlatam','tot_talentusa')
+    def actu_porcentajes(self):
+        total= self.tot_B1+ self.tot_MKT + self.tot_NT + self.tot_S4+ self.tot_talentlatam + self.tot_talentusa
+        if total>0:
+            self.total=total
+            self.porc_B1 = self.tot_B1  * 100/total
+            self.porc_MKT= self.tot_MKT * 100/total
+            self.porc_NT = self.tot_NT  * 100/total
+            self.porc_S4 = self.tot_S4  * 100/total
+            self.porc_talentusa  =self.tot_talentusa * 100/total
+            self.porc_talentlatam=self.tot_talentlatam * 100/total
+

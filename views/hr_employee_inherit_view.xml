@@ -10,14 +10,25 @@
                 <group string="Sueldo - Contribuciones">
                     <field name="employee_cost_hour_ids">
                         <tree>
-                            <field name="hr_employee_es_rd"/>
+                            <!-- <field name="hr_employee_es_rd"/> -->
                             <field name="hr_cost_date"/>
-                            <field name="hr_sueldo_facturado"/>
-                            <field name="hr_contribuciones"/>
+                            <field name="hr_sueldo_facturado" string="Sueldos a distribuir"/>
+                            <field name="hr_contribuciones" string="Contribuciones a distribuir"/>
+                            <field name="hr_honorario" string="Honorarios a distribuir"/>
+
+                            <field name="hr_sueldo_info" string="Sueldos"/>
+                            <field name="hr_usd" string="USD"/>
+                            <field name="hr_byout" string="Honorarios"/>
+                            <field name="hr_comisiones" string="Comisiones"/>
+                            <!-- <field name="hr_total"/> -->
                         </tree>
                     </field>
                 </group>
             </group>
+            <field name="area_uniope" position="after">
+                <field name="hr_company_payment"/>
+            </field>
+
         </field>
     </record>
 

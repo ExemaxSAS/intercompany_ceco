@@ -19,6 +19,7 @@ class RevenueInterco(models.Model):
     tots4 = fields.Float('Total S4',store=True)
     tottalentlatam = fields.Float('Total Talent Latam',store=True)
     tottalentusa = fields.Float('Total Talent USA',store=True)
+    
     #guardo % para poder mostrar en vista pivot
     #los dejo en readonly porque permite editar valor
     total=  fields.Float('TOTAL Interco',  store=True)
@@ -28,6 +29,7 @@ class RevenueInterco(models.Model):
     porc_S4 = fields.Float('% S4',store=False,compute="_comp_porcs4")
     porc_talentlatam = fields.Float('% Talent Latam',store=False,compute="_comp_porc_tlatam")
     porc_talentusa = fields.Float('% Talent USA',store=False,compute="_comp_por_tusa")
+    
 
     _sql_constraints = [('unique_revenue_mesaniopais', 'unique(mes, anio, pais)',
                          'Ya existe un registro para el período y pais seleccionado')]
