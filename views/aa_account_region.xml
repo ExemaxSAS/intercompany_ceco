@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+         <!-- aa_account_region -->
+        <record model="ir.ui.view" id="aa_account_region_tree">
+            <field name="name">aa.account.region.tree</field>
+            <field name="model">aa.account.region</field>
+            <field name="arch" type="xml">
+                <tree>
+                        <field name="code" />
+                        <field name="name" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="aa_account_region_form">
+            <field name="name">aa.account.region.form</field>
+            <field name="model">aa.account.region</field>
+            <field name="arch" type="xml">
+                <form>
+                        <sheet>
+                            <group>
+                                <field name="name" />
+                                <field name="code" />
+                            </group>
+                        </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- MENU -->
+
+        <record id="action_aa_account_region" model="ir.actions.act_window">
+           <field name="name">AA Region</field>
+           <field name="res_model">aa.account.region</field>
+           <field name="view_mode">tree,form</field>
+           <field name="view_id" ref="aa_account_region_tree"/>
+           <field name="help" type="html">
+               <p class="o_view_nocontent_smiling_face">
+                   Configuración de Account Analytic Region - No se ha creado ningúna region
+               </p>
+           </field>
+        </record>
+
+        <menuitem
+        id="submenu_aa_account_region"
+        name="AA Region"
+        parent="account.account_account_menu"
+        action="action_aa_account_region"
+        groups="account.group_account_readonly"
+        sequence="51"/>
+
+  </data>
+</odoo>

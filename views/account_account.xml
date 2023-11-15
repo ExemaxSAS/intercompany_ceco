@@ -13,6 +13,7 @@
                         <field name="area"/>
                         <field name="unidad_operativa"/>
                         <field name="tipo_cuenta"/>
+                        <field name="aa_linepl"/>
                     </group>
                     <group>
                         <field name="grupo" />

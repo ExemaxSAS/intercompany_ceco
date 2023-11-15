@@ -107,6 +107,7 @@ class IntercompanyCostLine(models.Model):
     date_to = fields.Date('Fecha hasta', required=True)
     hr_employee_id= fields.Many2one('hr.employee','Empleado',required=True)
     account_id =  fields.Many2one('account.analytic.account','Centro de costo')
+    aa_linepl = fields.Many2one('aa.account.linepl', 'Línea P&L', related='account_id.aa_linepl')
     area_uniope = fields.Char(string="Area/Unidad Operativa")
     area = fields.Integer('id Area',store=True)
     unidad_operativa = fields.Integer('Unidad Operativa',store=True)
@@ -162,7 +163,7 @@ class AccountIntercompanyCost(models.Model):
             emps.append(e.id)
         aline_ids = self.env['account.analytic.line'].search([('employee_id','in', emps),('date','>=', self.date_from),('date','<=', self.date_to)])
         self.analytic_line_ids = aline_ids
-        _logger.info('aline_ids:' + str(aline_ids) )
+        _logger.info('********** aline_ids:' + str(aline_ids) )
 
     def prepost_intercompany_cost(self):
         COSTOS_INDIRECTOS = int(self.env['ir.config_parameter'].get_param('idcostos_indirectos-' + str(self.company_id.id), ''))
@@ -213,6 +214,8 @@ class AccountIntercompanyCost(models.Model):
             groupby=['employee_id'])
         _logger.info('AAAAAAAAAAAAAAA:' + str(result) )
 
+        
+
         for employee in result:
 
             horas_total_empleado=employee.get('unit_amount')
@@ -222,6 +225,36 @@ class AccountIntercompanyCost(models.Model):
                 #busco datos por empleado y luego calculo
                 id_empleado= employee.get('employee_id')[0]
                 empleado= self.env['hr.employee'].search([('id', '=', id_empleado), ('hr_company_payment', '=', str(self.company_id.id))])
+                #IVAN ARRIOLA
+                aal_for_empleoyee = self.env['account.analytic.line'].search(
+                    [('employee_id', '=', empleado.id ), ('date', '>=', self.date_from), ('date', '<=', self.date_to)])
+                aaa_tmp = {}
+                for aal_e in aal_for_empleoyee:
+                    _logger.warning('******* aal_e: {0}'.format(aal_e.id))
+                    _logger.warning('******* aal_e.unit_amount: {0}'.format(aal_e.unit_amount))
+                    if aal_e.account_id.id not in aaa_tmp:
+                        _logger.warning('******* if: {0}'.format(aal_e.unit_amount))
+                        aaa_tmp[aal_e.account_id.id] = aal_e.unit_amount
+                    else:
+                        _logger.warning('******* else: {0}'.format(aal_e.unit_amount))
+                        aaa_tmp[aal_e.account_id.id] = aaa_tmp[aal_e.account_id.id] + aal_e.unit_amount
+                _logger.warning('******* aaa_tmp: {0}'.format(aaa_tmp))
+                #Busco etiqueta analitica del empleado, si no existe la creo
+                tag_employee = self.env['account.analytic.tag'].search([('employee_id.id','=',empleado.id),('company_id.id','=',self.company_id.id)],limit=1)
+                if len(tag_employee) == 0:
+                    tag_employee = self.env['account.analytic.tag'].create({
+                        'employee_id': empleado.id,
+                        'name': empleado.name,
+                        'active_analytic_distribution': True,
+                        'company_id': self.company_id.id
+                    })
+                tag_employee.analytic_distribution_ids.unlink()
+                for a_tmp in aaa_tmp:
+                    percentage = (aaa_tmp[a_tmp] * 100) / horas_total_empleado
+                    
+                    _logger.warning('******* a_tmp: {0} / percentage: {1}'.format(a_tmp,percentage))
+                    tag_employee.analytic_distribution_ids = [(0, 0,  { 'account_id': a_tmp, 'percentage' :  percentage})]
+                #raise ValidationError('Empleado: {0} / horas: {1} / aal: {2}'.format(empleado.name,horas_total_empleado,aal_for_empleoyee))
                 _logger.info('OOOOOOOOOOO:' + str(empleado) )
                 area=empleado.department_id.id
                 unidad_operativa=empleado.uni_oper.id
@@ -319,6 +352,9 @@ class AccountIntercompanyCost(models.Model):
                             tipo_costo='directos'
 
                             id_cuenta = cuenta.get('account_id')[0]
+                            cuenta_analitica = self.env['account.analytic.account'].browse(cuenta.get('account_id')[0])
+                            if len(cuenta_analitica.aa_linepl) == 0:
+                                raise ValidationError('La cuenta analitica "{0}" no tiene Linea L&P necesaria para realizar la operacion'.format(cuenta_analitica.name))
                             horas_trabajadas = cuenta.get('unit_amount')
                             if (total_hrs_directas<=HORAS_SUELDO):
                                 _logger.info('total_hrs_directas<=HORAS_SUELDO')
@@ -358,23 +394,41 @@ class AccountIntercompanyCost(models.Model):
                             #honorario_cuenta = valor_hora_honorario * horas_cuenta * porcentaje_cuenta/100
                             honorario_cuenta = (valor_honorario / HORAS_SUELDO) * horas_cuenta
 
-                            cta_sueldo = self.env['account.account'].search(
-                                [('area', '=', area), ('unidad_operativa', '=', unidad_operativa), ('company_id', '=', self.company_id.id),
-                                    ('tipo_cuenta', '=', 'sueldo')],
-                                limit=1)
+                            #Cambio IVAN ARRIOLA -> Ahora la cuenta pasa a buscarce segun la que figure en el centro de costo como Linea P&L
+                            #cta_sueldo = self.env['account.account'].search(
+                            #    [('area', '=', area), ('unidad_operativa', '=', unidad_operativa), ('company_id', '=', self.company_id.id),
+                            #        ('tipo_cuenta', '=', 'sueldo')],
+                            #    limit=1)
+                            cta_sueldo = self.env['account.account'].search([
+                                ('company_id', '=', self.company_id.id),
+                                ('aa_linepl','=',cuenta_analitica.aa_linepl.id),
+                                ('tipo_cuenta', '=', 'sueldo')
+                            ],limit=1)
                             _logger.info('AAAAAAAAActa_sueldo DIR ' + str(cta_sueldo))
                             if cta_sueldo:
                                 cuenta_sueldo = cta_sueldo.name
-                            cta_contribucion = self.env['account.account'].search(
-                                [('area', '=', area), ('unidad_operativa', '=', unidad_operativa), ('company_id', '=', self.company_id.id),
-                                    ('tipo_cuenta', '=', 'contribucion')], limit=1)
+                            #Cambio IVAN ARRIOLA -> Ahora la cuenta pasa a buscarce segun la que figure en el centro de costo como Linea P&L
+                            #cta_contribucion = self.env['account.account'].search(
+                            #    [('area', '=', area), ('unidad_operativa', '=', unidad_operativa), ('company_id', '=', self.company_id.id),
+                            #        ('tipo_cuenta', '=', 'contribucion')], limit=1)
+                            cta_contribucion = self.env['account.account'].search([
+                                ('company_id', '=', self.company_id.id),
+                                ('aa_linepl','=',cuenta_analitica.aa_linepl.id),
+                                ('tipo_cuenta', '=', 'contribucion')
+                            ],limit=1)
                             _logger.info('AAAAAAAAActa_contribucion DIR ' + str(cta_contribucion))
                             if cta_contribucion:
                                 cuenta_contribucion = cta_contribucion.name
-                     
-                            cta_honorarios = self.env['account.account'].search(
-                                [('area', '=', area), ('unidad_operativa', '=', unidad_operativa), ('company_id', '=', self.company_id.id),
-                                    ('tipo_cuenta', '=', 'honorario')], limit=1)
+
+                            #Cambio IVAN ARRIOLA -> Ahora la cuenta pasa a buscarce segun la que figure en el centro de costo como Linea P&L
+                            #cta_honorarios = self.env['account.account'].search(
+                            #    [('area', '=', area), ('unidad_operativa', '=', unidad_operativa), ('company_id', '=', self.company_id.id),
+                            #        ('tipo_cuenta', '=', 'honorario')], limit=1)
+                            cta_honorarios = self.env['account.account'].search([
+                                ('company_id', '=', self.company_id.id),
+                                ('aa_linepl','=',cuenta_analitica.aa_linepl.id),
+                                ('tipo_cuenta', '=', 'honorario')
+                            ],limit=1)
                             _logger.info('AAAAAAAAActa_honorarios DIR ' + str(cta_honorarios))
                             if cta_honorarios:
                                 cuenta_honorarios = cta_honorarios.name
@@ -407,7 +461,8 @@ class AccountIntercompanyCost(models.Model):
                 # for e in empleados:
                 #     emps.append(e.id)
                 req_account_analytic_line = self.env['account.analytic.line'].search([('employee_id', '=', id_empleado), ('date', '>=', self.date_from), ('date', '<=', self.date_to), ('group_id', 'in', [COSTOS_INDIRECTOS, COSTOS_INDIRECTOS_B, COSTOS_INDIRECTOS_C])])
-                if not req_account_analytic_line:
+                #IVAN ARRIOLA agrego condicion imposible para que no agregue horas indirectas para completar las 160 de trabajo, requerimiento no necesario indicado por Paula
+                if not req_account_analytic_line and 1 == 0:
                     account_a_id = 139
                     if self.company_id.id == 1:
                         account_a_id = 139
@@ -417,7 +472,8 @@ class AccountIntercompanyCost(models.Model):
                         account_a_id = 400 ##completar con la cuenta de usa 400
                         
                     self.env['account.analytic.line'].create({'name': '/', 'employee_id': id_empleado, 'date': self.date_to, 'group_id': COSTOS_INDIRECTOS, 'account_id': account_a_id, 'unit_amount': horas_indirectas})
-                if horas_indirectas>0:
+                #IVAN ARRIOLA agrego condicion imposible para que no agregue horas indirectas para completar las 160 de trabajo, requerimiento no necesario indicado por Paula
+                if horas_indirectas>0 and 1 == 0:
                     # busco total de cuentas indirectas del empleado
                     c_indirectos_array = "(" + str(COSTOS_INDIRECTOS) + "," + str(COSTOS_INDIRECTOS_B) + "," + str(COSTOS_INDIRECTOS_C) + ")"
                     request = "SELECT  SUM(unit_amount) as total_employee_indirectas FROM account_analytic_line " \
@@ -529,15 +585,21 @@ class AccountIntercompanyCost(models.Model):
         #PARAMETROS
         DIARIO = int(self.env['ir.config_parameter'].get_param('diario-' + str(self.company_id.id), '')) #mex 2 = id 15 #usa 3= -23
         CUENTA_SUELDOS_APAGAR =int(self.env['ir.config_parameter'].get_param('cta_sueldosapagar-' + str(self.company_id.id), ''))
+        CUENTA_HONORARIOS_APAGAR =int(self.env['ir.config_parameter'].get_param('cta_honorariosapagar-' + str(self.company_id.id), ''))
+        CUENTA_CONTRIBUCIONES_APAGAR =int(self.env['ir.config_parameter'].get_param('cta_contribucionesapagar-' + str(self.company_id.id), ''))
         
         _logger.info('CUENTA_SUELDOS_APAGAR ' + str(CUENTA_SUELDOS_APAGAR))
+        _logger.info('CUENTA_HONORARIOS_APAGAR ' + str(CUENTA_HONORARIOS_APAGAR))
+        _logger.info('CUENTA_CONTRIBUCIONES_APAGAR ' + str(CUENTA_CONTRIBUCIONES_APAGAR))
         #agrupo por area y cuenta para crear el asiento
         lines = [(5, 0, 0)]
         request= "SELECT  SUM(costo_sueldo) as sum_costosueldo,SUM(costo_contribuciones) as sum_costo_contribuciones,SUM(costo_honorario) as sum_costo_honorario,  area, unidad_operativa, account_id " \
                  " FROM intercompany_cost_line  WHERE account_itc_id =" + str(self.id) + " GROUP BY area, unidad_operativa, account_id"
 
         self.env.cr.execute(request)
-        monto_total = 0
+        monto_total_sueldo = 0
+        monto_total_honorarios = 0
+        monto_total_contribuciones = 0
 
         for record in self.env.cr.dictfetchall():
             area = record['area']
@@ -552,9 +614,15 @@ class AccountIntercompanyCost(models.Model):
                 else:
                     raise ValidationError('La cuenta analítica ' + analytic_account.name + ' no existe en la compañía ' + self.company_id.name)
             unidad_operativa = record['unidad_operativa']
-            cuenta_sueldo = self.env['account.account'].search(
-                [('area', '=', area), ('unidad_operativa', '=', unidad_operativa), ('company_id', '=', self.company_id.id), ('tipo_cuenta','=','sueldo')], limit=1)
-            
+            #Cambio IVAN ARRIOLA -> Ahora la cuenta pasa a buscarce segun la que figure en el centro de costo como Linea P&L
+            #cuenta_sueldo = self.env['account.account'].search(
+            #    [('area', '=', area), ('unidad_operativa', '=', unidad_operativa), ('company_id', '=', self.company_id.id), ('tipo_cuenta','=','sueldo')], limit=1)
+            cuenta_sueldo = self.env['account.account'].search([
+                ('company_id', '=', self.company_id.id),
+                ('aa_linepl','=',analytic_account.aa_linepl.id),
+                ('tipo_cuenta','=','sueldo')
+                ], limit=1)
+
             _logger.info(
                 'AREA UNIOPE: ' + str(area) + '-' + str(unidad_operativa) + '- Cuenta sueldo' +  str(cuenta_sueldo))
             
@@ -564,7 +632,7 @@ class AccountIntercompanyCost(models.Model):
             #--------------- SUELDO EMPLEADO------------------#
             if cuenta_sueldo and (monto>0): # and not(freelance):
                 #genero linea
-                monto_total += monto
+                monto_total_sueldo += monto
                 val = {'account_id':cuenta_sueldo.id,
                           'analytic_account_id':analytic_account_id  ,
                           'currency_id':self.company_id.currency_id.id,
@@ -574,15 +642,21 @@ class AccountIntercompanyCost(models.Model):
 
             # --------------- HONORARIOS FREELANCE ------------------#
             monto = round(record['sum_costo_honorario'],2)
-            cuenta_honorarios = self.env['account.account'].search(
-                [('area', '=', area), ('unidad_operativa', '=', unidad_operativa), ('company_id', '=', self.company_id.id), ('tipo_cuenta', '=', 'honorario')],
-                limit=1)
+            #Cambio IVAN ARRIOLA -> Ahora la cuenta pasa a buscarce segun la que figure en el centro de costo como Linea P&L
+            #cuenta_honorarios = self.env['account.account'].search(
+            #    [('area', '=', area), ('unidad_operativa', '=', unidad_operativa), ('company_id', '=', self.company_id.id), ('tipo_cuenta', '=', 'honorario')],
+            #    limit=1)
+            cuenta_honorarios = self.env['account.account'].search([
+                ('company_id', '=', self.company_id.id),
+                ('aa_linepl','=',analytic_account.aa_linepl.id),
+                ('tipo_cuenta', '=', 'honorario')
+                ],limit=1)
             _logger.info(
                 'AREA UNIOPE: ' + str(area) + '-' + str(unidad_operativa) + '- Cuenta honorario' + str(cuenta_honorarios))
                 
             if cuenta_honorarios and (monto > 0): # and freelance:
                 # genero linea
-                monto_total += monto
+                monto_total_honorarios += monto
                 val = {'account_id': cuenta_honorarios.id,
                         'analytic_account_id': analytic_account_id,
                         'currency_id': self.company_id.currency_id.id,
@@ -592,14 +666,20 @@ class AccountIntercompanyCost(models.Model):
 
             #"________CONTRIBUCIONES------"
             monto = round(record['sum_costo_contribuciones'],2)
-            cuenta_contribucion = self.env['account.account'].search(
-                [('area', '=', area), ('unidad_operativa', '=', unidad_operativa), ('company_id', '=', self.company_id.id),('tipo_cuenta','=','contribucion')], limit=1)
+            #Cambio IVAN ARRIOLA -> Ahora la cuenta pasa a buscarce segun la que figure en el centro de costo como Linea P&L
+            #cuenta_contribucion = self.env['account.account'].search(
+            #    [('area', '=', area), ('unidad_operativa', '=', unidad_operativa), ('company_id', '=', self.company_id.id),('tipo_cuenta','=','contribucion')], limit=1)
+            cuenta_contribucion = self.env['account.account'].search([
+                ('company_id', '=', self.company_id.id),
+                ('aa_linepl','=',analytic_account.aa_linepl.id),
+                ('tipo_cuenta','=','contribucion')
+                ], limit=1)
             _logger.info(
                 'MOV : analitica' + str(analytic_account_id) + '- Cuenta' + str(cuenta_contribucion))
 
             if cuenta_contribucion and (monto > 0):
                 # genero linea
-                monto_total += monto
+                monto_total_contribuciones += monto
                 val = {'account_id': cuenta_contribucion.id,
                        'analytic_account_id': analytic_account_id,
                        'currency_id': self.company_id.currency_id.id,
@@ -607,14 +687,31 @@ class AccountIntercompanyCost(models.Model):
                        'amount_currency': monto}
                 lines.append((0, 0, val))
         #END FOR
-        if monto_total>0:
-            _logger.info('MONTO TOTAL' + str(monto_total))
+        if monto_total_sueldo>0:
+            _logger.info('MONTO TOTAL' + str(monto_total_sueldo))
             val={'account_id': CUENTA_SUELDOS_APAGAR,
                 'currency_id': self.company_id.currency_id.id,
-                'credit': monto_total,
-                'amount_currency': monto_total * -1,
+                'credit': monto_total_sueldo,
+                'amount_currency': monto_total_sueldo * -1,
             }
             lines.append((0, 0, val))
+        if monto_total_honorarios>0:
+            _logger.info('MONTO TOTAL' + str(monto_total_honorarios))
+            val={'account_id': CUENTA_HONORARIOS_APAGAR,
+                'currency_id': self.company_id.currency_id.id,
+                'credit': monto_total_honorarios,
+                'amount_currency': monto_total_honorarios * -1,
+            }
+            lines.append((0, 0, val))
+        if monto_total_contribuciones>0:
+            _logger.info('MONTO TOTAL' + str(monto_total_contribuciones))
+            val={'account_id': CUENTA_CONTRIBUCIONES_APAGAR,
+                'currency_id': self.company_id.currency_id.id,
+                'credit': monto_total_contribuciones,
+                'amount_currency': monto_total_contribuciones * -1,
+            }
+            lines.append((0, 0, val))
+
             move = self.env['account.move'].sudo().create({'journal_id': DIARIO, 'currency_id': self.company_id.currency_id.id,'line_ids':lines })
             move.action_post()
 

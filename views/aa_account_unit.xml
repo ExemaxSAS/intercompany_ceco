@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+         <!-- aa_account_unit -->
+        <record model="ir.ui.view" id="aa_account_unit_tree">
+            <field name="name">aa.account.unit.tree</field>
+            <field name="model">aa.account.unit</field>
+            <field name="arch" type="xml">
+                <tree>
+                        <field name="code" />
+                        <field name="name" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="aa_account_unit_form">
+            <field name="name">aa.account.unit.form</field>
+            <field name="model">aa.account.unit</field>
+            <field name="arch" type="xml">
+                <form>
+                        <sheet>
+                            <group>
+                                <field name="name" />
+                                <field name="code" />
+                            </group>
+                        </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- MENU -->
+
+        <record id="action_aa_account_unit" model="ir.actions.act_window">
+           <field name="name">AA Unidad Operativa</field>
+           <field name="res_model">aa.account.unit</field>
+           <field name="view_mode">tree,form</field>
+           <field name="view_id" ref="aa_account_unit_tree"/>
+           <field name="help" type="html">
+               <p class="o_view_nocontent_smiling_face">
+                   Configuración de Account Analytic Unidad Operativa - No se ha creado ningún unidad operativa
+               </p>
+           </field>
+        </record>
+
+        <menuitem
+        id="submenu_aa_account_unit"
+        name="AA Unidad Operativa"
+        parent="account.account_account_menu"
+        action="action_aa_account_unit"
+        groups="account.group_account_readonly"
+        sequence="51"/>
+
+  </data>
+</odoo>

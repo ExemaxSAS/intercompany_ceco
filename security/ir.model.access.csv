@@ -8,3 +8,11 @@ access_resultados_interco,resultados_interco,model_resultados_interco,base.group
 access_type_results,type_results,model_type_results,base.group_user,1,1,1,1
 access_intercompany_cost_ctascomunes,intercompany_cost_ctascomunes,model_intercompany_cost_ctascomunes,base.group_user,1,1,1,1
 access_revenue_interco,revenue_interco,model_revenue_interco,base.group_user,1,1,1,1
+access_intercompany_ceco_company,intercompany_ceco.aa_account_company,model_aa_account_company,base.group_user,1,1,1,1
+access_intercompany_ceco_department,intercompany_ceco.aa_account_department,model_aa_account_department,base.group_user,1,1,1,1
+access_intercompany_ceco_unit,intercompany_ceco.aa_account_unit,model_aa_account_unit,base.group_user,1,1,1,1
+access_intercompany_ceco_linepl,intercompany_ceco.aa_account_linepl,model_aa_account_linepl,base.group_user,1,1,1,1
+access_intercompany_ceco_cost,intercompany_ceco.aa_account_cost,model_aa_account_cost,base.group_user,1,1,1,1
+access_intercompany_ceco_region,intercompany_ceco.aa_account_region,model_aa_account_region,base.group_user,1,1,1,1
+access_intercompany_ceco_pais,intercompany_ceco.aa_account_pais,model_aa_account_pais,base.group_user,1,1,1,1
+access_recupero_pais,recupero_pais,model_recupero_pais,base.group_user,1,1,1,1

@@ -24,6 +24,13 @@
                         </tree>
                     </field>
                 </group>
+                <group string="Distribución Analítica">
+                    <field name="analytic_dis_id">
+                        <tree>
+                            <field name="analytic_distribution_ids"/>
+                        </tree>
+                    </field>
+                </group>
             </group>
             <field name="area_uniope" position="after">
                 <field name="hr_company_payment"/>

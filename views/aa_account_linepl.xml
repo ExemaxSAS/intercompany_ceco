@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+        <!-- aa_account_linepl -->
+        <record model="ir.ui.view" id="aa_account_linepl_tree">
+            <field name="name">aa.account.linepl.tree</field>
+            <field name="model">aa.account.linepl</field>
+            <field name="arch" type="xml">
+                <tree>
+                        <field name="code" />
+                        <field name="name" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="aa_account_linepl_form">
+            <field name="name">aa.account.linepl.form</field>
+            <field name="model">aa.account.linepl</field>
+            <field name="arch" type="xml">
+                <form>
+                        <sheet>
+                            <group>
+                                <field name="name" />
+                                <field name="code" />
+                            </group>
+                        </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- MENU -->
+
+        <record id="action_aa_account_linepl" model="ir.actions.act_window">
+           <field name="name">AA Línea P&amp;L</field>
+           <field name="res_model">aa.account.linepl</field>
+           <field name="view_mode">tree,form</field>
+           <field name="view_id" ref="aa_account_linepl_tree"/>
+           <field name="help" type="html">
+               <p class="o_view_nocontent_smiling_face">
+                   Configuración de Account Analytic Línea P&amp;L - No se ha creado ningún línea P&amp;L
+               </p>
+           </field>
+        </record>
+
+        <menuitem
+        id="submenu_aa_account_linepl"
+        name="AA Línea P&amp;L"
+        parent="account.account_account_menu"
+        action="action_aa_account_linepl"
+        groups="account.group_account_readonly"
+        sequence="51"/>
+
+  </data>
+</odoo>

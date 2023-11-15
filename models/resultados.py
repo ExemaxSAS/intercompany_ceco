@@ -135,6 +135,24 @@ class ResultadosInterco(models.Model):
     icdirecto_mex = fields.Float('IC directo MEX')
     #icdirecto_arg = fields.Float('Recruiting ARG')
     icdirecto_arg = fields.Float('IC directo ARG') ##ARGENTINA
+    #USA
+    icdirecto_b1_usa = fields.Float('IC directo B1 USA')
+    icdirecto_nt_usa = fields.Float('IC directo NT USA')
+    icdirecto_mkt_usa = fields.Float('IC directo MKT USA')
+    icdirecto_s4_usa = fields.Float('IC directo S4 USA')
+    icdirecto_talent_usa  = fields.Float('IC directo Talent USA')
+    #MEX
+    icdirecto_b1_mex = fields.Float('IC directo B1 MEX')
+    icdirecto_nt_mex = fields.Float('IC directo NT MEX')
+    icdirecto_mkt_mex = fields.Float('IC directo MKT MEX')
+    icdirecto_s4_mex = fields.Float('IC directo S4 MEX')
+    icdirecto_talent_mex = fields.Float('IC directo Talent Latam')
+    #ARGENTINA
+    icdirecto_b1_arg = fields.Float('IC directo B1 ARG')
+    icdirecto_nt_arg = fields.Float('IC directo NT ARG')
+    icdirecto_mkt_arg = fields.Float('IC directo MKT ARG')
+    icdirecto_s4_arg = fields.Float('IC directo S4 ARG')
+    icdirecto_talent_arg = fields.Float('IC directo Talent ARG')
 
     recruiting_total= fields.Float('Total Recruiting')
     #USA
@@ -473,59 +491,187 @@ class ResultadosInterco(models.Model):
 
     def process_results(self):
         # mejora, recorrer type_results y ejecutar procesos segun , es por subgrupos, es ctaingreso, es RG
+        #***********  PROCESO IC DIRECTO antes mayo 2023 *******************
+        # ***********  PROCESO IC DIRECTO *******************
+        # icdirecto = self.env['type.results'].search([('resultado', '=', 'IC DIRECTO')], limit=1)
+        # if icdirecto:
+        #     # Si encuentra la configuracion busco los grupos
+        #     suma_resultado = 0
+        #     suma_grupo_mex = 0
+        #     suma_grupo_usa = 0
+        #     suma_grupo_arg = 0
+        #     for grupo in icdirecto.grupo:
+        #         # por cada grupo, busco las cuentas relacionadas
+        #         cuentas_mex = self.env['account.account'].search([('grupo', '=', grupo.id),('pais','=','MEX')])
+        #         _logger.info('GRUPO:' + grupo.name + 'CUENTAS MEX:' + str(cuentas_mex))
+        #         for cuenta in cuentas_mex:
+        #             request = "SELECT  SUM(balance) as balance_account  FROM account_move_line " \
+        #                       " WHERE account_id = " + str(cuenta.id) + "  and parent_state='posted' and date_part('month',date)=" + str(
+        #                 self.mes) + " and date_part('year',date)=" + str(self.anio) + " and company_id=" + str(self.current_company_id.id)
+        #          #   _logger.info('QUERY:' + request)
+        #             self.env.cr.execute(request)
+        #             for record in self.env.cr.dictfetchall():
+        #                 if record['balance_account']:
+        #                     suma_grupo_mex += record['balance_account']
+        #         #-------------USA
+        #         cuentas_usa = self.env['account.account'].search([('grupo', '=', grupo.id), ('pais', '=', 'USA')])
+        #         _logger.info('GRUPO:' + grupo.name + 'CUENTAS USA IC DIRECTO:' + str(cuentas_usa))
+        #         for cuenta in cuentas_usa:
+        #                 request = "SELECT  SUM(balance) as credit_account  FROM account_move_line " \
+        #                           " WHERE account_id = " + str(cuenta.id) + " and parent_state='posted' and date_part('month',date)=" + str(
+        #                     self.mes) + " and date_part('year',date)=" + str(self.anio) + " and company_id=" + str(self.current_company_id.id)
+        #                 self.env.cr.execute(request)
+        #                 for record in self.env.cr.dictfetchall():
+        #                     if record['credit_account']:
+        #                         suma_grupo_usa += record['credit_account']
+        #         #-------------ARGENTINA
+        #         cuentas_arg = self.env['account.account'].search([('grupo', '=', grupo.id), ('pais', '=', 'ARG')])
+        #         _logger.info('GRUPO:' + grupo.name + 'CUENTAS ARG:' + str(cuentas_arg))
+        #         for cuenta in cuentas_arg:
+        #                 request = "SELECT  SUM(balance) as credit_account  FROM account_move_line " \
+        #                           " WHERE account_id = " + str(cuenta.id) + " and parent_state='posted' and date_part('month',date)=" + str(
+        #                     self.mes) + " and date_part('year',date)=" + str(self.anio) + " and company_id=" + str(self.current_company_id.id)
+        #                 self.env.cr.execute(request)
+        #                 for record in self.env.cr.dictfetchall():
+        #                     if record['credit_account']:
+        #                         suma_grupo_arg += record['credit_account']
+        #         # mando a log el total por grupo
+        #         #_logger.info('TOTAL grupo:' + str(suma_grupo_usa))
+        #         suma_resultado += suma_grupo_usa + suma_grupo_mex + suma_grupo_arg
+        #     # calculos finales-----
+        #     self.icdirecto_total = abs(suma_resultado)
+        #     self.icdirecto_mex = abs(suma_grupo_mex)
+        #     self.icdirecto_usa = abs(suma_grupo_usa)
+        #     self.icdirecto_arg = abs(suma_grupo_arg)
+
+        # # *******************- fin IC DIRECTO***************
         # ***********  PROCESO IC DIRECTO *******************
         icdirecto = self.env['type.results'].search([('resultado', '=', 'IC DIRECTO')], limit=1)
         if icdirecto:
-            # Si encuentra la configuracion busco los grupos
-            suma_resultado = 0
-            suma_grupo_mex = 0
-            suma_grupo_usa = 0
-            suma_grupo_arg = 0
+            suma_mkt, suma_b1, suma_nt, suma_s4, suma_tusa, suma_tlatam = 0, 0, 0, 0, 0, 0
             for grupo in icdirecto.grupo:
-                # por cada grupo, busco las cuentas relacionadas
-                cuentas_mex = self.env['account.account'].search([('grupo', '=', grupo.id),('pais','=','MEX')])
-                _logger.info('GRUPO:' + grupo.name + 'CUENTAS MEX:' + str(cuentas_mex))
-                for cuenta in cuentas_mex:
-                    request = "SELECT  SUM(balance) as balance_account  FROM account_move_line " \
-                              " WHERE account_id = " + str(cuenta.id) + "  and parent_state='posted' and date_part('month',date)=" + str(
-                        self.mes) + " and date_part('year',date)=" + str(self.anio) + " and company_id=" + str(self.current_company_id.id)
-                 #   _logger.info('QUERY:' + request)
-                    self.env.cr.execute(request)
-                    for record in self.env.cr.dictfetchall():
-                        if record['balance_account']:
-                            suma_grupo_mex += record['balance_account']
-                #-------------USA
-                cuentas_usa = self.env['account.account'].search([('grupo', '=', grupo.id), ('pais', '=', 'USA')])
-                _logger.info('GRUPO:' + grupo.name + 'CUENTAS USA IC DIRECTO:' + str(cuentas_usa))
-                for cuenta in cuentas_usa:
-                        request = "SELECT  SUM(balance) as credit_account  FROM account_move_line " \
-                                  " WHERE account_id = " + str(cuenta.id) + " and parent_state='posted' and date_part('month',date)=" + str(
-                            self.mes) + " and date_part('year',date)=" + str(self.anio) + " and company_id=" + str(self.current_company_id.id)
-                        self.env.cr.execute(request)
-                        for record in self.env.cr.dictfetchall():
-                            if record['credit_account']:
-                                suma_grupo_usa += record['credit_account']
-                #-------------ARGENTINA
-                cuentas_arg = self.env['account.account'].search([('grupo', '=', grupo.id), ('pais', '=', 'ARG')])
-                _logger.info('GRUPO:' + grupo.name + 'CUENTAS ARG:' + str(cuentas_arg))
-                for cuenta in cuentas_arg:
-                        request = "SELECT  SUM(balance) as credit_account  FROM account_move_line " \
-                                  " WHERE account_id = " + str(cuenta.id) + " and parent_state='posted' and date_part('month',date)=" + str(
-                            self.mes) + " and date_part('year',date)=" + str(self.anio) + " and company_id=" + str(self.current_company_id.id)
-                        self.env.cr.execute(request)
-                        for record in self.env.cr.dictfetchall():
-                            if record['credit_account']:
-                                suma_grupo_arg += record['credit_account']
-                # mando a log el total por grupo
-                #_logger.info('TOTAL grupo:' + str(suma_grupo_usa))
-                suma_resultado += suma_grupo_usa + suma_grupo_mex + suma_grupo_arg
+                suma_b1 = suma_b1 + self.calc_subgrupos('B1', grupo.id)
+                suma_nt = suma_nt +  self.calc_subgrupos('NT', grupo.id)
+                suma_mkt = suma_mkt + self.calc_subgrupos('MKT', grupo.id)
+                suma_s4 = suma_s4 + self.calc_subgrupos('S4', grupo.id)
+                suma_tusa = suma_tusa + self.calc_subgrupos('TUSA', grupo.id)
+                suma_tlatam = suma_tlatam + self.calc_subgrupos('TLATAM', grupo.id)
+               
+            _logger.info('ACA icdirecto :')
+            _logger.info('   suma b1:' + str(suma_b1))
+            _logger.info('   suma nt:' + str(suma_nt))
+            _logger.info('   suma mkt:' + str(suma_mkt) + ' total_mkt:' + str(self.revenue_interco_total_mkt))
+            _logger.info('   suma s4:' + str(suma_s4))
+            _logger.info('   suma tlatam:' + str(suma_tlatam))
+            _logger.info('   suma talentusa:' + str(suma_tusa))
+           
             # calculos finales-----
-            self.icdirecto_total = abs(suma_resultado)
-            self.icdirecto_mex = abs(suma_grupo_mex)
-            self.icdirecto_usa = abs(suma_grupo_usa)
-            self.icdirecto_arg = abs(suma_grupo_arg)
 
-        # *******************- fin IC DIRECTO***************
+            if self.revenue_interco_total_b1 > 0:
+                self.icdirecto_b1_usa = suma_b1 * (self.revenue_b1_usa / self.revenue_interco_total_b1)
+                _logger.info('  suma_b1:' + str(suma_b1) + ' revenue_b1_usa:' + str(
+                    self.revenue_b1_usa / self.revenue_interco_total_b1))
+            if self.revenue_interco_total_mkt > 0:
+                porc_mkt_revenue = 0.00
+                porc_mkt_revenue = self.revenue_mkt_usa / self.revenue_interco_total_mkt
+                self.icdirecto_mkt_usa = suma_mkt * porc_mkt_revenue
+                _logger.info('  suma_mkt:' + str(suma_mkt) + ' revenue_mkt_usa:' + str(
+                    porc_mkt_revenue))
+            if self.revenue_interco_total_nt > 0:
+                self.icdirecto_nt_usa = suma_nt * (self.revenue_nt_usa / self.revenue_interco_total_nt)
+                _logger.info('  suma_nt:' + str(suma_nt) + ' revenue_nt_usa:' + str(
+                    self.revenue_nt_usa / self.revenue_interco_total_nt))
+            if self.revenue_interco_total_s4 > 0:
+                self.icdirecto_s4_usa = suma_s4 * (self.revenue_s4_usa / self.revenue_interco_total_s4)
+                _logger.info('  suma_s4:' + str(suma_s4) + ' revenue_s4_usa:' + str(
+                    self.revenue_s4_usa / self.revenue_interco_total_s4))
+                #raise UserError(self.icdirecto_s4_usa)
+            # usa no suma tlatam
+            if self.revenue_interco_total_usa > 0:
+                self.icdirecto_talent_usa = suma_tusa * (self.revenue_tusa_usa / self.revenue_interco_total_usa)
+                _logger.info('  suma_tusa:' + str(suma_tusa) + ' revenue_tusa_usa:' + str(
+                    self.revenue_tusa_usa / self.revenue_interco_total_usa))
+
+            _logger.info('   b1 usa:' + str(self.icdirecto_b1_usa))
+            _logger.info('   nt usa:' + str(self.icdirecto_nt_usa))
+            _logger.info('   mkt usa:' + str(self.icdirecto_mkt_usa))
+            _logger.info('   s4 usa:' + str(self.icdirecto_s4_usa))
+            _logger.info('   tusa:' + str(self.icdirecto_talent_usa))
+            # calculos mexico
+            _logger.info('---------MEX--------- :')
+            
+            if self.revenue_interco_total_b1 > 0:
+                self.icdirecto_b1_mex = suma_b1 * (self.revenue_b1_mex / self.revenue_interco_total_b1)
+                _logger.info('  suma_b1:' + str(suma_b1) + ' revenue_b1_mex:' + str(
+                    self.revenue_b1_mex / self.revenue_interco_total_b1))
+            if self.revenue_interco_total_mkt > 0:
+                porc_mkt_revenue = 0.00
+                porc_mkt_revenue = self.revenue_mkt_mex / self.revenue_interco_total_mkt
+                self.icdirecto_mkt_mex = suma_mkt * porc_mkt_revenue
+                _logger.info('  suma_mkt:' + str(suma_mkt) + ' revenue_mkt_mex:' + str(
+                    porc_mkt_revenue))                
+            if self.revenue_interco_total_nt > 0:
+                self.icdirecto_nt_mex = suma_nt * (self.revenue_nt_mex / self.revenue_interco_total_nt)
+                _logger.info('  suma_nt:' + str(suma_nt) + ' revenue_nt_mex:' + str(
+                    self.revenue_nt_mex / self.revenue_interco_total_nt))
+            if self.revenue_interco_total_s4 > 0:
+                self.icdirecto_s4_mex = suma_s4 * (self.revenue_s4_mex / self.revenue_interco_total_s4)
+                _logger.info('  suma_s4:' + str(suma_s4) + ' revenue_s4_mex:' + str(
+                    self.revenue_s4_mex / self.revenue_interco_total_s4))
+            # mex no suma tusa
+            if self.revenue_interco_total_latam > 0:
+                self.icdirecto_talent_mex = suma_tlatam * (self.revenue_tlatam_mex / self.revenue_interco_total_latam)
+                _logger.info('  suma_tlatam:' + str(suma_tlatam) + ' revenue_tmex_mex:' + str(
+                    self.revenue_tlatam_mex / self.revenue_interco_total_latam))
+            self.icdirecto_mex = self.icdirecto_b1_mex + self.icdirecto_nt_mex + self.icdirecto_mkt_mex + self.icdirecto_s4_mex + self.icdirecto_talent_mex
+            _logger.info('---------MEX--------- :')
+
+            _logger.info('   b1 mex:' + str(self.icdirecto_b1_mex))
+            _logger.info('   nt mex:' + str(self.icdirecto_nt_mex))
+            _logger.info('   mkt mex:' + str(self.icdirecto_mkt_mex))
+            _logger.info('   s4 mex:' + str(self.icdirecto_s4_mex))
+            _logger.info('   tlatam mex:' + str(self.icdirecto_talent_mex))
+
+            # calculos ARGENTINA
+            _logger.info('---------ARG--------- :')
+            
+            if self.revenue_interco_total_b1 > 0:
+                self.icdirecto_b1_arg = suma_b1 * (self.revenue_b1_arg / self.revenue_interco_total_b1)
+                _logger.info('  suma_b1:' + str(suma_b1) + ' revenue_b1_arg:' + str(
+                    self.revenue_b1_arg / self.revenue_interco_total_b1))
+            if self.revenue_interco_total_mkt > 0:
+                porc_mkt_revenue = 0.00
+                porc_mkt_revenue = self.revenue_mkt_arg / self.revenue_interco_total_mkt
+                self.icdirecto_mkt_arg = suma_mkt * porc_mkt_revenue
+                _logger.info('  suma_mkt:' + str(suma_mkt) + ' revenue_mkt_arg:' + str(
+                    porc_mkt_revenue))                
+            if self.revenue_interco_total_nt > 0:
+                self.icdirecto_nt_arg = suma_nt * (self.revenue_nt_arg / self.revenue_interco_total_nt)
+                _logger.info('  suma_nt:' + str(suma_nt) + ' revenue_nt_arg:' + str(
+                    self.revenue_nt_arg / self.revenue_interco_total_nt))
+            if self.revenue_interco_total_s4 > 0:
+                self.icdirecto_s4_arg = suma_s4 * (self.revenue_s4_arg / self.revenue_interco_total_s4)
+                _logger.info('  suma_s4:' + str(suma_s4) + ' revenue_s4_arg:' + str(
+                    self.revenue_s4_arg / self.revenue_interco_total_s4))
+            # arg no suma tusa 
+            if self.revenue_interco_total_latam > 0:
+                self.icdirecto_talent_arg = suma_tlatam * (self.revenue_tlatam_arg / self.revenue_interco_total_latam)
+                _logger.info('  suma_tlatam:' + str(suma_tlatam) + ' revenue_tlatam_arg:' + str(
+                    self.revenue_tlatam_arg / self.revenue_interco_total_latam))
+            self.icdirecto_arg = self.icdirecto_b1_arg + self.icdirecto_nt_arg + self.icdirecto_mkt_arg + self.icdirecto_s4_arg + self.icdirecto_talent_arg
+            _logger.info('---------ARG--------- :')
+
+            _logger.info('   b1 arg:' + str(self.icdirecto_b1_arg))
+            _logger.info('   nt arg:' + str(self.icdirecto_nt_arg))
+            _logger.info('   mkt arg:' + str(self.icdirecto_mkt_arg))
+            _logger.info('   s4 arg:' + str(self.icdirecto_s4_arg))
+            _logger.info('   tlatam arg:' + str(self.icdirecto_talent_arg))
+
+            
+
+            self.icdirecto_total = self.icdirecto_usa + self.icdirecto_mex + self.icdirecto_arg
+        #*******************- FIN IC DIRECTO***************
+
         #***********  PROCESO RECRUITING antes feb 2023 *******************
         #recruiting = self.env['type.results'].search([('resultado', '=', 'RECRUITING')], limit=1)
         #if recruiting:
@@ -1776,6 +1922,10 @@ class ResultadosInterco(models.Model):
         DIARIO = int(pdiario)
 
         # busco cuentas, luego genero asientos
+        cta_icdirecto_B1_mex,cta_icdirecto_MKT_mex, cta_icdirecto_S4_mex,  cta_icdirecto_NT_mex,  cta_icdirecto_talent_mex=None,None,None,None,None
+        cta_icdirecto_B1_usa, cta_icdirecto_MKT_usa, cta_icdirecto_S4_usa, cta_icdirecto_NT_usa, cta_icdirecto_talent_usa = None,None,None,None,None
+        cta_icdirecto_B1_arg, cta_icdirecto_MKT_arg, cta_icdirecto_S4_arg, cta_icdirecto_NT_arg, cta_icdirecto_talent_arg = None,None,None,None,None
+       
         cta_recruiting_B1_mex,cta_recruiting_MKT_mex, cta_recruiting_S4_mex,  cta_recruiting_NT_mex,  cta_recruiting_talent_mex=None,None,None,None,None
         cta_recruiting_B1_usa, cta_recruiting_MKT_usa, cta_recruiting_S4_usa, cta_recruiting_NT_usa, cta_recruiting_talent_usa = None,None,None,None,None
         cta_recruiting_B1_arg, cta_recruiting_MKT_arg, cta_recruiting_S4_arg, cta_recruiting_NT_arg, cta_recruiting_talent_arg = None,None,None,None,None
@@ -1808,6 +1958,60 @@ class ResultadosInterco(models.Model):
         cta_leads_B1_usa, cta_leads_MKT_usa, cta_leads_S4_usa, cta_leads_NT_usa, cta_leads_talent_usa = None, None, None, None, None
         cta_leads_B1_arg, cta_leads_MKT_arg, cta_leads_S4_arg, cta_leads_NT_arg, cta_leads_talent_arg = None, None, None, None, None
         
+        cuentas = self.env['type.results'].with_company(self.env.company.id).search([('resultado', '=', 'IC DIRECTO')], limit=1)
+        for ctas in cuentas:
+            # MEX
+            cta_icdirecto_B1_mex = ctas.ctacontable_B1_mex
+            cta_icdirecto_MKT_mex = ctas.ctacontable_MKT_mex
+            cta_icdirecto_S4_mex = ctas.ctacontable_S4_mex
+            cta_icdirecto_NT_mex = ctas.ctacontable_NT_mex
+            cta_icdirecto_talent_mex = ctas.ctacontable_talent_mex
+            # USA
+            cta_icdirecto_B1_usa = ctas.ctacontable_B1_usa
+            cta_icdirecto_MKT_usa = ctas.ctacontable_MKT_usa
+            cta_icdirecto_S4_usa = ctas.ctacontable_S4_usa
+            cta_icdirecto_NT_usa = ctas.ctacontable_NT_usa
+            cta_icdirecto_talent_usa = ctas.ctacontable_talent_usa
+            # ARGENTINA
+            cta_icdirecto_B1_arg = ctas.ctacontable_B1_arg
+            cta_icdirecto_MKT_arg = ctas.ctacontable_MKT_arg
+            cta_icdirecto_S4_arg = ctas.ctacontable_S4_arg
+            cta_icdirecto_NT_arg = ctas.ctacontable_NT_arg
+            cta_icdirecto_talent_arg = ctas.ctacontable_talent_arg
+
+        if  not(cta_icdirecto_B1_mex) and (self.icdirecto_b1_mex>0):
+            raise UserError(('Falta definir las cuentas contables de recupero para IC Directo B1 MEX'))
+        if  not(cta_icdirecto_MKT_mex) and (self.icdirecto_mkt_mex>0):
+            raise UserError(('Falta definir las cuentas contables de recupero para IC Directo MKT MEX'))
+        if  not(cta_icdirecto_S4_mex) and (self.icdirecto_s4_mex>0):
+            raise UserError(('Falta definir las cuentas contables de recupero para IC Directo S4 MEX'))
+        if not (cta_icdirecto_NT_mex) and (self.icdirecto_nt_mex > 0):
+            raise UserError(('Falta definir las cuentas contables de recupero para IC Directo NT MEX'))
+        if not (cta_icdirecto_talent_mex) and (self.icdirecto_talent_mex > 0):
+            raise UserError(('Falta definir las cuentas contables de recupero para IC Directo talent latam MEX'))
+        if not (cta_icdirecto_B1_usa) and (self.icdirecto_b1_usa > 0):
+            raise UserError(('Falta definir las cuentas contables de recupero para IC Directo B1 USA'))
+        if not (cta_icdirecto_MKT_usa) and (self.icdirecto_mkt_usa > 0):
+            raise UserError(('Falta definir las cuentas contables de recupero para IC Directo MKT USA'))
+        if not (cta_icdirecto_S4_usa) and (self.icdirecto_s4_usa > 0):
+            raise UserError(('Falta definir las cuentas contables de recupero para IC Directo S4 USA'))
+        if not (cta_icdirecto_NT_usa) and (self.icdirecto_nt_usa > 0):
+            raise UserError(('Falta definir las cuentas contables de recupero para IC Directo NT USA'))
+        if not (cta_icdirecto_talent_usa) and (self.icdirecto_talent_usa > 0):
+            raise UserError(('Falta definir las cuentas contables de recupero para IC Directo talent USA'))
+        #ARGENTINA
+        if not (cta_icdirecto_B1_arg) and (self.icdirecto_b1_arg > 0):
+            raise UserError(('Falta definir las cuentas contables de recupero para IC Directo B1 ARG'))
+        if not (cta_icdirecto_MKT_arg) and (self.icdirecto_mkt_arg > 0):
+            raise UserError(('Falta definir las cuentas contables de recupero para IC Directo MKT ARG'))
+        if not (cta_icdirecto_S4_arg) and (self.icdirecto_s4_arg > 0):
+            raise UserError(('Falta definir las cuentas contables de recupero para IC Directo S4 ARG'))
+        if not (cta_icdirecto_NT_arg) and (self.icdirecto_nt_arg > 0):
+            raise UserError(('Falta definir las cuentas contables de recupero para IC Directo NT ARG'))
+        if not (cta_icdirecto_talent_arg) and (self.icdirecto_talent_arg > 0):
+            raise UserError(('Falta definir las cuentas contables de recupero para IC Directo talent ARG'))
+
+        #--------------------------------------------------#
 
         cuentas = self.env['type.results'].with_company(self.env.company.id).search([('resultado', '=', 'RECRUITING')], limit=1)
         for ctas in cuentas:
@@ -2264,6 +2468,150 @@ class ResultadosInterco(models.Model):
         _logger.info('---CUENTA IC MEX:' + str(cta_acobrar_ic_mex))
         _logger.info('---CUENTA IC USA:' + str(cta_acobrar_ic_usa))
         _logger.info('---CUENTA IC ARG:' + str(cta_acobrar_ic_arg))
+        
+        # ------ ASIENTO IC DIRECTO-----------
+        # ic directo mex
+        toticdirecto_mex=0
+        lines = [(5, 0, 0)]
+        if (self.icdirecto_b1_mex>0):
+            val = {'account_id': cta_icdirecto_B1_mex.id,
+                'currency_id': self.company_id.currency_id.id, #19
+                'debit': round(self.icdirecto_b1_mex, 2),
+                'amount_currency': round(self.icdirecto_b1_mex, 2)}
+            lines.append((0, 0, val))
+            toticdirecto_mex= toticdirecto_mex+round(self.icdirecto_b1_mex, 2)
+        if (self.icdirecto_mkt_mex>0):
+            val = {'account_id': cta_icdirecto_MKT_mex.id,
+               'currency_id': self.company_id.currency_id.id,
+               'debit': round(self.icdirecto_mkt_mex,2),
+               'amount_currency': round(self.icdirecto_mkt_mex,2)}
+            lines.append((0, 0, val))
+            toticdirecto_mex = toticdirecto_mex + round(self.icdirecto_mkt_mex,2)
+        if (self.icdirecto_s4_mex>0):
+            val = {'account_id': cta_icdirecto_S4_mex.id,
+               'currency_id': self.company_id.currency_id.id,
+               'debit': round(self.icdirecto_s4_mex,2),
+               'amount_currency': round(self.icdirecto_s4_mex,2)}
+            lines.append((0, 0, val))
+            toticdirecto_mex = toticdirecto_mex + round(self.icdirecto_s4_mex,2)
+        if (self.icdirecto_nt_mex > 0):
+            val = {'account_id': cta_icdirecto_NT_mex.id,
+                   'currency_id': self.company_id.currency_id.id,
+                   'debit': round(self.icdirecto_nt_mex,2),
+                   'amount_currency': round(self.icdirecto_nt_mex,2)}
+            lines.append((0, 0, val))
+            toticdirecto_mex = toticdirecto_mex + round(self.icdirecto_nt_mex,2)
+        if (self.icdirecto_talent_mex > 0):
+            val = {'account_id': cta_icdirecto_talent_mex.id,
+                   'currency_id': self.company_id.currency_id.id,
+                   'debit': round(self.icdirecto_talent_mex,2),
+                   'amount_currency': round(self.icdirecto_talent_mex,2)}
+            lines.append((0, 0, val))
+            toticdirecto_mex = toticdirecto_mex + round(self.icdirecto_talent_mex,2)
+        if (toticdirecto_mex>0):
+            val = {'account_id': cta_acobrar_ic_mex.id,
+               'currency_id': self.company_id.currency_id.id,
+               'credit': round(toticdirecto_mex, 2),
+               'amount_currency': round(toticdirecto_mex * -1, 2),
+               }
+            lines.append((0, 0, val))
+            #raise UserError(lines)
+            move = self.env['account.move'].create({'journal_id': DIARIO, 'currency_id': self.company_id.currency_id.id, 'line_ids': lines})
+            move.action_post()
+        #ic directo usa
+        toticdirecto_usa = 0
+        lines = [(5, 0, 0)]
+        if (self.icdirecto_b1_usa > 0):
+            val = {'account_id': cta_icdirecto_B1_usa.id,
+                   'currency_id': self.company_id.currency_id.id,
+                   'debit':  round(self.icdirecto_b1_usa,2),
+                   'amount_currency':  round(self.icdirecto_b1_usa,2)}
+            lines.append((0, 0, val))
+            toticdirecto_usa = toticdirecto_usa + round(self.icdirecto_b1_usa,2)
+        if (self.icdirecto_mkt_usa > 0):
+            val = {'account_id': cta_icdirecto_MKT_usa.id,
+                   'currency_id': self.company_id.currency_id.id,
+                   'debit':  round(self.icdirecto_mkt_usa,2),
+                   'amount_currency':  round(self.icdirecto_mkt_usa,2)}
+            lines.append((0, 0, val))
+            toticdirecto_usa = toticdirecto_usa + round(self.icdirecto_mkt_usa,2)
+        if (self.icdirecto_s4_usa > 0):
+            val = {'account_id': cta_icdirecto_S4_usa.id,
+                   'currency_id': self.company_id.currency_id.id,
+                   'debit':  round(self.icdirecto_s4_usa,2),
+                   'amount_currency':  round(self.icdirecto_s4_usa,2)}
+            lines.append((0, 0, val))
+            toticdirecto_usa = toticdirecto_usa + round(self.icdirecto_s4_usa,2)
+        if (self.icdirecto_nt_usa > 0):
+            val = {'account_id': cta_icdirecto_NT_usa.id,
+                   'currency_id': self.company_id.currency_id.id,
+                   'debit':  round(self.icdirecto_nt_usa,2),
+                   'amount_currency':  round(self.icdirecto_nt_usa,2)}
+            lines.append((0, 0, val))
+            toticdirecto_usa = toticdirecto_usa + round(self.icdirecto_nt_usa,2)
+        if (self.icdirecto_talent_usa > 0):
+            val = {'account_id': cta_icdirecto_talent_usa.id,
+                   'currency_id': self.company_id.currency_id.id,
+                   'debit':  round(self.icdirecto_talent_usa,2),
+                   'amount_currency':  round(self.icdirecto_talent_usa,2)}
+            lines.append((0, 0, val))
+            toticdirecto_usa = toticdirecto_usa + round(self.icdirecto_talent_usa,2)
+        if (toticdirecto_usa > 0):
+            val = {'account_id': cta_acobrar_ic_usa.id,
+                   'currency_id': self.company_id.currency_id.id,
+                   'credit': round(toticdirecto_usa,2),
+                   'amount_currency': round(toticdirecto_usa * -1,2),
+                   }
+            lines.append((0, 0, val))
+            move = self.env['account.move'].create({'journal_id': DIARIO, 'currency_id': 19, 'line_ids': lines})
+            move.action_post()
+        #ic directo ARGENTINA
+        toticdirecto_arg = 0
+        lines = [(5, 0, 0)]
+        if (self.icdirecto_b1_arg > 0):
+            val = {'account_id': cta_icdirecto_B1_arg.id,
+                   'currency_id': self.company_id.currency_id.id,
+                   'debit':  round(self.icdirecto_b1_arg,2),
+                   'amount_currency':  round(self.icdirecto_b1_arg,2)}
+            lines.append((0, 0, val))
+            toticdirecto_arg = toticdirecto_arg + round(self.icdirecto_b1_arg,2)
+        if (self.icdirecto_mkt_arg > 0):
+            val = {'account_id': cta_icdirecto_MKT_arg.id,
+                   'currency_id': self.company_id.currency_id.id,
+                   'debit':  round(self.icdirecto_mkt_arg,2),
+                   'amount_currency':  round(self.icdirecto_mkt_arg,2)}
+            lines.append((0, 0, val))
+            toticdirecto_arg = toticdirecto_arg + round(self.icdirecto_mkt_arg,2)
+        if (self.icdirecto_s4_arg > 0):
+            val = {'account_id': cta_icdirecto_S4_arg.id,
+                   'currency_id': self.company_id.currency_id.id,
+                   'debit':  round(self.icdirecto_s4_arg,2),
+                   'amount_currency':  round(self.icdirecto_s4_arg,2)}
+            lines.append((0, 0, val))
+            toticdirecto_arg = toticdirecto_arg + round(self.icdirecto_s4_arg,2)
+        if (self.icdirecto_nt_arg > 0):
+            val = {'account_id': cta_icdirecto_NT_arg.id,
+                   'currency_id': self.company_id.currency_id.id,
+                   'debit':  round(self.icdirecto_nt_arg,2),
+                   'amount_currency':  round(self.icdirecto_nt_arg,2)}
+            lines.append((0, 0, val))
+            toticdirecto_arg = toticdirecto_arg + round(self.icdirecto_nt_arg,2)
+        if (self.icdirecto_talent_arg > 0):
+            val = {'account_id': cta_icdirecto_talent_arg.id,
+                   'currency_id': self.company_id.currency_id.id,
+                   'debit':  round(self.icdirecto_talent_arg,2),
+                   'amount_currency':  round(self.icdirecto_talent_arg,2)}
+            lines.append((0, 0, val))
+            toticdirecto_arg = toticdirecto_arg + round(self.icdirecto_talent_arg,2)
+        if (toticdirecto_arg > 0):
+            val = {'account_id': cta_acobrar_ic_arg.id,
+                   'currency_id': self.company_id.currency_id.id,
+                   'credit': round(toticdirecto_arg,2),
+                   'amount_currency': round(toticdirecto_arg * -1,2),
+                   }
+            lines.append((0, 0, val))
+            move = self.env['account.move'].create({'journal_id': DIARIO, 'currency_id': self.company_id.currency_id.id, 'line_ids': lines})
+            move.action_post()
         # ------ ASIENTO RECRUITING-----------
         # recruitng mex
         totrecruiting_mex=0

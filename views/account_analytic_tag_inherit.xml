@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="account_analytic_tag_form_inherit">
+        <field name="name">account.analytic.tag.form</field>
+        <field name="model">account.analytic.tag</field>
+        <field name="inherit_id" ref="analytic.account_analytic_tag_form_view"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="employee_id" />
+            </field>
+        </field>
+    </record>
+
+  </data>
+</odoo>

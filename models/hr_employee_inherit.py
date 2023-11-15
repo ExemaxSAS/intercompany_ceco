@@ -11,6 +11,8 @@ class HrEmployeeInherit(models.Model):
         ('3', 'ITPS ONE LLC')
     ], string='Paga empresa')
 
+    analytic_dis_id = fields.Many2one('account.analytic.tag', 'Distribución Analítica')
+
 class IntercompanyEmployeeCost(models.Model):
     _name = 'employee.cost.hour.line'
 

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+        <!-- aa_account_cost -->
+        <record model="ir.ui.view" id="aa_account_cost_tree">
+            <field name="name">aa.account.cost.tree</field>
+            <field name="model">aa.account.cost</field>
+            <field name="arch" type="xml">
+                <tree>
+                        <field name="code" />
+                        <field name="name" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="aa_account_cost_form">
+            <field name="name">aa.account.cost.form</field>
+            <field name="model">aa.account.cost</field>
+            <field name="arch" type="xml">
+                <form>
+                        <sheet>
+                            <group>
+                                <field name="name" />
+                                <field name="code" />
+                            </group>
+                        </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- MENU -->
+
+        <record id="action_aa_account_cost" model="ir.actions.act_window">
+           <field name="name">AA CENTRO Costo</field>
+           <field name="res_model">aa.account.cost</field>
+           <field name="view_mode">tree,form</field>
+           <field name="view_id" ref="aa_account_cost_tree"/>
+           <field name="help" type="html">
+               <p class="o_view_nocontent_smiling_face">
+                   Configuración de Account Analytic CENTRO Costo - No se ha creado ningún CENTRO Costo 
+               </p>
+           </field>
+        </record>
+
+        <menuitem
+        id="submenu_aa_account_cost"
+        name="AA CENTRO Costo"
+        parent="account.account_account_menu"
+        action="action_aa_account_cost"
+        groups="account.group_account_readonly"
+        sequence="51"/>
+
+
+  </data>
+</odoo>

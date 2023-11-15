@@ -42,6 +42,7 @@
                                     <field name="costo_contribuciones"/>
                                     <field name="costo_honorario"/>
                                     <field name="account_id" />
+                                    <field name="aa_linepl" />
                                     <field name="area_uniope"/>
                                     <field name="tipo"/>
                                     <field name="cuenta_sueldo"/>
