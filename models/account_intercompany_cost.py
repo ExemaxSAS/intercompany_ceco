@@ -107,10 +107,7 @@ class IntercompanyCostLine(models.Model):
     date_to = fields.Date('Fecha hasta', required=True)
     hr_employee_id= fields.Many2one('hr.employee','Empleado',required=True)
     account_id =  fields.Many2one('account.analytic.account','Centro de costo')
-<<<<<<< HEAD
     aa_linepl = fields.Many2one('aa.account.linepl', 'Línea P&L', related='account_id.aa_linepl')
-=======
->>>>>>> 8ffd35ec01e30610f21031471ef2240e27376bcb
     area_uniope = fields.Char(string="Area/Unidad Operativa")
     area = fields.Integer('id Area',store=True)
     unidad_operativa = fields.Integer('Unidad Operativa',store=True)

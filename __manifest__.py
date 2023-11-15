@@ -13,7 +13,6 @@
     'description': '''
     ''',
     'data': [
-        'security/ir.model.access.csv',
         'views/account_intercompany_cost_view.xml',
         'views/hr_employee_inherit_view.xml',
         'views/account_account.xml',
@@ -31,5 +30,6 @@
         'views/account_analytic_tag_inherit.xml',
 	    'data/params.xml',
 	    'data/rules.xml',        
+        'security/ir.model.access.csv',
     ],
 }
